@@ -21,4 +21,6 @@ A `Dockerfile` is useful when you want to run an application from a Docker conta
    * Note the use of 'dot' `.` which assumes you are running the command from the same directory the `Dockerfile` is located in. 
    
 <b>3. Run container using `docker run -<optional flags> <imageName>`</b>
+   * `docker run -d` or `docker run --detach`               Run container in background and print container ID
+   * `docker run -p <#>:<#>` or `docker run --publish`      Publish container port(s) to the host 
 
