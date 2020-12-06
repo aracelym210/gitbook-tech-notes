@@ -12,7 +12,7 @@ A `Dockerfile` is useful when you want to run an application from a Docker conta
 
 ### Basic steps for implementing a Dockerfile
 <b>1. Create `Dockerfile`</b>
-   * Create file called `Dockerfile` in the directory of your project
+   * Create file called `Dockerfile` in the directory of your project. <i>No file extension is needed.</i>
    * `FROM <baseImage:tag>`
       * Decide on a base image with any applicable tags you wish to use. This will be the first line of the Dockerfile. You can look on [dockerhub](https://hub.docker.com) to pick your base image.
    
