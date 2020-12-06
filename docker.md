@@ -8,8 +8,17 @@
 
 ### Dockerfile
 ##### When to use a Dockerfile
-A `Dockerfile` is useful when you want to run an application from a Docker container. Essentially, it's the file that provides the instructions to create the environment to run the app (i.e. `pip install -r requirements.txt`, commands you would normally run from the command prompt to run your script/ app, etc.)
+A `Dockerfile` is useful when you want to run an application from a Docker container. Essentially, it's the file that provides the instructions to create the environment to run the app (i.e. `pip install -r requirements.txt`, commands you would normally run from the command prompt to run your script/ app, etc.). Once the Dockerfile is created, you can build your image, and then run the container. 
 
-* Create file called `Dockerfile` in the directory of your project
-* `FROM <baseImage:tag>`
-  * Decide on a base image with any applicable tags you wish to use. This will be the first line of the Dockerfile. You can look on [dockerhub](https://hub.docker.com) to pick your base image. 
+##### Basic steps for implementing a Dockerfile
+<b>1. Create `Dockerfile`</b>
+   * Create file called `Dockerfile` in the directory of your project
+   * `FROM <baseImage:tag>`
+      * Decide on a base image with any applicable tags you wish to use. This will be the first line of the Dockerfile. You can look on [dockerhub](https://hub.docker.com) to pick your base image.
+   
+<b>2. Build your container image using `docker build -t <imageName:tag> .`</b>
+   * Use `docker build --help` to find out more about what the `t` flag is used for if needed. 
+   * Note the use of 'dot' `.` which assumes you are running the command from the same directory the `Dockerfile` is located in. 
+   
+<b>3. Run container using `docker run -<optional flags> <imageName>`</b>
+
