@@ -1,16 +1,16 @@
 # Docker Cheat Sheet
 
-### Basics
-##### Identify and use a docker image
+## Basics
+### Identify and use a docker image
 * `https://hub.docker.com`      go here to look for images that may fit your needs
 * `docker pull <image name>`    pulls a docker image from a repository. start here 
 * `docker run <image name>`     runs an instance of a container. <i>if image not found, will automatically do a `docker pull`</i>
 
-### Dockerfile
-##### When to use a Dockerfile
+## Dockerfile
+### When to use a Dockerfile
 A `Dockerfile` is useful when you want to run an application from a Docker container. Essentially, it's the file that provides the instructions to create the environment to run the app (i.e. `pip install -r requirements.txt`, commands you would normally run from the command prompt to run your script/ app, etc.). Once the Dockerfile is created, you can build your image, and then run the container. 
 
-##### Basic steps for implementing a Dockerfile
+### Basic steps for implementing a Dockerfile
 <b>1. Create `Dockerfile`</b>
    * Create file called `Dockerfile` in the directory of your project
    * `FROM <baseImage:tag>`
