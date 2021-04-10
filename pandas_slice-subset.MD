@@ -39,5 +39,6 @@
    * Sorting by partial dates is `inclusive:inclusive`. The example above would include all 2018, 2019, 2020
 
 ## Subsetting by row, column number
+* Keep dates in ISO 8601 format, that is, `yyyy-mm-dd`
 * Use `iloc[]` 
 * `subset = df.iloc[2:5, 1:3]` 
