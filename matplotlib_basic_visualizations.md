@@ -94,6 +94,40 @@
     plt.show()
     ```
 
+# Examples
+```python 
+# Import matplotlib.pyplot with alias plt
+import matplotlib.pyplot as plt
+
+# Look at the first few rows of data
+print(avocados.head())
+print()
+
+# Get the total number of avocados sold of each size
+nb_sold_by_size = avocados.groupby("size")["nb_sold"].sum()
+print(nb_sold_by_size)
+
+# Create a bar plot of the number of avocados sold by size
+nb_sold_by_size.plot(kind="bar")
+
+# Show the plot
+plt.show()
+```
+### Results (chart not pictured)
+```
+         date          type  year  avg_price   size    nb_sold
+0  2015-12-27  conventional  2015       0.95  small  9.627e+06
+1  2015-12-20  conventional  2015       0.98  small  8.710e+06
+2  2015-12-13  conventional  2015       0.93  small  9.855e+06
+3  2015-12-06  conventional  2015       0.89  small  9.405e+06
+4  2015-11-29  conventional  2015       0.99  small  8.095e+06
+
+size
+extra_large    1.562e+08
+large          2.015e+09
+small          2.055e+09
+Name: nb_sold, dtype: float64
+```
 
 # Credits
 - datacamp.com
