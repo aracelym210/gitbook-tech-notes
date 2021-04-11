@@ -59,3 +59,6 @@ print(temperatures_ind.loc["2010-08":"2011-02"])
 ## Subsetting by row, column number
 * Use `iloc[]` 
 * `subset = df.iloc[2:5, 1:3]` 
+
+# Credits
+- datacamp.com 
