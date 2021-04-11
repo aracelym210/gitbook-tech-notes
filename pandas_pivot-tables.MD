@@ -1,10 +1,11 @@
 # Pivot Tables
 * Perform subsetting and calculations on pivot tables
 
-# Key Terms
+# Key Terms/ Ideas
 * index
 * columns
 * axis argument 
+* filtering by boolean logic
 
 # Key functions
 * Create pivot table with `.pivot_table("column name", index="<index>", columns="<column>")`
@@ -54,6 +55,63 @@ Zimbabwe      Harare            20.284  20.861  21.079  20.889  20.308  ...  20.
 [100 rows x 14 columns]
 ```
 
+## Make calculations on a pivot table and subset using boolean logic
+```python
+# Get the worldwide mean temp by year
+mean_temp_by_year = temp_by_country_city_vs_year.mean()
 
+# Filter for the year that had the highest mean temp
+print(mean_temp_by_year[mean_temp_by_year == mean_temp_by_year.max()])
+
+# Get the mean temp by city
+mean_temp_by_city = temp_by_country_city_vs_year.mean(axis="columns")
+print(mean_temp_by_city)
+
+# Filter for the city that had the lowest mean temp
+print(mean_temp_by_city[mean_temp_by_city == mean_temp_by_city.min()])
+```
+### Results 
+```
+year
+2013    20.312
+dtype: float64
+country        city            
+Afghanistan    Kabul               15.542
+Angola         Luanda              24.392
+Australia      Melbourne           14.275
+               Sydney              17.799
+Bangladesh     Dhaka               26.174
+                                    ...  
+United States  Chicago             11.331
+               Los Angeles         16.675
+               New York            10.911
+Vietnam        Ho Chi Minh City    27.923
+Zimbabwe       Harare              20.699
+Length: 100, dtype: float64
+country  city  
+China    Harbin    4.877
+dtype: float64
+
+<script.py> output:
+    year
+    2013    20.312
+    dtype: float64
+    country        city            
+    Afghanistan    Kabul               15.542
+    Angola         Luanda              24.392
+    Australia      Melbourne           14.275
+                   Sydney              17.799
+    Bangladesh     Dhaka               26.174
+                                        ...  
+    United States  Chicago             11.331
+                   Los Angeles         16.675
+                   New York            10.911
+    Vietnam        Ho Chi Minh City    27.923
+    Zimbabwe       Harare              20.699
+    Length: 100, dtype: float64
+    country  city  
+    China    Harbin    4.877
+    dtype: float64
+```
 # Credits
 * Datacamp.com
