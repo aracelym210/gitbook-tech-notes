@@ -95,6 +95,7 @@
     ```
 
 # Examples
+## Creating a bar plot of total avocados sold based on size
 ```python 
 # Import matplotlib.pyplot with alias plt
 import matplotlib.pyplot as plt
@@ -128,6 +129,21 @@ large          2.015e+09
 small          2.055e+09
 Name: nb_sold, dtype: float64
 ```
+## Create a line plot of all avocados sold each day 
+```python
+# Import matplotlib.pyplot with alias plt
+import matplotlib.pyplot as plt
+
+# Get the total number of avocados sold on each date
+nb_sold_by_date = avocados.groupby("date")["nb_sold"].sum()
+
+# Create a line plot of the number of avocados sold by date
+nb_sold_by_date.plot(kind="line")
+
+# Show the plot
+plt.show()
+```
+### Results not shown because only result is plot
 
 # Credits
 - datacamp.com
