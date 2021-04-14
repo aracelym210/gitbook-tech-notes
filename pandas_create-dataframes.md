@@ -7,9 +7,9 @@
 - Reading and writing CSVs with Pandas
 
 # Key Functions 
-## Create a dataframe from scratch
-- `pd.Dataframe(<list or dictionary with data>)`
-
+- `pd.Dataframe(<list or dictionary with data>)` create a dataframe from scratch 
+- `df = pd.read_csv("dataset.csv")` reads a CSV file into a dataframe 
+- `df.to_csv("new_dataset.csv")` converts a dataframe to CSV
 
 
 # Examples 
