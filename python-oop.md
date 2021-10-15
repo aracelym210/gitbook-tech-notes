@@ -20,5 +20,22 @@
     | State | Behavior | 
     | Variables (i.e. `my_obj.attribute`) | Functions (i.e. `my_obj.function()`)|
     
-  - **Tip!** List all attributes and methods of an object by typing `dir(my_obj)`
+  - **Tip!** List all attributes and methods of an object by typing `dir(my_obj)`. Other helpful helper functions include `help(my_obj)` and `type(my_obj)`.
 
+> **Note:** _Objects_ and _classes_ are related, but not the same. An _object_ is a representation or instance of a class, while a _class_ is a abstract blueprint or pattern for the methods and attributes of an object. 
+
+# Writing a class
+### Template
+```python
+class <Class_name>:
+  # class code goes here 
+```
+### Example
+```python
+class Customer:
+  # code for class goes here
+  pass
+  
+c1 = Customer()     # Class_name() creates an object of the class Class_name. In this case, Customer ()
+c2 = Customer()
+```
