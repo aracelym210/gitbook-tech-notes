@@ -7,11 +7,12 @@
 | Great for data analysis as scripts | Great for building frameworks and tools | 
 
 # Fundamental OOP concepts 
-- **Objects** as data structures 
+## Objects as data structures 
   -   Object = state + behavior 
   -   **Ecapsulation** (another core tenant of OOP) = bundling data with methods that operate on it 
       -   For example, a customer as an object is made up of attributes, such as name, e-mail, phone number. Additionally the customer has actions she can take like place order, or cancel order. 
-- **Classes** 
+      
+## Classes as templates
   - Classes are like a blueprint for an object. 
   - Classes incorporate information on objects' state and behavior 
 
@@ -23,6 +24,9 @@
   - **Tip!** List all attributes and methods of an object by typing `dir(my_obj)`. Other helpful helper functions include `help(my_obj)` and `type(my_obj)`.
 
 > **Note:** _Objects_ and _classes_ are related, but not the same. An _object_ is a representation or instance of a class, while a _class_ is a abstract blueprint or pattern for the methods and attributes of an object. 
+
+### Methods
+- _Method_ appears to be the term used when referring to a function that is part of a class.
 
 # Writing a class
 ## `self` argument in class methods
