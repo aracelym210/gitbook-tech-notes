@@ -26,7 +26,11 @@
 > **Note:** _Objects_ and _classes_ are related, but not the same. An _object_ is a representation or instance of a class, while a _class_ is a abstract blueprint or pattern for the methods and attributes of an object. 
 
 ### Methods
-- _Method_ appears to be the term used when referring to a function that is part of a class.
+- _Method_ is the term used to reference function definition within a Class.
+
+### Attributes
+- _Attributes_ should be defined within a Class by assignment
+- When referring to an attribute within a Class, use the syntax `self.attribute`
 
 # Writing a class
 ## `self` argument in class methods
@@ -53,3 +57,28 @@ class Customer:
 c1 = Customer()     # Class_name() creates an object of the class Class_name. In this case, Customer ()
 c2 = Customer()
 ```
+
+## `__init()__` constructor
+- The `__init()__` contructor is a special method that can be defined within a Class, which initializes certain variables when an object is first instantiated. 
+- This is also a good place to set default values for certain attributes
+- The `__init()__` constructor is the preferred place (best practice) location within a Class to define all attributes. The benefits of defining all attributes here instead of individual _setter methods_, such as the `set_name()` method in the example above, include the following:
+  -  Easier to read and maintain code due to all attributes being defined in a single location
+  -  No need to worry about attempted to access attributes that have not been defined yet, leading to bugs and errors
+
+    ![image](https://user-images.githubusercontent.com/2760319/137593198-1310bfad-c66e-4005-ba5d-2f5059ac7d2e.png)
+
+### Example
+```python
+class Customer:
+  """This is an example of a DocString, which is a large comment block explaining the Class"""
+  def __init__(self, name, balance=0):
+    self.name = name
+    self.balance = balance
+    print("The __init__ method was called")
+```
+
+# Best Practices for building a Class in Python
+1. Define all attributes in the `__init__()` method
+2. Use `CamelCase` for Class definition, and `snake_case` for method and attribute definitions
+3. Keep `self` as `self`.
+4. Use `docstrings`
