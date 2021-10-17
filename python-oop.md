@@ -82,3 +82,65 @@ class Customer:
 2. Use `CamelCase` for Class definition, and `snake_case` for method and attribute definitions
 3. Keep `self` as `self`.
 4. Use `docstrings`
+
+# Instance and Class Data
+- __Inheritance:__ Extends functionality of existing code 
+- __Polymorphism:__ Creates a unified interface
+- __Encapsulation:__ Bundling of data and methods 
+
+## Instance-level data
+- Data bound by `self` to bind to a particular instance. 
+- Example: 
+  - Instance level varibales defined in `__init__()` method with instance level attributes (i.e. `self.name`, `self.salary`)
+
+## Class-level data
+- Data shared among all instances of a class 
+
+### Class attributes 
+- _Class attributes_ are defined directly in the body of `class`, outside of any methods or constructors. They are "global variables" within the class
+> __When to use?__ class-level attributes are used when you want certain data/ attributes/ variables to be shared among all Class objects. For example, a minimum salary in the example of the employee class, should not change between each instance of the employee class. Other possible usecases for class attributes include min/max values for attributes and commonly used values and constants 
+
+#### Example
+```python
+class Employee:
+  MIN_SALARY = 30000      # self. is not used for class attributes
+
+  def __init__(self, name, salary):
+    self.name = name
+
+    # Use class name to access class attribute
+    if salary >= Employee.MIN_SALARY:
+      self.salary = salary
+    else:
+      self.salary = Employee.MIN_SALARY
+```
+
+### Class methods
+- Class methods cannot use instance-level data
+> __When to use?__ The main usecase of useage of a class methods is "alternative constructors." You might want to create a class method when there are multiple ways to intialize, such as from an external reference file.
+- Special syntax of class methods include
+  - The __"class method decorator"__ `@classmethod`
+  - The first argument of a class method is `cls` instead of `self` like other methods within a class.
+  - To call a class method, use `ClassName.method()` syntax instead of `object.method()`
+
+#### Example
+```python
+class Employee:
+  MIN_SALARY = 30000      # self. is not used for class attributes
+
+  def __init__(self, name, salary):
+    self.name = name
+
+    # Use class name to access class attribute
+    if salary >= Employee.MIN_SALARY:
+      self.salary = salary
+    else:
+      self.salary = Employee.MIN_SALARY
+
+  @classmethod
+  def from_file(cls, filename):     # self is not passed in classmethods
+    with open(filename, "r") as f:
+      name = f.readline()
+
+    return cls(name)                # cls() will call the __init__() constructor
+```
