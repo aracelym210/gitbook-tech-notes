@@ -179,3 +179,28 @@ mng.display()
 Debbie Lashko
 Manager Debbie Lashko
 ```
+
+## Customizing functionality via inheritance
+- Add methods as usual
+- Can use data from both parent and child class
+
+### Example 
+```python 
+# class SubClassName(InheritedParentClassName)
+class CheckingAccount(BankAccount):
+
+  # customized constuctor that also executes parent code
+  def __init__(self, balance, limit):
+    BankAccount.__init__(self, content)
+    self.limit = limit
+    
+   def deposit(self, amount): 
+    self.balance += amount
+    
+   def withdraw(self, amount, fee=0):
+    if fee <= self.limit:
+      BankAccount.withdraw(self, amount - fee)
+    else: 
+      BankAccount.withdraw(self, amount - self.limit)
+
+```
