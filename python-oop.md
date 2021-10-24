@@ -204,3 +204,21 @@ class CheckingAccount(BankAccount):
       BankAccount.withdraw(self, amount - self.limit)
 
 ```
+
+# Operator overloading: comparison
+- creating two objects of the same class, with the same data, will return as `False` if you attempt to check if they are equal to each other. This is because the variable that is storing the class object is just storing a reference point to the memory location where the data is stored. 
+
+### Example - Overloading __eq()__
+```python
+class Customer:
+  def __init__(self, id, name):
+    self.id, self.name = id, name
+    
+  # Will be called when == is used
+  def __eq__(self, other):
+    $Diagnostic printout
+    print("__eq()__ is called.
+    
+    return (self.id == other.id) and \
+           (self.name ==other.name)
+```
