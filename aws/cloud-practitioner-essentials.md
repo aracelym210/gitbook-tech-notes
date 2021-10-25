@@ -25,7 +25,7 @@
     | --------------------- | --------------------- | ------------------- | 
     | Run all parts of application in the cloud | Deploy resourcs by using virtualization and resource management tools | Connect cloud-based resources to on-premises infrastructure | 
     | Migrate existing applications to the cloud | Increase resource utilization by using app mgmt and virtualization technologies | Integrate cloud-based resources with legacy IT applications | 
-    | Design and build new applications in the cloud | Aka "private cloud. | | 
+    | Design and build new applications in the cloud | Aka "private cloud." | | 
 
 ### Definitions
 - **Cloud computing:** The on-demand delivery of IT resources over the internet with pay as you go pricing 
