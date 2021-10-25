@@ -8,8 +8,8 @@
 - AWS Support
 - AWS Certified Cloud Practitoner Exam
 
-## Module 1 Objectives 
-- Benefits of AWS
+## Module 1  
+- **Benefits of AWS**
   - Flexibility of using resources as needed, and returning when no longer needed.
     - Makes it easier to develop and deploy applications  
   - Undifferentiated heavy lifting of IT (routine, repetive tasks) 
@@ -19,7 +19,7 @@
   - Focus less on managing infrastructure and servers and focus more on applications and customers 
   - Economies of scale allows AWS to provide lower pay-as-you-go prices
   - Applications can be deployed across the world quickly, providing customers around the world with low-latency 
-- Differences between on-demand delivery and cloud deployments 
+- **Differences between on-demand delivery and cloud deployments**
   - "On-demand delivery" indicates that resources are available as you need them, when you need them. Additionally, resources can be returned when not needed.
     | Cloud-based Deployment | On-Premises Deployment | Hybrid Deployment | 
     | --------------------- | --------------------- | ------------------- | 
@@ -28,4 +28,4 @@
     | Design and build new applications in the cloud | Aka "private cloud. | | 
 
 ### Definitions
-- Cloud computing: The on-demand delivery of IT resources over the internet with pay as you go pricing 
+- **Cloud computing:** The on-demand delivery of IT resources over the internet with pay as you go pricing 
