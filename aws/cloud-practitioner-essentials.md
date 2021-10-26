@@ -73,6 +73,14 @@ Use the AWS Service, `Amazon EC2 Auto scaling` when you want the scaling process
 | Dynamic scaling | Responds to changing demand | 
 | Predictive scaling | automatically schedules the right number of EC2 instances based on predicted demand. | 
 
+**Scale up:** Add more power 
+**Scale out:** Add more instances to handle increased requests 
+- Auto scaling configuration has various capacity settings: 
+  - Min capacity
+  - Desired capacity 
+  - Max capacity 
+  - 
+
 ### Summarize benefits of Elastic Load Balancing
 ### example uses for Elastic Load Balancing
 ### Differences between Amazon Simple Notification Service (SNS) and Simple Queue Service (SOS)
