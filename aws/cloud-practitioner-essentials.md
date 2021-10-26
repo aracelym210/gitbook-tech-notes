@@ -38,7 +38,8 @@
 - Cost-effective
 - Quick 
 
-### Identify different EC2 instance types (each is grouped under an instance family)
+### Identify different EC2 instance types 
+- Each is grouped under an instance family
 - Each instance family offers various combinations of CPU, storage, memory, and networking capacity
 
 | Instance Family Type | Notes | 
