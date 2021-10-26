@@ -51,6 +51,13 @@
 | Storage optimized | Workloads that require high sequential read and write access to large datasets on local storage; <br>Distributed file systems; <br>Data warehousing applications; <br>High frequency online transaction processing systems; <br>Applications with high IOPS (I/O) requirements. | 
   
 ### Differentiate between various billing options for EC2
+| Name of Billing Option | Description | Use cases | Other notes | 
+| ---------------------- | ------------ | --------- | ----------- | 
+| On-demand purchase | only pay for duration that instance is run (per hour or per second, depending on OS and build) | | | 
+| Savings plan |low prices on EC2 prices, in exchange for commitment to usage for 1 or 3 year term. | | |
+| Reserved instances | Requires 1 or 3 year commitment, *plus* payment in one of three ways. (1) All up front. (2) Partial upfront. (3) No upfront. | | | 
+| Spot instances | Can save up to 90%, with the catch/ caveat that AWS can reclaim resources whenever needed, with only a 2 minute warning. | | | 
+| Dedicated hosts | No shared-tenancy of the host. | Usually used for compliance reasons | | 
 ###  Summarize benefits of Amazon EC2 Auto Scaling 
 ### Summarize benefits of Elastic Load Balancing
 ### example uses for Elastic Load Balancing
