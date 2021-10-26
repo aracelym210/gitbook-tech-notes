@@ -21,6 +21,7 @@
   - Applications can be deployed across the world quickly, providing customers around the world with low-latency 
 - **Differences between on-demand delivery and cloud deployments**
   - "On-demand delivery" indicates that resources are available as you need them, when you need them. Additionally, resources can be returned when not needed.
+  
     | Cloud-based Deployment | On-Premises Deployment | Hybrid Deployment | 
     | --------------------- | --------------------- | ------------------- | 
     | Run all parts of application in the cloud | Deploy resourcs by using virtualization and resource management tools | Connect cloud-based resources to on-premises infrastructure | 
@@ -38,13 +39,15 @@
   - Quick 
 - Identify different EC2 instance types (each is grouped under an instance family)
   - Each instance family offers various combinations of CPU, storage, memory, and networking capacity
+  
   | Instance Family Type | Notes | 
   | -------------------- | ------ | 
   | General purpose | Balanced resources; <br>Diverse workloads; <br>Web servers; <br> Code repos | 
-  | Compute optimized | | 
-  | Memory optimized | | 
-  | Accelearated computing | | 
-  | Storage optimized | | 
+  | Compute optimized | Compute intesive tasks; <br>Gaming servers; <br>High Performance Computing (HPC); <br>Scientific modeling | 
+  | Memory optimized | self-explanatory | 
+  | Accelearated computing | Floating point number calculations; <br>Graphics processing; <br>Data pattern matching; <br>Utilize hardware accelerators | 
+  | Storage optimized | Workloads that require high performance for locally stored data | 
+  
 - Differentiate between various billing options for EC2
 - Summarize benefits of Amazon EC2 Auto Scaling 
   - 
