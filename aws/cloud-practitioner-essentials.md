@@ -29,3 +29,26 @@
 
 ### Definitions
 - **Cloud computing:** The on-demand delivery of IT resources over the internet with pay as you go pricing 
+
+## Module 2
+- EC2 is enabled by multi-tenancy: sharing underlying hardware between virtual machines (via hypervisor that manages)
+- Benefits of Elastic Compute Cloud (EC2) 
+  - Highly flexible
+  - Cost-effective
+  - Quick 
+- Identify different EC2 instance types (each is grouped under an instance family)
+  - Each instance family offers various combinations of CPU, storage, memory, and networking capacity
+  | Instance Family Type | Notes | 
+  | -------------------- | ------ | 
+  | General purpose | Balanced resources; <br>Diverse workloads; <br>Web servers; <br> Code repos | 
+  | Compute optimized | | 
+  | Memory optimized | | 
+  | Accelearated computing | | 
+  | Storage optimized | | 
+- Differentiate between various billing options for EC2
+- Summarize benefits of Amazon EC2 Auto Scaling 
+  - 
+- Summarize benefits of Elastic Load Balancing
+- Example uses for Elastic Load Balancing
+- Differences between Amazon Simple Notification Service (SNS) and Simple Queue Service (SOS)
+- Additional AWS compute options 
