@@ -53,11 +53,13 @@
 ### Differentiate between various billing options for EC2
 | Name of Billing Option | Description | Use cases | Other notes | 
 | ---------------------- | ------------ | --------- | ----------- | 
-| On-demand purchase | only pay for duration that instance is run (per hour or per second, depending on OS and build) | | | 
-| Savings plan |low prices on EC2 prices, in exchange for commitment to usage for 1 or 3 year term. | | |
-| Reserved instances | Requires 1 or 3 year commitment, *plus* payment in one of three ways. (1) All up front. (2) Partial upfront. (3) No upfront. | | | 
-| Spot instances | Can save up to 90%, with the catch/ caveat that AWS can reclaim resources whenever needed, with only a 2 minute warning. | | | 
+| On-demand purchase | only pay for duration that instance is run (per hour or per second, depending on OS and build) | | Developing, testing, running apps w/ predictable usage patters. <br>| Ideal for short-term, irregular workloads. <br>Not recommended for workloads that last a year or longer because there are greater cost savings options available. | 
+| Savings plan | Up to 72% savings over on-demand instance in exchange for commitment to consistent compute usage for 1 or 3 year term. | | Offered for several compute services, including EC2. <br>Usage up to the commitment is charged at the savings plan rate, and anything beyond is charged at regular on-demand rates. |
+| Reserved instances | Discount applied to use of on-demand instances in account. Requires 1 or 3 year commitment, *plus* payment in one of three ways. (1) All up front. (2) Partial upfront. (3) No upfront. | | | 
+| Spot instances | Can save up to 90%, with the catch/ caveat that AWS can reclaim resources whenever needed, with only a 2 minute warning. | Ideal for workloads with flexible start and end times. <br>Batch processing data for a customer survey| | 
 | Dedicated hosts | No shared-tenancy of the host. | Usually used for compliance reasons | | 
+
+- AWS cost explorer is a tool that can analyze your EC2 usage over a period of time and provide recommendations. 
 ###  Summarize benefits of Amazon EC2 Auto Scaling 
 ### Summarize benefits of Elastic Load Balancing
 ### example uses for Elastic Load Balancing
