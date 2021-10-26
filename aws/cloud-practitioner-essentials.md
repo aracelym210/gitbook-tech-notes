@@ -60,7 +60,19 @@
 | Dedicated hosts | No shared-tenancy of the host. | Usually used for compliance reasons | | 
 
 - AWS cost explorer is a tool that can analyze your EC2 usage over a period of time and provide recommendations. 
+
 ###  Summarize benefits of Amazon EC2 Auto Scaling 
+Use the AWS Service, `Amazon EC2 Auto scaling` when you want the scaling process to happen automatically 
+- Scalability & Elasticity; how capacity can grow and shrink based on data needs 
+- High availability 
+- No single point of failure 
+- Able to support increase in demand
+
+| Auto-scaling approach | Description | 
+| --------------------- | ----------- | 
+| Dynamic scaling | Responds to changing demand | 
+| Predictive scaling | automatically schedules the right number of EC2 instances based on predicted demand. | 
+
 ### Summarize benefits of Elastic Load Balancing
 ### example uses for Elastic Load Balancing
 ### Differences between Amazon Simple Notification Service (SNS) and Simple Queue Service (SOS)
