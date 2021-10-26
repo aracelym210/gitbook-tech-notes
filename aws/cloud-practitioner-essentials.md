@@ -8,7 +8,7 @@
 - AWS Support
 - AWS Certified Cloud Practitoner Exam
 
-## Module 1  
+## Module 1 - Overview of Cloud Concepts 
 - **Benefits of AWS**
   - Flexibility of using resources as needed, and returning when no longer needed.
     - Makes it easier to develop and deploy applications  
@@ -31,27 +31,27 @@
 ### Definitions
 - **Cloud computing:** The on-demand delivery of IT resources over the internet with pay as you go pricing 
 
-## Module 2
+## Module 2 - Elastic Compute Cloud (EC2)
 - EC2 is enabled by multi-tenancy: sharing underlying hardware between virtual machines (via hypervisor that manages)
-- Benefits of Elastic Compute Cloud (EC2) 
-  - Highly flexible
-  - Cost-effective
-  - Quick 
-- Identify different EC2 instance types (each is grouped under an instance family)
-  - Each instance family offers various combinations of CPU, storage, memory, and networking capacity
+### Benefits of Elastic Compute Cloud (EC2) 
+- Highly flexible
+- Cost-effective
+- Quick 
+
+### Identify different EC2 instance types (each is grouped under an instance family)
+- Each instance family offers various combinations of CPU, storage, memory, and networking capacity
+
+| Instance Family Type | Notes | 
+| -------------------- | ------ | 
+| General purpose | Balanced resources; <br>Diverse workloads; <br>Web servers; <br> Code repos | 
+| Compute optimized | Compute intesive tasks; <br>Gaming servers; <br>High Performance Computing (HPC); <br>Scientific modeling; <br>Also useful for batch processing workloads that require processing many transactions in a single group | 
+| Memory optimized | Designed to deliver fast performance for workloads that process large datasets in memory. <br>High performance database; <br>Workload that involves performing real-time processing of a large amount of unstructured data. | 
+| Accelearated computing | Floating point number calculations; <br>Graphics processing; <br>Data pattern matching; <br>Utilize hardware accelerators (coprocessors) | 
+| Storage optimized | Workloads that require high sequential read and write access to large datasets on local storage; <br>Distributed file systems; <br>Data warehousing applications; <br>High frequency online transaction processing systems; <br>Applications with high IOPS (I/O) requirements. | 
   
-  | Instance Family Type | Notes | 
-  | -------------------- | ------ | 
-  | General purpose | Balanced resources; <br>Diverse workloads; <br>Web servers; <br> Code repos | 
-  | Compute optimized | Compute intesive tasks; <br>Gaming servers; <br>High Performance Computing (HPC); <br>Scientific modeling; <br>Also useful for batch processing workloads that require processing many transactions in a single group | 
-  | Memory optimized | Designed to deliver fast performance for workloads that process large datasets in memory. <br>High performance database; <br>Workload that involves performing real-time processing of a large amount of unstructured data. | 
-  | Accelearated computing | Floating point number calculations; <br>Graphics processing; <br>Data pattern matching; <br>Utilize hardware accelerators (coprocessors) | 
-  | Storage optimized | Workloads that require high sequential read and write access to large datasets on local storage; <br>Distributed file systems; <br>Data warehousing applications; <br>High frequency online transaction processing systems; <br>Applications with high IOPS (I/O) requirements. | 
-  
-- Differentiate between various billing options for EC2
-- Summarize benefits of Amazon EC2 Auto Scaling 
-  - 
-- Summarize benefits of Elastic Load Balancing
-- Example uses for Elastic Load Balancing
-- Differences between Amazon Simple Notification Service (SNS) and Simple Queue Service (SOS)
-- Additional AWS compute options 
+### Differentiate between various billing options for EC2
+###  Summarize benefits of Amazon EC2 Auto Scaling 
+### Summarize benefits of Elastic Load Balancing
+### example uses for Elastic Load Balancing
+### Differences between Amazon Simple Notification Service (SNS) and Simple Queue Service (SOS)
+### Additional AWS compute options 
