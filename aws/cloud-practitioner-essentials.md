@@ -43,10 +43,10 @@
   | Instance Family Type | Notes | 
   | -------------------- | ------ | 
   | General purpose | Balanced resources; <br>Diverse workloads; <br>Web servers; <br> Code repos | 
-  | Compute optimized | Compute intesive tasks; <br>Gaming servers; <br>High Performance Computing (HPC); <br>Scientific modeling | 
-  | Memory optimized | self-explanatory | 
-  | Accelearated computing | Floating point number calculations; <br>Graphics processing; <br>Data pattern matching; <br>Utilize hardware accelerators | 
-  | Storage optimized | Workloads that require high performance for locally stored data | 
+  | Compute optimized | Compute intesive tasks; <br>Gaming servers; <br>High Performance Computing (HPC); <br>Scientific modeling; <br>Also useful for batch processing workloads that require processing many transactions in a single group | 
+  | Memory optimized | Designed to deliver fast performance for workloads that process large datasets in memory. <br>High performance database; <br>Workload that involves performing real-time processing of a large amount of unstructured data. | 
+  | Accelearated computing | Floating point number calculations; <br>Graphics processing; <br>Data pattern matching; <br>Utilize hardware accelerators (coprocessors) | 
+  | Storage optimized | Workloads that require high sequential read and write access to large datasets on local storage; <br>Distributed file systems; <br>Data warehousing applications; <br>High frequency online transaction processing systems; <br>Applications with high IOPS (I/O) requirements. | 
   
 - Differentiate between various billing options for EC2
 - Summarize benefits of Amazon EC2 Auto Scaling 
