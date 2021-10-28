@@ -28,9 +28,6 @@
     | Migrate existing applications to the cloud | Increase resource utilization by using app mgmt and virtualization technologies | Integrate cloud-based resources with legacy IT applications | 
     | Design and build new applications in the cloud | Aka "private cloud." | | 
 
-### Definitions
-- **Cloud computing:** The on-demand delivery of IT resources over the internet with pay as you go pricing 
-
 ## Module 2 - Elastic Compute Cloud (EC2)
 - EC2 is enabled by multi-tenancy: sharing underlying hardware between virtual machines (via hypervisor that manages)
 ### Benefits of Elastic Compute Cloud (EC2) 
@@ -114,3 +111,8 @@ Use the AWS Service, `Amazon EC2 Auto scaling` when you want the scaling process
 
 ### Decision flow for containerized apps
 If your usecase is running Docker container-based workloads on AWS, first you need to choose an orchestration tool - *Amazon ECS* or *Amazon EKS*, **THEN** you must choose platform - EC2, which is requires traditional mangement processes or AWS Fartgate, which is a serverless compute service that is managed for you. 
+
+
+### Definitions
+- **Cloud computing:** The on-demand delivery of IT resources over the internet with pay as you go pricing 
+- 
