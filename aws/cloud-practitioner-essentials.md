@@ -85,9 +85,22 @@ Use the AWS Service, `Amazon EC2 Auto scaling` when you want the scaling process
 ### Summarize benefits of Elastic Load Balancing
 - Elastic load balancing helps to automatically redirect/ redistribute/ re-route traffic as resources (including EC2 instances) are auto-scaled
 - Load balancer is an application that takes in requests and routes to instances to be processed. 
-- Elastic Load Balancing (ELB) is an Amazon managed service and is a *regional* contruct. 
-- 
+- Elastic Load Balancing (ELB) is an Amazon managed service and is a *regional* contruct, so the service it provides is highly available, by default
 
-### example uses for Elastic Load Balancing
+### Example uses for Elastic Load Balancing
+- Application hosted on an EC2 instance goes through high demand and low demand periods over time. With auto-scaling configured for this application (auto-scaling is complimentary to ELB, but not the same), ELB acts as the host/ hostess/ director of traffic as resources are scaled up or down. 
+
 ### Differences between Amazon Simple Notification Service (SNS) and Simple Queue Service (SOS)
+- SQS enables you to send, store, and receive messages between software components at any volume, without losing messages or requiring other services to be available. Each message has a *payload* that is protected until delivery. Like mostly all AWS services, AWS manages the underlying infrastructure of SNS so that the service is scaled automatically and is reliable and easy to configure and use. 
+  - SQS can be thought of as a queue or buffer that is a critical component of a loosely coupled system architecture. 
+- SNS can also be used for sending messages to services, but **additionally**, it can send notifications to subscribers, which can be an end user, an endpoint such as an SQS queue, AWS Lamda functions, HTTPS or HTTP web hooks, email addresses, etc. 
+
 ### Additional AWS compute options 
+- "Serverless" means that you cannot see or access the underlying infrastructure or instances that are hosting your application. 
+- Although managing infrastructure on EC2 instance(s) requires significantly less management of resources compared to hosting services on-prem, management processes will still be required (i.e. patching, ensuring high availability, etc.). AWS offers numerous other 'compute services' that abstract the traditional management processes of infrastucture even more. This concept is where the term "serverless" comes from. 
+
+| AWS Service Name | Description | Use Case | 
+| ---------------- | ----------- | -------- | 
+| AWS Lamda | Service to host code that gets triggered upon configurable conditions being met. Designed to complete in 15 minutes or less | Batch processing; not designed for deep learning or extensive code functions | 
+| Amazon Elastic Container Services (ECS) | | | 
+| Amazon Elastic Kubernetes Service | | | 
