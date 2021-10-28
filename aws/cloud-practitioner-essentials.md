@@ -102,5 +102,6 @@ Use the AWS Service, `Amazon EC2 Auto scaling` when you want the scaling process
 | AWS Service Name | Description | Use Case | 
 | ---------------- | ----------- | -------- | 
 | AWS Lamda | Service to host code that gets triggered upon configurable conditions being met. Designed to complete in 15 minutes or less | Batch processing; not designed for deep learning or extensive code functions | 
-| Amazon Elastic Container Services (ECS) | | | 
-| Amazon Elastic Kubernetes Service | | | 
+| Amazon Elastic Container Services (ECS) | Not quite serverless, but provides efficiency and flexibility; <br>Container orchestration tool (Docker). <br>Designed to help run containerized applications at scale <br>Can be hosted on EC2| | 
+| Amazon Elastic Kubernetes Service | Not quite serverless, but provides efficiency and flexibility; <br>Container orchestration tool (Docker) | | 
+| AWS Fartgate | Serverless compute service for ECS or EKS, if you don't want your ECS or EKS to sit on top of EC2 | | 
