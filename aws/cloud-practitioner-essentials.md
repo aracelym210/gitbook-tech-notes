@@ -83,6 +83,11 @@ Use the AWS Service, `Amazon EC2 Auto scaling` when you want the scaling process
 
 
 ### Summarize benefits of Elastic Load Balancing
+- Elastic load balancing helps to automatically redirect/ redistribute/ re-route traffic as resources (including EC2 instances) are auto-scaled
+- Load balancer is an application that takes in requests and routes to instances to be processed. 
+- Elastic Load Balancing (ELB) is an Amazon managed service and is a *regional* contruct. 
+- 
+
 ### example uses for Elastic Load Balancing
 ### Differences between Amazon Simple Notification Service (SNS) and Simple Queue Service (SOS)
 ### Additional AWS compute options 
