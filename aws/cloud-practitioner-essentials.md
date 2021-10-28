@@ -79,7 +79,8 @@ Use the AWS Service, `Amazon EC2 Auto scaling` when you want the scaling process
   - Min capacity
   - Desired capacity 
   - Max capacity 
-  - 
+  - ![image](https://user-images.githubusercontent.com/2760319/139175169-527700af-13b2-470a-87e5-7fd4b8a1a9f8.png)
+
 
 ### Summarize benefits of Elastic Load Balancing
 ### example uses for Elastic Load Balancing
