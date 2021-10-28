@@ -105,3 +105,12 @@ Use the AWS Service, `Amazon EC2 Auto scaling` when you want the scaling process
 | Amazon Elastic Container Services (ECS) | Not quite serverless, but provides efficiency and flexibility; <br>Container orchestration tool (Docker). <br>Designed to help run containerized applications at scale <br>Can be hosted on EC2| | 
 | Amazon Elastic Kubernetes Service | Not quite serverless, but provides efficiency and flexibility; <br>Container orchestration tool (Docker) | | 
 | AWS Fartgate | Serverless compute service for ECS or EKS, if you don't want your ECS or EKS to sit on top of EC2 | | 
+
+### Deciding which Amazon service to use
+| Needs / Wants | Service | 
+| ------------- | -------- | 
+| Host traditional applications <br>Need full OS access (Linux/Windows) | EC2 | 
+| Host short running functions <br>Service-oriented apps <br>Event driven apps <br>No desire/ need to manage underlying environment | AWS Lambda (serverless) | 
+
+### Decision flow for containerized apps
+If your usecase is running Docker container-based workloads on AWS, first you need to choose an orchestration tool - *Amazon ECS* or *Amazon EKS*, **THEN** you must choose platform - EC2, which is requires traditional mangement processes or AWS Fartgate, which is a serverless compute service that is managed for you. 
