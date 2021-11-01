@@ -115,4 +115,23 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 
 ### Definitions
 - **Cloud computing:** The on-demand delivery of IT resources over the internet with pay as you go pricing 
-- 
+
+# Module 3
+- Summarize benefits of AWS Global Infrastructure
+- Describe basic concept of Availability Zones
+- Describe benefits of Amazon cloudFront & edge locatoins 
+- Compare different methods of provisioning AWS services
+
+## AWS global Infrastructure 
+- AWS broken up into regions
+- Traffic does not leave designated AWS region without explicit permission and "delegration," meaning (unless you say so)
+- Four (4) business factors that go into choosing a region
+  -  Compliance 
+  -  Proximity to customers 
+  -  Feature availability/ Available services within a region 
+  -  Pricing: each region has it's own price sheet
+
+## Availability Zones 
+- Each availibilty zone is one or more data centers with redundant power, networking and connectivity
+- Located 10s of miles apart from each other, which allows for low latency (single ms)
+- Regional services, are by default, highly available  
