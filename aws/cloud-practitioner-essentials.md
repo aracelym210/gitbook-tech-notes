@@ -153,3 +153,23 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
   - Storage
   - Databases
   - Machine learning 
+
+
+# Module 4 (AWS Networking)
+- Objectives 
+  -  Describe basic concepts of networking
+  -  Describe difference between public and private networking resources
+  -  Explain virtual private gateway 
+  -  Explain a virtual private network (VPN)
+  -  Describe benefit of AWS Direct Connect
+  -  Describe benefit of hybrid deployments
+  -  Describe the layers of security used in an IT strategy
+  -  Describe the services customers use to interact with the AWS global network 
+
+## Connectivity to AWS
+- A **Virtual Private Cloud (VPC)** is essnetially your own private network within AWS. EC2 instances and other instances are placed into VPCs with various subnets 
+- Public facing resources 
+  -  Internet gateway is used to allow traffic from internet to internet facing services 
+-  Private resources 
+  -  A Virtual Private Gateway allows only traffic from certain internet addresses to access your VPC. For example, only traffic from your on-premises data center 
+  -  AWS direct connect allows the creation of a completely private, fiber connection, from data center to AWS. Work with data provider in area   
