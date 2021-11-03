@@ -135,3 +135,21 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 - Each availibilty zone is one or more data centers with redundant power, networking and connectivity
 - Located 10s of miles apart from each other, which allows for low latency (single ms)
 - Regional services, are by default, highly available  
+
+## Edge Locations
+- Content Delivery Network - CDN = Amazon Cloudfront 
+- An **edge location** is a site that Amazon Cloudfront uses to store cached copies of content closer to customers for faster delivery
+- Helps to deliver data to edge locations to accelerate communication and content delivery
+- AWS outposts
+
+## How to provision AWS resources
+- All AWS interaction is API calls
+- AWS Mgmt console - browser based; manage resources visually; point and click 
+- AWS CLI - make API calls using terminal on local machine; more scriptable
+- AWS Software Development Kits (SDKs) - interact with AWS resources using various programming languages 
+- AWS Elastic Beanstalk - provide code and config settings, and EBS deploys resources
+- AWS Cloud Formation - Create automated, repeatable deployments; Infrastructure as Code; JSON or YAML cloud formation, declarative formats. Manages API calls.
+  - EC2
+  - Storage
+  - Databases
+  - Machine learning 
