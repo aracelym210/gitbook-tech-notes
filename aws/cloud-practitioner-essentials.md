@@ -140,7 +140,7 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 - Content Delivery Network - CDN = Amazon Cloudfront 
 - An **edge location** is a site that Amazon Cloudfront uses to store cached copies of content closer to customers for faster delivery
 - Helps to deliver data to edge locations to accelerate communication and content delivery
-- AWS outposts
+- AWS outposts are used to extend AWS infrastructure and services to on-prem data center
 
 ## How to provision AWS resources
 - All AWS interaction is API calls
