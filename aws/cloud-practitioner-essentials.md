@@ -167,9 +167,38 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
   -  Describe the services customers use to interact with the AWS global network 
 
 ## Connectivity to AWS
-- A **Virtual Private Cloud (VPC)** is essnetially your own private network within AWS. EC2 instances and other instances are placed into VPCs with various subnets 
+- A **Virtual Private Cloud (VPC)** is an AWS networking service that can be used to establish boundaries around AWS resources. It is essentially your own private network within AWS. EC2 instances and other instances are placed into VPCs with various subnets.
 - Public facing resources 
   -  Internet gateway is used to allow traffic from internet to internet facing services 
 -  Private resources 
   -  A Virtual Private Gateway allows only traffic from certain internet addresses to access your VPC. For example, only traffic from your on-premises data center 
   -  AWS direct connect allows the creation of a completely private, fiber connection, from data center to AWS. Work with data provider in area   
+
+## Subnets and network access control lists
+- Subnets are used to separate areas within a Virtual Private Cloud (VPC) to group resources together.
+- ![image](https://user-images.githubusercontent.com/2760319/140250205-9795509d-3c7e-47db-9808-e77f1140efcb.png)
+- ![image](https://user-images.githubusercontent.com/2760319/140250999-a9615b7b-ebdc-4475-985f-4b03524eabdc.png)
+
+
+### Network hardening
+- **Network ACLs (NACL)** check packets crossing in and out of subnets, which can be used to separate resources that are allowed to access the internet and those that are not allowed.
+  - Controls inbound/ outbound traffic at the subnet level
+  - Default network ACL allows all inbound and outbound traffic; all custom nacl's deny all inbound/ outbound traffic unless explicitly allowed
+  - Stateless packet filtering 
+- **Security groups** provide instance level network security (i.e. two EC2 instances within the same subnet)
+  - Default SG denies all inbound traffic and allows all outbound traffic
+  - Stateful packet filtering 
+
+## Global networking
+### Route 53
+- AWS DNS service 
+  - Highly available and scalable 
+- Route 53 policies
+  - Latency-based routing
+  - Geolocation DNS
+  - Geoproximity routing
+  - Weighted round robin
+### Amazon CloudFront
+- Amazon CDN
+  - A **content delivery network (CDN)** is a network that delivers edge content to users based on their geographic location 
+  - 
