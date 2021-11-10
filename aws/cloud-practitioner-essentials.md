@@ -290,3 +290,23 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 5. Oracle Database
 6. Micrsoft SQL Server 
 
+## Amazon DynamoDB
+- Serverless database 
+  - `Serverless = -harware provisioning - patching - server management`
+- Non-relational/ NoSQL DB
+  - Structures other than rows and columns to organize data 
+  - Key-value pair
+- Millisecond response time 
+- Fully managed
+- Highly scalable 
+
+## Comparing RDS with DynamoDB
+
+| Amazon RDS | | Amazon DynamoDB | 
+| ------------ | ---------------- | 
+| Automatic HA recovery | NoSQL | 
+| Customer ownership of data | Key-value pair | 
+| Customer ownership of schema | Massive throughput capabilities | 
+| Customer controls network | Petabyte (PB) size potential | 
+| | Granular API access | 
+| Built for business analytics | Can be used for anything else | 
