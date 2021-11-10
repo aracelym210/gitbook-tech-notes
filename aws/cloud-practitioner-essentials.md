@@ -256,3 +256,14 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 | S3 | EBS | 
 | Treats a file as a complete, discrete object | | 
 | If a file is editted, the entire file needs to be re-uploaded | Only bits that are editted are modified | 
+
+## Amazon Elastic File System (EFS) 
+- *File storage* is a storage system in which multiple clients (users, apps, servers, etc.) can access data that is stored in shared file folders.
+  - This is achieved with a storage server using block storae with a local file system
+- Ideal for use cases which a large number of services and resources need to access the same data at the same time
+- *EFS* is a scalable file system used with AWS cloud services and on-prem resources. 
+
+| EBS | EFS | 
+| ----- | ------ | 
+| Stores data in a single AZ | Regional service <br>Data is stored across multiple AZs |
+| Attaches to EC2 instance, which must reside in the same AZ as the EBS volume | Can access data from all AZs in the region where a file system is located. | 
