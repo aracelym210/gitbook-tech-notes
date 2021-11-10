@@ -201,4 +201,43 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 ### Amazon CloudFront
 - Amazon CDN
   - A **content delivery network (CDN)** is a network that delivers edge content to users based on their geographic location 
-  - 
+
+# Module 5 (Storage and Databases)
+- Summarize the basic concept of storage and databases
+- Describe the benefits of Amazon Elastic Block Store (Amazon EBS)
+- Describe the benefits of Amazon Simple Storage Service (Amazon S3)
+- Describe the benefits of Amazon Elastic File System (Amazon EFS)
+- Summarize various storage solutions 
+- Describe the benefits of Amazon Relational Database Service (Amazon RDS)
+- Describe the benefits of Amazon DynamoDB
+- Summarize various database services 
+
+## Amazon Elastic Block Store (EBS)
+- *Block level storage* is a place to store files (bytes stored to blocks on disk)
+- An *instance store* provides temporarly block level storage for Amazon EC2 instance. 
+  - EC2 instance storage is ephemeral, and when the instance is spun down, whatever is stored to disk may be lost. 
+  - AWS recommends instance stores for use cases that involve temporary data that is not needed in the long term
+- *EBS volumes* are separate drives from separate instance store volumes that can be attached and used with an EC2 instance.
+  - Data stored on EBS volumes will persist if the EC2 instance is stopped and restarted
+  - Backups are extremely important, and incremental backups can be taken via *Amazon EBS snapshots*
+
+## Amazon Simple Storage Service (S3)
+- S3 is a service that provides *object level storage* (contrast with instance/ block level)
+- Data is stored as *objects*, and objects are stored in buckets 
+  - `Object = data + metadata + key`
+  - Example: `Object = image file + img metadata + unique id`
+- Max upload 5TB
+- Version control
+- Static website hosting on S3
+- Set permissions to control visibility and access to S3 files and buckets 
+
+### Amazon S3 storage classes 
+| Class Name | Use Case | Notes | 
+| ---------- | --------- | -------- |
+| S3 Standard | Desined for frequently accessed data <br>Stores data in min. 3 AZs <br>Websites, content distribution, data analytics | High avail. Higher cost than other storage classes intended for infrequently accessed data and archival storage | 
+| S3 Standard-Infrequent access (S3 Standard IA) | Infrequently accessed data | Lower storage price, higher retrieval price from S3 standard. <br>Stores in min. 3 AZs | 
+| S3 One Zone-Infrequent Access (S3 One Zone-IA) | Only stores in one AZ. <br>Lower storage price than S3 std IA. | Use this when you want to save costs on storage, or you can easily reproduce your data in the event of an AZ failure | 
+| S3 Intelligent-Tiering | Ideal for data with unknown or changing access patterns <br>Requires small monthly monitoring and autoation fee per object | S3 monitors objects' access patterns and moves objects based on observations | 
+| S3 Glacier | Low-cost storage designed for archiving. <br>Objects can be retrieved within a few minutes to hours | Example usecases include archived customer records or older photos and video files | 
+| S3 Glacier Deep Archive | Lowest-cost storage designed for archiving. <br>Objects can be retrieved within 12 hours | Example usecases include archived customer records or older photos and video files | 
+
