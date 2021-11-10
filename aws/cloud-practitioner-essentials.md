@@ -339,3 +339,73 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 - Amazon Elasticache
 - Amazon DynamoDB Accelerator 
 
+# Module 6 (Security)
+- Explain the benefits of the shared responsibility model
+- Describe multi-factor authentication (MFA)
+- Differentiate between AWS Identity and Access Management (IAM) security levels 
+- Explain the main benefits of AWS Organization
+- Describe security policies at a basic level
+- Summarize the benefits of compliance with AWS
+- Explain additional AWS security services at a basic level
+
+## Shared Responsibility Model
+![image](https://user-images.githubusercontent.com/2760319/141129640-51f1520f-04db-4e12-95ad-778f6b755e1e.png)
+- AWS responsible for the security "of" the cloud
+  - Physical
+  - Network
+  - Hypervisor
+- Customer responsible for security "in" the cloud 
+  - Operating System
+  - Application
+  - Data 
+
+## User permissions and access
+### AWS account root user 
+- Owner of the AWS account and has permissions to do whatever they want/ interact with any resouces 
+  -  It is recommended to not use the root account for every day tasks
+  -  MFA *highly* recommended for root user access
+### AWS Identity and Access Management (IAM) Service
+- AWS service to control access to resources in a granular way
+### IAM User 
+- Identity that can be created in AWS
+- Accounts can be created and explicity grant permissions to users 
+  - All permissions are denied by default, and must be explicitly granted
+  - Least privilege model
+- IAM policies are associated to users
+  - JSON document that states permissions 
+  ```
+  {
+    "version": "2021-11-09",
+    "Statement": {
+      "Effect": "Allow",
+      "Action": "s3:ListBucket",
+      "Resource": "arn:aws:::coffee_shop_reports"
+    }
+  }
+  ```
+### IAM Groups
+- Collection of users 
+- Eases the burden of managing permissions for individual IAM users 
+### IAM Roles 
+- Identities in IAM which can be assumed for temporary amounts of time
+  - No username and password
+  - Temp permissions 
+  - *It is best practice to use roles for **temporary** access to services or resources, and not to be used long term*.
+
+## AWS Organizations 
+- **root** is the parent container for all accouns in an org
+- AWS service that is a central organization to manage multiple AWS accounts 
+- Billing, access, compliance, and resource sharing can be managed here
+- Centralized managment of AWS accounts 
+- Consolidated billing for all member accounts 
+- Hierarchal grouping of accounts (similar to Organizational Units (OUs)
+  - Good for managing accounts with similar business or security reqs
+- AWS services and API actions access control 
+- Service control policies 
+  - Policies that restrict services, resources, and individual API actions that can be accessed in each member account   
+  - Can be applied to an individual member **account** or an **organizational unit**
+  - Although this is *similiar* to an IAM policies, there is a difference because IAM policies are applied to IAM users, groups or roles.
+![image](https://user-images.githubusercontent.com/2760319/141137885-1b9ad07f-1169-4887-8ef8-26317a1911bb.png)
+![image](https://user-images.githubusercontent.com/2760319/141137929-e3b52bd2-0493-48a8-9123-eadc84dce2d4.png)
+![image](https://user-images.githubusercontent.com/2760319/141137996-c9af38ac-4aa4-4f26-a70f-b49802f59882.png)
+
