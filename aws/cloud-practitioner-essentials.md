@@ -252,6 +252,7 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 | | Serverless | 
 
 | Object Storage | Block Level Storage | 
+| -------------- | ------------------- |
 | S3 | EBS | 
 | Treats a file as a complete, discrete object | | 
 | If a file is editted, the entire file needs to be re-uploaded | Only bits that are editted are modified | 
