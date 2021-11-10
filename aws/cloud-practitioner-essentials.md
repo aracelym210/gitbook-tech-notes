@@ -328,3 +328,14 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 | -------------- | ------------ | 
 | Homogenous | Src and target DB are the same type | 
 | Heterogeneous | Src and Dst DB are different types of DB. <br>2 step process | 
+
+## Additional AWS DB
+- Amazon DocumentDB: Good for content management, catalogs
+- Amazon Neptune: Graph database for social networking, reocmmendation engines, fraud detection 
+- Amazon Managed Blockchain
+- Amazon Quantum Ledger Database: Immutable 
+
+### DB accelerator 
+- Amazon Elasticache
+- Amazon DynamoDB Accelerator 
+
