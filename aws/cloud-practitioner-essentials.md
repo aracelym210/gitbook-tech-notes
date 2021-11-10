@@ -267,3 +267,26 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 | ----- | ------ | 
 | Stores data in a single AZ | Regional service <br>Data is stored across multiple AZs |
 | Attaches to EC2 instance, which must reside in the same AZ as the EBS volume | Can access data from all AZs in the region where a file system is located. | 
+
+## Amazon Relational Database Service 
+- Amazon RDS is a an AWS service that enables you to run relational databases in the AWS Cloud
+- Automates tasks such as:
+  - Hardware provisioning 
+  - Database setup
+  - Patching 
+  - Backups 
+- Security options include
+  - Encryption at rest 
+  - Encryption in transit 
+
+### RDS database engines 
+1. Amazon Aurora 
+  - Compatible w/ MySQL and PostgreSQL. Faster than standard MySQL and PostgreSQL 
+  - Reduce DB cost by reducing unnecessary I/O operations 
+  - Should be considered if workloads require HA, as it replicates sixe copies of data across three AZs, and continuously backs up data to S3
+2. PostgreSQL
+3. MySQL
+4. MariaDB
+5. Oracle Database
+6. Micrsoft SQL Server 
+
