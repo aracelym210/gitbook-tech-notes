@@ -241,3 +241,17 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 | S3 Glacier | Low-cost storage designed for archiving. <br>Objects can be retrieved within a few minutes to hours | Example usecases include archived customer records or older photos and video files | 
 | S3 Glacier Deep Archive | Lowest-cost storage designed for archiving. <br>Objects can be retrieved within 12 hours | Example usecases include archived customer records or older photos and video files | 
 
+## Amazon EBS and S3 Comparison
+| Elastic Block Storage | Simple Storage Service | 
+| --------------------- | ---------------------- | 
+| Up to 16 TiB | Unlimited storage| 
+| Survives termination of EC2 instance | Max object size of 5TB | 
+| SSD by default | Write once/ read many (WORM) | 
+| HDD options | "11 9s" durrability.  (Highly available) | 
+| | Web enabled with access rights controlled | 
+| | Serverless | 
+
+| Object Storage | Block Level Storage | 
+| S3 | EBS | 
+| Treats a file as a complete, discrete object | | 
+| If a file is editted, the entire file needs to be re-uploaded | Only bits that are editted are modified | 
