@@ -302,7 +302,7 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 
 ## Comparing RDS with DynamoDB
 
-| Amazon RDS | | Amazon DynamoDB | 
+| Amazon RDS | Amazon DynamoDB | 
 | ------------ | ---------------- | 
 | Automatic HA recovery | NoSQL | 
 | Customer ownership of data | Key-value pair | 
