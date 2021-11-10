@@ -310,3 +310,21 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 | Customer controls network | Petabyte (PB) size potential | 
 | | Granular API access | 
 | Built for business analytics | Can be used for anything else | 
+
+## Amazon Redshift 
+- *Data warehouses* historical analytics 
+- Data warehouse as a service 
+- Redshift is a data warehousing service that can be used for big data analytics. It can collect data from many sources to help understand relationships and trends across data 
+
+## AWS Database Migration Service (DMS)
+- Helps customers migrate databases to AWS in a safe, secure way
+- Source DB remains fully operational during migrations
+- Other use-cases 
+  - Development and test DB migration
+  - DB consolidation
+  - Continuous db replication
+
+| Migration Type | | 
+| -------------- | ------------ | 
+| Homogenous | Src and target DB are the same type | 
+| Heterogeneous | Src and Dst DB are different types of DB. <br>2 step process | 
