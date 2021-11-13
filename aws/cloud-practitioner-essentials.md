@@ -409,3 +409,10 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 ![image](https://user-images.githubusercontent.com/2760319/141137929-e3b52bd2-0493-48a8-9123-eadc84dce2d4.png)
 ![image](https://user-images.githubusercontent.com/2760319/141137996-c9af38ac-4aa4-4f26-a70f-b49802f59882.png)
 
+## Compliance 
+- AWS Artifact is a service that provides on-demand access to AWS Security and compliance reports
+  - AWS Artifact agreements: review, accept, and manage agreements for an individual account and for all accounts in AWS organizations. Agreements are offers to address customers who are subject to specific regulations such as HIPPA
+  - AWS Artifact reports provide compliance reports from 3rd party auditors 
+- **Customer compliance center** contains AWS compliance resources 
+- 
+
