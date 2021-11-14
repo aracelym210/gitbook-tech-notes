@@ -477,3 +477,43 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
   - Orange triangle = Problem found and **investigation** is recommended
   - Green checkbox = No problems found 
 
+# Module 8 (Pricing and Support)
+## AWS Free Tier
+3 ways to try out free services with AWS 
+- Always free (does not expire)
+  - AWS Lambda -- if run less than 1 million times per month, this service is free 
+  - SageMaker
+  - Comprehend Medical
+  - Dynamo DB -- allows 25 GB of free storage per month
+  - SNS
+  - Cognito
+- 12 months free
+- Trials 
+  - Deploy application stacks, offering 1 month trial of up to 750 hours of usage 
+## AWS pricing concepts 
+### How AWS Pricing Works 
+- **Pay for what you use:** For each service, pay for exactly the amount of resources that are actually used, without requiring long-term contracts or complex licensing 
+- **Pay less when you reserve:** Some services offer reservation options that provide a significant discount compared to On-demand instance pricing 
+- **Pay less with volume-based discounts when you use more:** Some services offer tiered pricing, so per-unit cost is incrementally lower with increased usage (i.e. you pay less per GB with increase usage of S3 bucket)
+### AWS Pricing calculator 
+- Let's you explore AWS services and create an estimate for the cost of your usecases in AWS.
+- Estimates can be organized into groups 
+- Links can be shared to share pricing estimates 
+### AWS Pricing Examples 
+#### Aws Lambda 
+- Charged based on the number of requests for functions and the time it takes them to run 
+- 1 million free request and up to 3.2 million seconds of free compute time per month 
+- Save on costs by signing up for Compute Savings Plans 
+  - Lower compute costs in exchange for committing to a consistent amount of usage over a 1-year or 3-year term  (i.e. _paying less when you reserve_)
+#### Amazon EC2 
+- Pay only for the compute time that is used while instances are running 
+#### Amazon S3
+Cost components:
+- Storage
+- Requests and data retrievals: You pay for requests made to S3 objects and buckets 
+- Data transfer 
+- Management and replication: i.e. S3 inventory, analytics, and object tagging 
+## AWS Billing Dashboard 
+- From the AWS Management Console, search for billing and select 
+- 
+
