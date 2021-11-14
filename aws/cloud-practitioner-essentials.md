@@ -416,3 +416,33 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
 - **Customer compliance center** contains AWS compliance resources 
 - 
 
+## DDOS
+- Objective is to shutdown application's ability to function by overwhelming the capacity to the point where it can no longer operate 
+- **UDP Flood** - Attacker gives a false return address (victim) address to a legitimate service request (i.e. weather)
+  - AWS solution - Security groups which only allow in proper request traffic. SG's are AWS network level protection, not EC2 where application sits 
+- **HTTP Level Attacks** 
+- **SLOWORIS Attack** - Attacker pretends to have an extremely slow connection, creating a large queue and preventing other customers from accessing the application 
+  - AWS solution - Elastic Load Balancing 
+
+### AWS Shield with AWS WAF (Web Application Firewall) 
+- Machine learning and signatures 
+- WAF uses web access control lists to protect AWS resources 
+- **AWS Shield Std** protects all AWS customers at no extra cost. AWS shield uses a variety of analysis techniques to detect malicious traffic in real time and automatically mitigate it 
+- **AWS Shield Advanced** paid AWS service that provides detailed attack diagnostics and integrates with other services such as CloudFront, Route53, ELB. 
+
+## Additional security services 
+- Encryption at rest 
+- Encryption in transit 
+### Amazon Key Management Service (KMS)
+- Enables user to perform encryption operations through cryptographic keys. Create, manage, and use keys, and control the use of the keys across a wide range of services 
+
+### AWS Inspector
+- Runs automated assessments to monitor to detect deviations from security best practices. A prioritized report is returned with a detailed list of security findings and recommendations to fix.
+- Requires 3 things: 
+  - Network configuration reachability piece
+  - Amazon agent (can be installed on EC2 instances) 
+  - Security assessment service 
+ ### Amazon Guard duty 
+ - Analyzes metadata (cloudTrail events, VPC flow logs, and Route53 logs) 
+ - Runs independently from other services so as to not affect others 
+ - Amazon guard duty can be interated with AWS Lambda to take remediation steps in response to GuardDuty's findings 
