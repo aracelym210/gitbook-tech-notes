@@ -446,3 +446,34 @@ If your usecase is running Docker container-based workloads on AWS, first you ne
  - Analyzes metadata (cloudTrail events, VPC flow logs, and Route53 logs) 
  - Runs independently from other services so as to not affect others 
  - Amazon guard duty can be interated with AWS Lambda to take remediation steps in response to GuardDuty's findings 
+
+# Module 7 (Monitoring and analytics)
+## Amazon CloudWatch 
+- Allows you to monitor infrastructure and applications in real time 
+- Custom metrics can be created using a **cloudwatch alarm**, which can be integrated with SNS to send a notification
+- Dashboard feature 
+### CloudWatch Benefits 
+- Access all metrics from a central location 
+- Gain visibility into applications, infrastructure and services 
+- Reduce Mean Time to Resolution and improve Total Cost to Ownership 
+- Drive insights to optimize applications and operational resources 
+## AWS CloudTrail
+- Comprehensive API auditting tool (this works because every action in AWS is a programmatic API call) 
+- Events are typtically updated in CloudTrail within 15 minutes after the action was taken
+- ![image](https://user-images.githubusercontent.com/2760319/141688483-6f9ed814-1820-4048-bf5f-b6d4713b8409.png)
+### CloudTrail Insights 
+- Optional feature that allows CloudTrail to automatically detect unusual API activities in your AWS acct 
+## AWS Trusted Advisor 
+- AWS web service that inspects your AWS environment and provides real-time recommendations in accordance with AWS best practices. 
+- Compares it's findings to best practices in the five following categories:
+  - Cost
+  - Optimization
+  - Performance
+  - Security
+  - Fault tolerance 
+  - Service Limits 
+- Findings categories 
+  - Red circle = Problem found and **action** is recommended 
+  - Orange triangle = Problem found and **investigation** is recommended
+  - Green checkbox = No problems found 
+
