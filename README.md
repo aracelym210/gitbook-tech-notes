@@ -1,6 +1,12 @@
 # cheat-sheets
 This repository hosts cheat-sheets and personal notes on various topics I learn about. 
 
+# Cloud
+## AWS
+
+## GCP (Google)
+
+
 # Python
 ## Pandas 
 - [Creating a Pandas dataframe](https://github.com/tejana-tech/cheat-sheets/blob/main/pandas_create-dataframes.md)
