@@ -1,4 +1,4 @@
-# cheat-sheets
+# Cheat Sheets
 This repository hosts cheat-sheets and personal notes on various topics I learn about. 
 
 ## Cloud
