@@ -220,6 +220,11 @@ class Customer:
     $Diagnostic printout
     print("__eq__() is called.")
     
-    return (self.id == other.id) and \
-           (self.name == other.name)
+    #  Check that objects are the same type of Class
+    if type(self) == type(other):
+      return (self.id == other.id) and \
+             (self.name == other.name)
+    else:
+      return False
 ```
+- When using our overloaded __eq__() method, it's a good idea to add a check to make sure the objects that are being compared are the same type of Class. 
