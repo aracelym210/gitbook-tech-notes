@@ -228,3 +228,4 @@ class Customer:
       return False
 ```
 - When using our overloaded __eq__() method, it's a good idea to add a check to make sure the objects that are being compared are the same type of Class. 
+- Python always calls the child's __eq__() method when comparing a child object to a parent object.
