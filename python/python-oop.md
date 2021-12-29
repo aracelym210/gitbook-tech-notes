@@ -261,3 +261,8 @@ class Customer:
 | ------- | -------- | 
 | `__str__()` | executed when `print()` is called on an object. Considered "informal" | 
 | `__repr__()` | executed when `repr()` is called. Mainly used by developers. | 
+
+# Exceptions and Exception handling 
+- `try` - `except` - `finally`
+- Exceptions are classes. See [Python documentation for more information](https://docs.python.org/3/library/exceptions.html)
+  - standard exceptions inherited from `BaseException` or `Exception`
