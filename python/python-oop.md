@@ -247,6 +247,10 @@ class Customer:
    """.format(name = self.name \ 
               balance = self.balance)
    return cust_str
+   
+  #  if __str__() was not defined, print() would default to __repr__()
+  def __repr__(self):
+    return "Customer({id}, '{name}', {balance})".format(id = self.id, name = self.name, balance = self.balance)
 ```
 - When using our overloaded __eq__() method, it's a good idea to add a check to make sure the objects that are being compared are the same type of Class. 
 - Python always calls the child's __eq__() method when comparing a child object to a parent object.
