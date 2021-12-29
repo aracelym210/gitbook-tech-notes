@@ -254,6 +254,7 @@ class Customer:
 ```
 - When using our overloaded __eq__() method, it's a good idea to add a check to make sure the objects that are being compared are the same type of Class. 
 - Python always calls the child's __eq__() method when comparing a child object to a parent object.
+- You should always define at least one of the string representation methods (`__str__()` or `__repr__()` for your object to make sure that the person using your class can get important information about the object easily.
 
 ## More methods to overload in a Class object
 | Method | Usecase | 
