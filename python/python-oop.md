@@ -206,9 +206,10 @@ class CheckingAccount(BankAccount):
 ```
 
 # Operator overloading: comparison
-- creating two objects of the same class, with the same data, will return as `False` if you attempt to check if they are equal to each other. This is because the variable that is storing the class object is just storing a reference point to the memory location where the data is stored. 
+- creating two objects of the same class, with the same data, will return as `False` if you attempt to check if they are equal to each other. This is because the variable that is storing the class object is just storing a _reference point to the memory location_ where the data is stored. 
+- After overloading the `__eq__()` constructor with the example code from below, comparing two objects that share the same values will return an expected outcome
 
-### Example - Overloading __eq()__
+### Example - Overloading __eq__()
 ```python
 class Customer:
   def __init__(self, id, name):
@@ -217,8 +218,8 @@ class Customer:
   # Will be called when == is used
   def __eq__(self, other):
     $Diagnostic printout
-    print("__eq()__ is called.
+    print("__eq__() is called.")
     
     return (self.id == other.id) and \
-           (self.name ==other.name)
+           (self.name == other.name)
 ```
