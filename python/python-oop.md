@@ -206,6 +206,16 @@ class CheckingAccount(BankAccount):
 ```
 
 # Operator overloading: comparison
+## Comparison operators
+| Operator | Method | 
+| -------- | ------ | 
+| `==` | `__eq__()` | 
+| `!=` | `__ne__()` | 
+| `>=` | `__ge__()` | 
+| `<=` | `__le__()` | 
+| `>` | `__gt__()` | 
+| `<` | `__lt__()` | 
+
 - creating two objects of the same class, with the same data, will return as `False` if you attempt to check if they are equal to each other. This is because the variable that is storing the class object is just storing a _reference point to the memory location_ where the data is stored. 
 - After overloading the `__eq__()` constructor with the example code from below, comparing two objects that share the same values will return an expected outcome
 
@@ -229,3 +239,9 @@ class Customer:
 ```
 - When using our overloaded __eq__() method, it's a good idea to add a check to make sure the objects that are being compared are the same type of Class. 
 - Python always calls the child's __eq__() method when comparing a child object to a parent object.
+
+## More methods to overload in a Class object
+| Method | Usecase | 
+| ------- | -------- | 
+| `__str__()` | executed when `print()` is called on an object. Considered "informal" | 
+| `__repr__()` | executed when `repr()` is called. Mainly used by developers. | 
