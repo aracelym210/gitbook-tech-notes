@@ -222,8 +222,10 @@ class CheckingAccount(BankAccount):
 ### Example - Overloading __eq__()
 ```python
 class Customer:
-  def __init__(self, id, name):
-    self.id, self.name = id, name
+  def __init__(self, id, name, balance):
+    self.id = id
+    self.name = name
+    self.balance = balance
     
   # Will be called when == is used
   def __eq__(self, other):
@@ -236,6 +238,15 @@ class Customer:
              (self.name == other.name)
     else:
       return False
+  
+  def __str__(self):
+    cust_str = """
+    Customer: 
+      name: {name}
+      balance: {balance}
+   """.format(name = self.name \ 
+              balance = self.balance)
+   return cust_str
 ```
 - When using our overloaded __eq__() method, it's a good idea to add a check to make sure the objects that are being compared are the same type of Class. 
 - Python always calls the child's __eq__() method when comparing a child object to a parent object.
