@@ -266,3 +266,20 @@ class Customer:
 - `try` - `except` - `finally`
 - Exceptions are classes. See [Python documentation for more information](https://docs.python.org/3/library/exceptions.html)
   - standard exceptions inherited from `BaseException` or `Exception`
+### Raising exceptions 
+- Sometimes we may want to have more control over the errors that may arise when our code is being used. This is what the `raise` keyword is for. 
+- `raise ExceptionNameHere('Error message here')`
+- The user of the code can then handle the error using `try / except` blocks 
+### Custom exceptions 
+- To define a custom Exception, create a class that inherits from the `Exception Class` or one of the subclasses 
+```python
+class BalanceError(Exception): pass 
+
+class Customer:
+  def __init__(self, name, balance):
+    if balance < 0: 
+      raise BalanceError("Balance has to be non-negative!")
+    else:
+      self.name, self.balance = name, balance 
+     
+```
