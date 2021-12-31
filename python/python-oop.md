@@ -283,3 +283,16 @@ class Customer:
       self.name, self.balance = name, balance 
      
 ```
+### Parent/ child Exception classes (inheritance)
+- It's better to include an except block for a child exception before the block for a parent exception, otherwise the child exceptions will be always be caught in the parent block, and the except block for the child will never be executed.
+
+# Designing for Inheritance and Polymorphism
+- When designing a Class, principles and best practices regarding inheritance and polymoprphism should come to mind 
+- _Polymorphism_: Using a unified interface to operate on objects of different classes (think, subclasses).
+  -   Example: `class BankAccount:` and two classes that inherit from `BankAccount` - `class CheckingAccount(BankAccount):` and `class SavingsAccount(BankAccount):`. Instead of having two `account_withdraw()` methods in each subclass, one method can be defined in BankAccount class, thus providing a unified interface to operate on different banking class objects.
+- The ___Liskov substitution principle___ is a fundamental oop design princple that provides guidance on _when and how_ to use inheritance properly. Named after Computer Scientist, Barbara Liskov. 
+    > "Base class should be interchangable with any of it's subclasses without altering and properties of the program."
+  - Liskov substitution princple should be true both 
+    - __Syntactically__: Methods in the subclass should have a signature with parameters and returned values compatible with the method in the parent class.
+    - __Semantically__ The state of objects also must stay consistent; the subclass method shouldn't rely on stronger input conditions, should not provide weaker output conditions, it should not throw additional exceptions and so on.
+  - Example: Anywhere a `BankAccount` object is used, we should be able to change that object to a `CheckingAccount` object and not have to change any properties of the code. It should work as is. 
