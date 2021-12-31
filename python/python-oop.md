@@ -291,8 +291,26 @@ class Customer:
 - _Polymorphism_: Using a unified interface to operate on objects of different classes (think, subclasses).
   -   Example: `class BankAccount:` and two classes that inherit from `BankAccount` - `class CheckingAccount(BankAccount):` and `class SavingsAccount(BankAccount):`. Instead of having two `account_withdraw()` methods in each subclass, one method can be defined in BankAccount class, thus providing a unified interface to operate on different banking class objects.
 - The ___Liskov substitution principle___ is a fundamental oop design princple that provides guidance on _when and how_ to use inheritance properly. Named after Computer Scientist, Barbara Liskov. 
+
     > "Base class should be interchangable with any of it's subclasses without altering and properties of the program."
-  - Liskov substitution princple should be true both 
+  - Liskov substitution princple (LSP) should be true both 
     - __Syntactically__: Methods in the subclass should have a signature with parameters and returned values compatible with the method in the parent class.
     - __Semantically__ The state of objects also must stay consistent; the subclass method shouldn't rely on stronger input conditions, should not provide weaker output conditions, it should not throw additional exceptions and so on.
   - Example: Anywhere a `BankAccount` object is used, we should be able to change that object to a `CheckingAccount` object and not have to change any properties of the code. It should work as is. 
+
+## Violations of Liskov Substitution Principle (LSP)
+__Syntactic incompatability__
+- `BankAccount.withdraw()` requires 1 parameter but `CheckingAccount.withdraw()` requires two. Thus, we could not substitute the parent class for the child class.
+
+__Subclass strengthenting input conditions__
+- `BankAccount.withdraw()` accepts any amount but `CheckingAccount.withdraw()` assumes that the amount is limited 
+
+__Subclass weakening output conditions__
+- `BankAccount.withdraw()` can only leave a positive balance or throw an error, but `CheckingAccount.withdraw()` can have a negative balance
+
+__Changing additional attributes in a subclass method__ 
+__Throwing additional exceptions in a subclass that the base class does not throw__
+
+## Cicle-ellipse problem
+- The [circle-ellipse problem](https://en.wikipedia.org/wiki/Circle%E2%80%93ellipse_problem) is a classic example in software development, that illustrates a violation of the LSP. This is sometimes called the square-rectangle problem.
+
