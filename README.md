@@ -12,6 +12,8 @@ This repository hosts cheat-sheets and personal notes on various topics I learn 
 - [Docker](https://github.com/txmx13/cheat-sheets/blob/main/docker/docker.md)
 
 ## Python
+### Programming Concepts 
+- [Object oriented programming with Python](https://github.com/txmx13/cheat-sheets/blob/main/python/python-oop.md)
 ### Pandas 
 - [Creating a Pandas dataframe](https://github.com/txmx13/cheat-sheets/blob/main/python/pandas_create-dataframes.md)
 - [Slicing and subsetting](https://github.com/txmx13/cheat-sheets/blob/main/python/pandas_slice-subset.MD)
