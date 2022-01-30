@@ -30,3 +30,6 @@
 * [About](operating-systems/about.md)
 * [Process Management](operating-systems/process-management/README.md)
   * [🔀 Context Switching](operating-systems/process-management/context-switching.md)
+  * [Interprocess Communication](operating-systems/process-management/interprocess-communication/README.md)
+    * [Shared Memory IPC](operating-systems/process-management/interprocess-communication/shared-memory-ipc.md)
+    * [📬 Message Passing](operating-systems/process-management/interprocess-communication/message-passing.md)
