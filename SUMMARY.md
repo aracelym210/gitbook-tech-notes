@@ -33,3 +33,4 @@
   * [Interprocess Communication](operating-systems/process-management/interprocess-communication/README.md)
     * [Shared Memory IPC](operating-systems/process-management/interprocess-communication/shared-memory-ipc.md)
     * [📬 Message Passing](operating-systems/process-management/interprocess-communication/message-passing.md)
+  * [Mind Map](operating-systems/process-management/mind-map.md)
