@@ -18,7 +18,7 @@
 * [🐍 Python](programming-languages/python/README.md)
   * [📊 Matplotlib](programming-languages/python/matplotlib/README.md)
     * [Basic Visualizations](programming-languages/python/matplotlib/matplotlib\_basic\_visualizations.md)
-  * [OOP in Python](programming-languages/python/python-oop.md)
+  * [🧱 OOP in Python](programming-languages/python/python-oop.md)
   * [🐼 Pandas](programming-languages/python/pandas/README.md)
     * [Creating Dataframes](programming-languages/python/pandas/pandas\_create-dataframes.md)
     * [Handling Missing Values](programming-languages/python/pandas/pandas\_missing-values.md)
