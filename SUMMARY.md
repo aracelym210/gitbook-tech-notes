@@ -1,6 +1,12 @@
 # Table of contents
 
-* [Cheat Sheets](README.md)
+## Welcome
+
+* [About](README.md)
+
+***
+
+* [Cheat Sheets](<README (1).md>)
 * [aws](aws/README.md)
   * [cloud-practitioner-essentials](aws/cloud-practitioner-essentials.md)
 * [docker](docker/README.md)
@@ -14,7 +20,3 @@
   * [pandas\_pivot-tables](python/pandas\_pivot-tables.MD)
   * [pandas\_slice-subset](python/pandas\_slice-subset.MD)
   * [python-oop](python/python-oop.md)
-
-## Welcome
-
-* [About](welcome/about.md)
