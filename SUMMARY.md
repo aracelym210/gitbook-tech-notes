@@ -28,4 +28,5 @@
 ## Operating Systems
 
 * [About](operating-systems/about.md)
-* [Process Management](operating-systems/process-management.md)
+* [Process Management](operating-systems/process-management/README.md)
+  * [Context Switching](operating-systems/process-management/context-switching.md)
