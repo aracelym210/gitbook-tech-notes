@@ -24,3 +24,8 @@
     * [Handling Missing Values](programming-languages/python/pandas/pandas\_missing-values.md)
     * [Pivot Tables with Pandas](programming-languages/python/pandas/pandas\_pivot-tables.md)
     * [Slicing and Subsetting](programming-languages/python/pandas/pandas\_slice-subset.md)
+
+## Operating Systems
+
+* [About](operating-systems/about.md)
+* [Process Management](operating-systems/process-management.md)
