@@ -8,14 +8,14 @@ description: Interprocess Communication (IPC)
 
 Processes running at the same time may be either independent or cooperating.
 
-|                Independent               |             Cooperating            |
+|            Independent process           |         Cooperating process        |
 | :--------------------------------------: | :--------------------------------: |
 | Does not share data with other processes |  Shares data with other processes  |
 |                                          | Can be affected by other processes |
 
 ## IPC Purpose
 
-Cooperating processes require a mechanism to allow for exchange of data. Two fundamental models of interprocess commnication enable this exchange of data:&#x20;
+Cooperating processes require a mechanism to allow for exchange of data. Two fundamental models of interprocess communication enable this exchange of data:&#x20;
 
-* Shared memory&#x20;
-* Message Passing
+* [Shared memory](shared-memory-ipc.md)&#x20;
+* [Message Passing](message-passing.md)
