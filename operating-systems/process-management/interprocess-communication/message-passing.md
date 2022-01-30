@@ -18,7 +18,7 @@ description: Notes on the message-passing IPC model
 
 ## Direct vs. Indirect Communication
 
-* Also referred to as symmetrical vs. asymmetrical communication scheme
+* Also referred to as <mark style="color:purple;">symmetrical vs. asymmetrical communication scheme</mark>
 
 ### Direct Communication&#x20;
 

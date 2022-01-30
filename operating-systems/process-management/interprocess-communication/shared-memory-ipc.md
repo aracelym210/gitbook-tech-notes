@@ -1,6 +1,6 @@
 # Shared Memory IPC
 
-## What is the shared memory IPC model?&#x20;
+### What is the shared memory IPC model?&#x20;
 
 * Communicating processes establish a region of shared memory&#x20;
 * This shared memory segment is an address space of the _creating,_ or _producing_, process. Other processes that wish to communicate using this same memory segment, or _consumer processes_, must attach it their address space.&#x20;
