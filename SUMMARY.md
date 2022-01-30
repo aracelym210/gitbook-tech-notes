@@ -16,9 +16,11 @@
 ## Programming Languages
 
 * [🐍 Python](programming-languages/python/README.md)
-  * [matplotlib\_basic\_visualizations](programming-languages/python/matplotlib\_basic\_visualizations.md)
-  * [pandas\_create-dataframes](programming-languages/python/pandas\_create-dataframes.md)
-  * [pandas\_missing-values](programming-languages/python/pandas\_missing-values.md)
-  * [pandas\_pivot-tables](programming-languages/python/pandas\_pivot-tables.md)
-  * [pandas\_slice-subset](programming-languages/python/pandas\_slice-subset.md)
-  * [python-oop](programming-languages/python/python-oop.md)
+  * [📊 Matplotlib](programming-languages/python/matplotlib/README.md)
+    * [Basic Visualizations](programming-languages/python/matplotlib/matplotlib\_basic\_visualizations.md)
+  * [OOP in Python](programming-languages/python/python-oop.md)
+  * [🐼 Pandas](programming-languages/python/pandas/README.md)
+    * [Creating Dataframes](programming-languages/python/pandas/pandas\_create-dataframes.md)
+    * [Handling Missing Values](programming-languages/python/pandas/pandas\_missing-values.md)
+    * [Pivot Tables with Pandas](programming-languages/python/pandas/pandas\_pivot-tables.md)
+    * [Slicing and Subsetting](programming-languages/python/pandas/pandas\_slice-subset.md)
