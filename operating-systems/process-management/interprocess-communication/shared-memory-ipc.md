@@ -9,7 +9,7 @@
 
 ## Producer-Consumer Problem
 
-The <mark style="color:purple;">producer-consumer problem</mark> is a helpful paradigm to consider when thinking of how shared memory works between processes.
+The [producer-consumer problem](https://www.youtube.com/watch?v=l6zkaJFjUbM) is a helpful paradigm to consider when thinking of how shared memory works between processes.
 
 A <mark style="color:purple;">buffer</mark> will reside in a shared memory space that is accessible by both producer and consumer processes.
 
