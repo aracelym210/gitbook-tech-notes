@@ -10,11 +10,11 @@
 
 ### Pointers & Address-of&#x20;
 
-| Symbol + Use  | Term                                                                       | Description                                                         |
-| ------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------- |
-| `int *p = 5;` | pointer, "p"                                                               | _declare_ the pointer-variable, p, and assign a value of 5.         |
-| `*p`          | <ul><li>indirection operator</li><li>dereference the pointer<br></li></ul> | Change or access/ reference the value that pointer p is pointing to |
-| `p = &x;`     | assign to address-of                                                       | assign (point) p to address space containing value of variable x    |
+| Symbol + Use                                                | Term                                                                       | Description                                                         |
+| ----------------------------------------------------------- | -------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| `int *p = 5;`                                               | pointer, "p"                                                               | _declare_ the pointer-variable, p, and assign a value of 5.         |
+| `*p`                                                        | <ul><li>indirection operator</li><li>dereference the pointer<br></li></ul> | Change or access/ reference the value that pointer p is pointing to |
+| <p><code>x = 20</code>;</p><p><code>p = &#x26;x;</code></p> | assign to address-of                                                       | assign (point) p to address space containing value of variable x    |
 
 {% embed url="https://youtu.be/ePutOtexvw8?t=67" %}
 
