@@ -2,11 +2,11 @@
 
 ## Data Types
 
-| Data type name | Syntax                                          | Description                                                                                                         |
-| -------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| Boolean        | <p><code>__Bool</code><br><code>bool</code></p> | <p>0 == False</p><p>Any other int == True</p><p></p><p>bool can be used with <code>stdbool.h</code> library<br></p> |
-|                |                                                 |                                                                                                                     |
-|                |                                                 |                                                                                                                     |
+| Data type name | Syntax                                                        | Description                                                                                                         |
+| -------------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
+| Boolean        | <p><code>__Bool = 0;</code><br><code>bool = false;</code></p> | <p>0 == False</p><p>Any other int == True</p><p></p><p>bool can be used with <code>stdbool.h</code> library<br></p> |
+|                |                                                               |                                                                                                                     |
+|                |                                                               |                                                                                                                     |
 
 ### Pointers & Address-of&#x20;
 
