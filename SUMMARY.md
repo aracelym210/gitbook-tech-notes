@@ -13,6 +13,8 @@
 
 ## Programming Languages
 
+* [C](programming-languages/c/README.md)
+  * [C basics](programming-languages/c/c-basics.md)
 * [🐍 Python](programming-languages/python/README.md)
   * [📊 Matplotlib](programming-languages/python/matplotlib/README.md)
     * [Basic Visualizations](programming-languages/python/matplotlib/matplotlib\_basic\_visualizations.md)
