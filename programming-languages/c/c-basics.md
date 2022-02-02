@@ -8,6 +8,8 @@
 | `*p`          | <ul><li>indirection operator</li><li>dereference the pointer<br></li></ul> | Change or access/ reference the value that pointer p is pointing to |
 | `p = &x;`     | assign to address-of                                                       | assign (point) p to address space containing value of variable x    |
 
+{% embed url="https://youtu.be/ePutOtexvw8?t=67" %}
+
 ## Language and Environment
 
 * Two types of _execution environments:_&#x20;
