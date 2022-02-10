@@ -7,5 +7,5 @@ Note that there are some screenshots directly taken from various training provid
 {% endhint %}
 
 {% hint style="warning" %}
-**Disclaimer: Everything in here are my **<mark style="color:orange;">**notes**</mark>**! Please take the information with a grain of salt. If you are doubtful about something you read here, take a look at other references. Although I try to be accurate and precise, I'm sure there are mistakes in these pages. If you find something that is incorrect, please let me know.**
+**Disclaimer: Everything in here are **<mark style="color:orange;">**notes**</mark>** I have created **<mark style="color:orange;">**for reference**</mark>**! Please take the information with a grain of salt. If you are doubtful about something you read here, take a look at other references. Although I try to be accurate and precise, I'm sure there are mistakes in these pages. If you find something that is incorrect, please let me know.**
 {% endhint %}
