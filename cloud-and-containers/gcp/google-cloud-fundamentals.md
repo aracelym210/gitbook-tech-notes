@@ -38,6 +38,8 @@
 
 ## Security&#x20;
 
+### Overview
+
 * Security is designed into every layer of GCP technical infrastructure.&#x20;
 
 | Layer                   | Notable security mesaures                                                                         |
@@ -48,6 +50,49 @@
 | User Identity           | Central Identity service w/ U2F support                                                           |
 | Service deployment      | Encryption of inter-service communication (via remote procedure - RPC- calls)                     |
 | Hardware infrastructure | Hardware designed and built by Google, secure boot stack, premises security                       |
+
+### Shared-responsibility&#x20;
+
+![](../../.gitbook/assets/image.png)
+
+### Resource Hierarchy Levels
+
+* Levels of hierarchy provide trust boundaries and resource isolation&#x20;
+* ![](<../../.gitbook/assets/image (1).png>)
+* Resources (VM, Storage Bucket, etc.) --> Project(s) --> Folder(s) --> Organization&#x20;
+  * All resources are organized into projects.
+  * Projects can optionally be organized into folders, which can also contain subfolders
+  * Folders and projects can be grouped together under an organization node
+
+#### Policies&#x20;
+
+* Inherited downwards in the hierarchy&#x20;
+* Each level in the hierarchy can have policies defined to apply permissions, etc.&#x20;
+* Can also be applied to individual resources&#x20;
+
+#### Projects
+
+* All services and resources belong to a GCP console project&#x20;
+* Three identifying attributes:&#x20;
+
+| Attribute      | Scope              | Grantor         | Mutability |
+| -------------- | ------------------ | --------------- | ---------- |
+| Project ID     | Globally unique    | Chosen by you   | Immutable  |
+| Project name   | Need not be unique | Chosen by you   | Mutable    |
+| Project number | Globally unique    | Assigned by GCP | Immutable  |
+
+* Projects are used for:
+  * Tracking resource and quota usage&#x20;
+  * Billing
+  * Managing permissions and credentials&#x20;
+  * Enabling services and APIs&#x20;
+* _Google Cloud Resource Manager_ API is used to programmatically manage projects in GCP. Accessed via REST API or RPC API
+  * Get a list of all projects associated with the account&#x20;
+  * Create new projects&#x20;
+  * Update existing projects&#x20;
+  * Delete projects&#x20;
+  * Recover projects&#x20;
+*
 
 ## Services&#x20;
 
