@@ -92,7 +92,14 @@
   * Update existing projects&#x20;
   * Delete projects&#x20;
   * Recover projects&#x20;
-*
+
+#### Folders&#x20;
+
+* Optional
+* Group projects or other folders under an organization
+* Use folders to assign policies via Cloud IAM folders&#x20;
+  * Resources in a folder inherit IAM policies assigned to the folder&#x20;
+* &#x20;
 
 ## Services&#x20;
 
