@@ -13,7 +13,7 @@
 * IaaS ---> Hybrid ---> PaaS (App Engine) ---> Serverless logic (Cloud functions) ---> Automated elastic resources (Managed services)&#x20;
 * Google network is made of up hundreds of thousands kilometers of fiber cable, including subsea cables, more than 90 Internet exchanges and more than 100 Internet Points of Presence.&#x20;
 
-#### Regions and Zones&#x20;
+## Regions and Zones&#x20;
 
 * Services can be zonal, regional, or managed by Google across regions&#x20;
 * A zone is a deployment area for GCP resources within a region.&#x20;
@@ -29,9 +29,56 @@
   * Google Cloud Storage&#x20;
   * Google BigQuery&#x20;
 
-### Pricing&#x20;
+## Pricing&#x20;
 
 * Per-second billing for IaaS compute engine, K8, and more&#x20;
 * Auto-applied sustained-use discounts for certain services
 * Online pricing calculator can help estimate costs&#x20;
 * Open APIs and Open source services give customers ability to run applications via other CSP if Google is no longer a good fit&#x20;
+
+## Security&#x20;
+
+* Security is designed into every layer of GCP technical infrastructure.&#x20;
+
+| Layer                   | Notable security mesaures                                                                         |
+| ----------------------- | ------------------------------------------------------------------------------------------------- |
+| Operational Security    | IDS, insider threat risk reduction measures, employee Universal 2nd Factor (U2F) use, secure SDLC |
+| Internet communication  | Google Front End service, DoS protection built in                                                 |
+| Storage services        | Encryption at rest                                                                                |
+| User Identity           | Central Identity service w/ U2F support                                                           |
+| Service deployment      | Encryption of inter-service communication (via remote procedure - RPC- calls)                     |
+| Hardware infrastructure | Hardware designed and built by Google, secure boot stack, premises security                       |
+
+## Services&#x20;
+
+### Compute&#x20;
+
+* Compute Engine
+* Kubernetes Engine
+* App Engine&#x20;
+* Cloud Functions&#x20;
+
+### Storage&#x20;
+
+* Bigtable&#x20;
+* Cloud Storage&#x20;
+* Cloud SQL
+* Cloud Spanner
+* Cloud Datastore&#x20;
+
+### Big Data&#x20;
+
+* BigQuery
+* Pub/Sub
+* Dataflow&#x20;
+* Dataproc
+* Datalab
+
+### Machine learning
+
+* Natural Language API
+* Vision API
+* Machine Learning
+* Speech API
+* Translate API
+*
