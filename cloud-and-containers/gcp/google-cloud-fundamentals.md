@@ -53,12 +53,13 @@
 
 ### Shared-responsibility&#x20;
 
-![](../../.gitbook/assets/image.png)
+![](<../../.gitbook/assets/image (2).png>)
 
 ### Resource Hierarchy Levels
 
 * Levels of hierarchy provide trust boundaries and resource isolation&#x20;
-* ![](<../../.gitbook/assets/image (1).png>)
+* ![](<../../.gitbook/assets/image (1) (1).png>)
+* ![](../../.gitbook/assets/image.png)
 * Resources (VM, Storage Bucket, etc.) --> Project(s) --> Folder(s) --> Organization&#x20;
   * All resources are organized into projects.
   * Projects can optionally be organized into folders, which can also contain subfolders
@@ -66,20 +67,24 @@
 
 #### Policies&#x20;
 
+* Contains a set of roles and role members&#x20;
 * Inherited downwards in the hierarchy&#x20;
 * Each level in the hierarchy can have policies defined to apply permissions, etc.&#x20;
 * Can also be applied to individual resources&#x20;
+* Resource policies are a union of parent and resource&#x20;
+* Less restrictive parent policies override a more restrictive resource policy&#x20;
+  * For example, suppose that a policy applied on the “bookshelf” project gives user Patricio the right to modify a Cloud Storage bucket. But a policy at the organization level says that Patricio can only view Cloud Storage buckets, not change them.
 
 #### Projects
 
 * All services and resources belong to a GCP console project&#x20;
 * Three identifying attributes:&#x20;
 
-| Attribute      | Scope              | Grantor         | Mutability |
-| -------------- | ------------------ | --------------- | ---------- |
-| Project ID     | Globally unique    | Chosen by you   | Immutable  |
-| Project name   | Need not be unique | Chosen by you   | Mutable    |
-| Project number | Globally unique    | Assigned by GCP | Immutable  |
+| Attribute      | Uniqueness         | Chosen / Assigned | Mutability |
+| -------------- | ------------------ | ----------------- | ---------- |
+| Project ID     | Globally unique    | Chosen by you     | Immutable  |
+| Project name   | Need not be unique | Chosen by you     | Mutable    |
+| Project number | Globally unique    | Assigned by GCP   | Immutable  |
 
 * Projects are used for:
   * Tracking resource and quota usage&#x20;
@@ -97,9 +102,95 @@
 
 * Optional
 * Group projects or other folders under an organization
-* Use folders to assign policies via Cloud IAM folders&#x20;
+* Use folders to assign policies via <mark style="color:green;">Cloud IAM folders</mark>&#x20;
   * Resources in a folder inherit IAM policies assigned to the folder&#x20;
-* &#x20;
+  * Assigning policies to folders instead of individual resources or projects is less tedious and less prone to errors&#x20;
+* &#x20;Administrative rights can be delegated using folders, enabling teams to work independently&#x20;
+
+#### Organization Node&#x20;
+
+* Root node for GCP resources&#x20;
+* Centralized visibility of how resources are being used (assuming the company has a single org. node).&#x20;
+* Notable roles:
+  * Organization Policy Admin - Broad control over all cloud resources&#x20;
+  * Project Creator - Fine-grained control of project creation&#x20;
+    * Good way to control who can spend money&#x20;
+* Two ways to get an organization node:
+  * Existing G Suite customer&#x20;
+  * Use Google Cloud Identity&#x20;
+
+### Identity and Access Management (IAM)
+
+_<mark style="color:green;">\<Who></mark> <mark style="color:blue;">\<can do what></mark>  <mark style="color:red;">\<on which resource></mark>_&#x20;
+
+* IAM policies let admins authorize who can take what actions on specific resources&#x20;
+
+#### <mark style="color:green;">Who can IAM policies apply to?</mark>&#x20;
+
+Four types of principals (identity types)
+
+| Principal Type                                  | Example                                   |
+| ----------------------------------------------- | ----------------------------------------- |
+| <p>Google account or<br>Cloud identity user</p> | <p>test@gmail.com<br>test@example.com</p> |
+| Service account                                 | test@project\_id.iam.gserviceaccount.com  |
+| Google group                                    | test@googlegroups.com                     |
+| <p>Cloud Identity or <br>G Suite domain</p>     | example.com                               |
+
+<details>
+
+<summary>Notes on service accounts </summary>
+
+* Identity that enables server-to-server interactions in a project&#x20;
+* Authenticates from one service to another&#x20;
+* Identified with an _email address_
+* Use cryptographic keys to access resources instead of passwords&#x20;
+* Service accounts are also a resource, meaning IAM policies can be attached to the account, allowing for different administrators to have different kinds of access to the account&#x20;
+* Example usecase:&#x20;
+  * &#x20;Application running in a virtual machine that needs to store data in Google Cloud Storage. But you don’t want to let just anyone on the Internet have access to that data; only that virtual machine. So you’d create a service account to authenticate your VM to Cloud Storage.
+
+</details>
+
+#### <mark style="color:blue;">Can do what?</mark>&#x20;
+
+* Defined by an _<mark style="color:blue;">IAM role,</mark> which is a collection of permissions_&#x20;
+* _<mark style="color:blue;"></mark>_![](<../../.gitbook/assets/image (3).png>)_<mark style="color:blue;"></mark>_
+
+_Three kinds of IAM roles to define who <mark style="color:blue;">can do what</mark>_&#x20;
+
+{% tabs %}
+{% tab title="Primitive" %}
+* Broad roles
+* Apply across all GCP services in a project
+* Fixed & "course-grained" level of access&#x20;
+  * Owner
+  * Editor
+  * Viewer&#x20;
+* May be too broad if several people are working on a sensitive-data project together
+{% endtab %}
+
+{% tab title="Predefined" %}
+* Apply to a particular GCP service within a project
+* Fine-grained permissions to take actions on services
+* &#x20;Example:
+  * compute.instances.delete
+  * compute.instances.get
+  * compute.instances.list
+  * compute.instances.SetMachineType
+  * compute.instances.start
+{% endtab %}
+
+{% tab title="Custom/ Precise" %}
+* Finest-grain of permissions&#x20;
+* Enables least-privilege model
+* Example: an "instanceOperator" role can be defined to allow some users to stop and start Compute Engine VMs, but not reconfigure them
+* Cannot be used at the folder level; only project or organization level&#x20;
+* With custom roles, admins need to manage the permissions that make up the custom roles, which could be burdensome&#x20;
+{% endtab %}
+{% endtabs %}
+
+#### _<mark style="color:red;">On which resource</mark>_
+
+* When you give a user, group, or service account a role on a specific element of the resource hierarchy, the resulting policy applies to the element you chose&#x20;
 
 ## Services&#x20;
 
@@ -133,4 +224,7 @@
 * Machine Learning
 * Speech API
 * Translate API
-*
+
+## References:
+
+* Cloudskillboost Google Course&#x20;
