@@ -36,6 +36,49 @@
 * Online pricing calculator can help estimate costs&#x20;
 * Open APIs and Open source services give customers ability to run applications via other CSP if Google is no longer a good fit&#x20;
 
+## Accessing GCP
+
+### Cloud Platform Console
+
+* Web based, administrative user interface&#x20;
+* Offers access to Cloud Shell
+* APIs managed (enabled/ disabled) from Console
+
+### Cloud Shell and SDK
+
+* Command-line interface (CLI)
+* Use SDK from the shell without installing SDK locally
+
+#### SDK
+
+* Set of tools to manage resources and applications in GCP
+  * gcloud tool - main CLI
+  * gsutil - GCP Storage&#x20;
+  * bq - BigQuery&#x20;
+* SDK can be installed locally on machine and also as a Docker image&#x20;
+
+### Cloud console Mobile App
+
+* For iOS and Android&#x20;
+
+### REST API
+
+* For custom apps&#x20;
+* JSON
+* OAuth 2.0 for authentication and authorization
+* Quotas and limits apply, and an increase can be increased&#x20;
+
+#### APIs Explorer
+
+* Interactive tool that lets you try APIs using a browser&#x20;
+
+#### Client Libraries&#x20;
+
+* Cloud Client Libraries (Google Recommended)&#x20;
+* Google API Client Libraries
+  * Open source&#x20;
+  * Multiple languages supported&#x20;
+
 ## Security&#x20;
 
 ### Overview
@@ -73,11 +116,13 @@
 * Can also be applied to individual resources&#x20;
 * Resource policies are a union of parent and resource&#x20;
 * Less restrictive parent policies override a more restrictive resource policy&#x20;
-  * For example, suppose that a policy applied on the “bookshelf” project gives user Patricio the right to modify a Cloud Storage bucket. But a policy at the organization level says that Patricio can only view Cloud Storage buckets, not change them.
+  * For example, suppose that a policy applied on the “bookshelf” project gives user Patricio the right to modify a Cloud Storage bucket. But a policy at the organization level says that Patricio can only view Cloud Storage buckets, not change them. The more "generous" policy takes effect&#x20;
 
 #### Projects
 
 * All services and resources belong to a GCP console project&#x20;
+* Projects are the main way to organize resources in GCP
+* Usually it makes sense to group resources together via a project because they have common business objectives&#x20;
 * Three identifying attributes:&#x20;
 
 | Attribute      | Uniqueness         | Chosen / Assigned | Mutability |
@@ -161,7 +206,7 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 {% tab title="Primitive" %}
 * Broad roles
 * Apply across all GCP services in a project
-* Fixed & "course-grained" level of access&#x20;
+* Fixed & "course-grained" level of access roles
   * Owner
   * Editor
   * Viewer&#x20;
@@ -183,7 +228,7 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 * Finest-grain of permissions&#x20;
 * Enables least-privilege model
 * Example: an "instanceOperator" role can be defined to allow some users to stop and start Compute Engine VMs, but not reconfigure them
-* Cannot be used at the folder level; only project or organization level&#x20;
+* _Cannot be used at the folder level_; only project or organization level&#x20;
 * With custom roles, admins need to manage the permissions that make up the custom roles, which could be burdensome&#x20;
 {% endtab %}
 {% endtabs %}
