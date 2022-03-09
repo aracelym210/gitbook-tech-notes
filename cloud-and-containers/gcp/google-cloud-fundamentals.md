@@ -308,6 +308,9 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 
 * Due to the nature and scope of VPC, networks and subnets can be dynamically scaled.&#x20;
   * If VPC has some virtual machines already configured to use IP addresses from a specific subnet, and that subnet size is increased, the existing VMs will not be affected&#x20;
+* Recommendations:
+  * Big VMs for in-memory DB and CPU intensive analytics&#x20;
+  * Many VMs for fault tolerance and elasticity&#x20;
 
 #### Cloud Load Balancing&#x20;
 
@@ -318,12 +321,11 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 {% tab title="Global HTTP(S)" %}
 **Use case:** Load balancing for web applications ****&#x20;
 
-**Capability:**&#x20;
+**Capability & Caveats:**&#x20;
 
 * Load balance layer 7 traffic based on load
 * Different URLs can be routed to different back ends
-
-**Caveat:**&#x20;
+* Traffic is balanced across regions&#x20;
 {% endtab %}
 
 {% tab title="Global SSL Proxy" %}
@@ -382,6 +384,7 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
   * If customer is not near a Google PoP, they can partner with a local carrier to provide that connection&#x20;
 * Dedicated interconnect&#x20;
   * direct, private connections to Google&#x20;
+  * SLA available&#x20;
 
 
 
