@@ -272,7 +272,21 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 
 ## Compute Engine&#x20;
 
+### Overview&#x20;
+
 * VMs can be built using GCP Compute Engine services&#x20;
+* VMs can be created with GCP console or gcloud CLI tool
+* Import images, create custom, or use common "cots" images&#x20;
+* Choose pre-configured machine type, or custom define resources required&#x20;
+* Many GCP zones have GPUs available for use&#x20;
+* Storage options&#x20;
+  * "Standard" / default: Persistent storage SSD
+  * If high performing scratch space required - attach local SSD, but beware that the data here does not persist VM termination&#x20;
+* Snapshots&#x20;
+* Pre-emptable VMs&#x20;
+  * Potentially good for batch jobs or any other work that can be interrupted&#x20;
+  * Good for cost-savings&#x20;
+* Auto-scaling feature&#x20;
 
 ### Virtual Private Cloud (VPC)
 
@@ -281,6 +295,8 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
   * firewall rules to restrict access where desired
   * static routes can be configured to route traffic to specific destinations&#x20;
 * A new user getting started in GCP can create their own custom VPC or use the default&#x20;
+* Firewall rules&#x20;
+  * metadata tags can be used to apply firewall rules to resources (i.e. web servers can be tagged "web", and 80/443 traffic will be allowed for this tag)&#x20;
 
 #### Scope
 
@@ -292,6 +308,80 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 
 * Due to the nature and scope of VPC, networks and subnets can be dynamically scaled.&#x20;
   * If VPC has some virtual machines already configured to use IP addresses from a specific subnet, and that subnet size is increased, the existing VMs will not be affected&#x20;
+
+#### Cloud Load Balancing&#x20;
+
+* Single, global anycast IP frontloads all of backend resources&#x20;
+* Various load balancing options
+
+{% tabs %}
+{% tab title="Global HTTP(S)" %}
+**Use case:** Load balancing for web applications ****&#x20;
+
+**Capability:**&#x20;
+
+* Load balance layer 7 traffic based on load
+* Different URLs can be routed to different back ends
+
+**Caveat:**&#x20;
+{% endtab %}
+
+{% tab title="Global SSL Proxy" %}
+**Use case:** SSL (layer 4) balancing of non-HTTPS SSL traffic&#x20;
+
+**Capability & Caveats:**&#x20;
+
+* Only _specific_ port numbers supported&#x20;
+{% endtab %}
+
+{% tab title="Global TCP Proxy" %}
+**Use case:** Layer 4 load balancing of non-SSL TCP traffic&#x20;
+
+**Capability & Caveats:**&#x20;
+
+* TCP only&#x20;
+* Specific port numbers&#x20;
+{% endtab %}
+
+{% tab title="Regional" %}
+**Use case:** Load balancing of any traffic (TCP, UDP)
+
+**Capability & Caveat:**&#x20;
+
+* Supported on _any_ port number&#x20;
+* TCP or UDP&#x20;
+{% endtab %}
+
+{% tab title="Regional internal" %}
+**Use case:** Load balancing of traffic inside a VPC
+
+**Capability & Caveat:**&#x20;
+
+* Use for internal tiers of multi-tier applications&#x20;
+{% endtab %}
+{% endtabs %}
+
+#### Cloud DNS&#x20;
+
+* Highly available, low latency, and scalable&#x20;
+* Create managed DNS zones, then add, edit and delete DNS records&#x20;
+* Programmatically manage zones and records using CLI or RESTful API
+
+#### Cloud CDN (Content Delivery Network)
+
+* Google globally distributed edge cache content geographically closer to your users&#x20;
+* HTTPS cloud load balancing required, then enable Cloud CDN
+* CDN Interconnect parter program with Google allows customers to continue to use external/ third-party CDN services&#x20;
+
+#### Connecting other networks with GCP
+
+* VPN using IPSEC using "Cloud Router"&#x20;
+* Direct peering&#x20;
+  * Relies on the customer being within a Google Point of Presence (of which there are many)
+* Carrier peering&#x20;
+  * If customer is not near a Google PoP, they can partner with a local carrier to provide that connection&#x20;
+* Dedicated interconnect&#x20;
+  * direct, private connections to Google&#x20;
 
 
 
