@@ -154,7 +154,7 @@
 
 #### Organization Node&#x20;
 
-* Root node for GCP resources&#x20;
+* Root node for GCP resources, though not \*required\*&#x20;
 * Centralized visibility of how resources are being used (assuming the company has a single org. node).&#x20;
 * Notable roles:
   * Organization Policy Admin - Broad control over all cloud resources&#x20;
@@ -237,7 +237,7 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 
 * When you give a user, group, or service account a role on a specific element of the resource hierarchy, the resulting policy applies to the element you chose&#x20;
 
-## Services&#x20;
+## List of Services&#x20;
 
 ### Compute&#x20;
 
@@ -269,6 +269,31 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 * Machine Learning
 * Speech API
 * Translate API
+
+## Compute Engine&#x20;
+
+* VMs can be built using GCP Compute Engine services&#x20;
+
+### Virtual Private Cloud (VPC)
+
+* VPC networks connect GCP resources to each other and/or to the internet
+* Like on-prem networks, VPCs can be configured with&#x20;
+  * firewall rules to restrict access where desired
+  * static routes can be configured to route traffic to specific destinations&#x20;
+* A new user getting started in GCP can create their own custom VPC or use the default&#x20;
+
+#### Scope
+
+* VPCs have global scope and can have subnets in any GCP region worldwide
+* Subnets can span the zones that make up a region (in other words, subnets have regional scope)
+* Resources in different zones can still live on the same subnet
+
+#### Scale
+
+* Due to the nature and scope of VPC, networks and subnets can be dynamically scaled.&#x20;
+  * If VPC has some virtual machines already configured to use IP addresses from a specific subnet, and that subnet size is increased, the existing VMs will not be affected&#x20;
+
+
 
 ## References:
 
