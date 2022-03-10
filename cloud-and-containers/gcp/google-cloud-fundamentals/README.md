@@ -96,13 +96,13 @@
 
 ### Shared-responsibility&#x20;
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2).png>)
 
 ### Resource Hierarchy Levels
 
 * Levels of hierarchy provide trust boundaries and resource isolation&#x20;
-* ![](<../../.gitbook/assets/image (1) (1).png>)
-* ![](../../.gitbook/assets/image.png)
+* ![](<../../../.gitbook/assets/image (1) (1).png>)
+* ![](../../../.gitbook/assets/image.png)
 * Resources (VM, Storage Bucket, etc.) --> Project(s) --> Folder(s) --> Organization&#x20;
   * All resources are organized into projects.
   * Projects can optionally be organized into folders, which can also contain subfolders
@@ -198,7 +198,7 @@ Four types of principals (identity types)
 #### <mark style="color:blue;">Can do what?</mark>&#x20;
 
 * Defined by an _<mark style="color:blue;">IAM role,</mark> which is a collection of permissions_&#x20;
-* _<mark style="color:blue;"></mark>_![](<../../.gitbook/assets/image (3).png>)_<mark style="color:blue;"></mark>_
+* _<mark style="color:blue;"></mark>_![](<../../../.gitbook/assets/image (3).png>)_<mark style="color:blue;"></mark>_
 
 _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</mark>_&#x20;
 
@@ -543,24 +543,47 @@ _**When creating a bucket...**_
 
 ## Google Cloud Bigtable&#x20;
 
-* Cloud Bigtable is...
-  * NoSQL database&#x20;
-    * Not a relational database
-    * Not every row (entry) needs to have the same column&#x20;
-    * More like a dictionary or JSON structure&#x20;
-  * Fully managed database service&#x20;
-  * Ideal for apps that need high throughput and scalability for non-structured key/value pair data&#x20;
-  * Ideal for large quantities of semi-structured or structured data (> 1 TB)
-  * Used in many of Google's core services such as: Gmail, Search, Maps, and Google Analytics
-  * Same API as HBase (native Hadoop database), which enables portability between HBase and Bigtable&#x20;
-  * Encrypted in-transit and at-rest by default
-  * Able to restrict access via Role-based ACLs
-  * Use cases:
-    * Marketing data&#x20;
-    * Financial data such as transaction histories, stock prices, exchange rates
-    * IoT data&#x20;
-    * Time-series data&#x20;
-    * Running machine learning algorithms on the data&#x20;
+### Cloud Bigtable is...
+
+* NoSQL database&#x20;
+  * Not a relational database
+  * Not every row (entry) needs to have the same column&#x20;
+  * More like a dictionary or JSON structure&#x20;
+* Fully managed database service&#x20;
+* Ideal for apps that need high throughput and scalability for non-structured key/value pair data&#x20;
+* Ideal for large quantities of semi-structured or structured data (> 1 TB)
+* Used in many of Google's core services such as: Gmail, Search, Maps, and Google Analytics
+* Same API as HBase (native Hadoop database), which enables portability between HBase and Bigtable&#x20;
+* Encrypted in-transit and at-rest by default
+* Able to restrict access via Role-based ACLs
+* Use cases:
+  * Marketing data&#x20;
+  * Financial data such as transaction histories, stock prices, exchange rates
+  * IoT data&#x20;
+  * Time-series data&#x20;
+  * Running machine learning algorithms on the data&#x20;
+
+### Bigtable Access Patterns&#x20;
+
+#### Application API
+
+* Data can be read from and written to Bigtable through a data service layer such as&#x20;
+  * Managed VMs
+  * HBase REST Server
+  * Java Server using HBase client
+* Typical usecase for this is serving data to applications, dashboards and data services&#x20;
+
+#### Streaming&#x20;
+
+* Cloud Dataflow Streaming service
+* Spark streaming&#x20;
+* Storm
+
+#### Batch Processing&#x20;
+
+* Hadoop MapReduce
+* Dataflow
+* Spark
 
 ## References:
 
