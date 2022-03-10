@@ -9,8 +9,8 @@
 * [🐋 docker](cloud-and-containers/docker/README.md)
   * [Docker Cheat Sheet](cloud-and-containers/docker/docker.md)
 * [☁ gcp](cloud-and-containers/gcp/README.md)
-  * [Google Cloud Fundamentals: Core Infrastructure](cloud-and-containers/gcp/google-cloud-fundamentals/README.md)
-    * [gcloud cheatsheet](cloud-and-containers/gcp/google-cloud-fundamentals/gcloud-cheatsheet.md)
+  * [Google Cloud Fundamentals: Core Infrastructure](cloud-and-containers/gcp/google-cloud-fundamentals.md)
+  * [gcloud cheatsheet](cloud-and-containers/gcp/gcloud-cheatsheet.md)
 
 ## Programming Languages
 

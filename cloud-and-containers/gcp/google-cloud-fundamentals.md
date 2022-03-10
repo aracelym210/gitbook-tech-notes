@@ -96,13 +96,13 @@
 
 ### Shared-responsibility&#x20;
 
-![](<../../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (2).png>)
 
 ### Resource Hierarchy Levels
 
 * Levels of hierarchy provide trust boundaries and resource isolation&#x20;
-* ![](<../../../.gitbook/assets/image (1) (1).png>)
-* ![](../../../.gitbook/assets/image.png)
+* ![](<../../.gitbook/assets/image (1) (1).png>)
+* ![](../../.gitbook/assets/image.png)
 * Resources (VM, Storage Bucket, etc.) --> Project(s) --> Folder(s) --> Organization&#x20;
   * All resources are organized into projects.
   * Projects can optionally be organized into folders, which can also contain subfolders
@@ -198,7 +198,7 @@ Four types of principals (identity types)
 #### <mark style="color:blue;">Can do what?</mark>&#x20;
 
 * Defined by an _<mark style="color:blue;">IAM role,</mark> which is a collection of permissions_&#x20;
-* _<mark style="color:blue;"></mark>_![](<../../../.gitbook/assets/image (3).png>)_<mark style="color:blue;"></mark>_
+* _<mark style="color:blue;"></mark>_![](<../../.gitbook/assets/image (3).png>)_<mark style="color:blue;"></mark>_
 
 _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</mark>_&#x20;
 
@@ -395,6 +395,17 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
   * Access controls available for buckets&#x20;
     * ACL: Scope (who) + permission (what actions can be performed)&#x20;
   * Pick a region for your bucket that makes sense&#x20;
+  * Globally unique name&#x20;
+  * Storage class&#x20;
+
+{% hint style="info" %}
+_**When creating a bucket...**_
+
+* Give it a globally unique name
+* Specify geographic location for bucket and contents
+* Choose a default storage class&#x20;
+{% endhint %}
+
 * Storage objects are immutable&#x20;
   * feature available to record history (object versioning).&#x20;
   * without versioning, new always overrides new&#x20;
@@ -403,84 +414,153 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 * Always encrypts data at rest and in transit
 * Not a file system!&#x20;
 
-#### Four Cloud Storage classes&#x20;
+### Four Cloud Storage classes&#x20;
 
 {% tabs %}
 {% tab title="Multi-regional" %}
 **Intent:**&#x20;
 
 * High performance obj storage
-* Geo-redundant
+* Geo-redundant (at a slightly higher price point)
+  * data is stored in at least two geographic locations separated by at least 160 km in the specified broad region (i.e. Asia, EU, USA)
 * Frequently accessed data&#x20;
 
-**Availability SLA:**&#x20;
+**Availability SLA:** 99.95%
 
-**Access APIs:**
+**Access APIs:** Consistent APIs
 
-**Access time:**
+**Access time:** Millisecond access
 
-**Storage Price:**
+**Storage Price:** Price per GB stored per month
 
-**Retrieval Price:**
+**Retrieval Price:** Total price per GB transferred
 
 **Use cases:**
+
+* Content storage & delivery&#x20;
+* Website content
+* Interactive workloads
+* Data in mobile or gaming apps&#x20;
 {% endtab %}
 
 {% tab title="Regional" %}
 **Intent:**&#x20;
 
 * High performance obj storage
-* \`
+* Data that is accessed frequently within a single region
 
-**Availability SLA:**&#x20;
+**Availability SLA:** 99.9%
 
-**Access APIs:**
+**Access APIs:** Consistent APIs
 
-**Access time:**
+**Access time:** Millisecond access
 
-**Storage Price:**
+**Storage Price:** Price per GB stored per month
 
-**Retrieval Price:**
+**Retrieval Price:** Total price per GB transferred
 
 **Use cases:**
+
+* In-region analytics&#x20;
+* Transcoding
+* Store data close to other resources that are using the data (i.e. Compute Engine VM or Kubernetes Engine clusters)
 {% endtab %}
 
 {% tab title="Nearline" %}
 **Intent:**&#x20;
 
 * Backup/ archival storage
+* Low-cost, infrequently accessed data&#x20;
 
-**Availability SLA:**&#x20;
+**Availability SLA:** 99%
 
-**Access APIs:**
+**Access APIs:** Consistent APIs
 
-**Access time:**
+**Access time:** Millisecond access
 
-**Storage Price:**
+**Storage Price:** Price per GB stored per month
 
-**Retrieval Price:**
+**Retrieval Price:**  Total price per GB transferred
 
 **Use cases:**
+
+* Long-tail content&#x20;
+* pulling data once a month or less for analysis
+* Backups
 {% endtab %}
 
 {% tab title="Coldline" %}
 **Intent:**&#x20;
 
-* Backup/ archival storage
+* Backup/ archival storage (very-low cost)
 
-**Availability SLA:**&#x20;
+**Availability SLA:** 99%
 
-**Access APIs:**
+**Access APIs:** Consistent APIs
 
-**Access time:**
+**Access time:** Millisecond access
 
-**Storage Price:**
+**Storage Price:** Price per GB stored per month
 
-**Retrieval Price:**
+**Retrieval Price:** Total price per GB transferred&#x20;
 
-**Use cases:**
+**Use cases:**&#x20;
+
+* Archiving
+* Disaster recovery
+* Data that is planned to be accessed for once a year or less&#x20;
 {% endtab %}
 {% endtabs %}
+
+### Bring data into Cloud Storage
+
+* Online transfer
+* Storage Transfer Service
+* Transfer appliance&#x20;
+* Via various GCP products and services&#x20;
+  * Import and export tables to Cloud storage _from BigQuery_
+  * Store _App Engine logs, Cloud DS backups, objects used by App Engine applications like images_&#x20;
+  * Store instance startup scripts, Compute Engine images and objects used by _Compute Engine_ apps&#x20;
+  *
+
+#### Online transfer&#x20;
+
+* self-managed movement of data either via the GCP console, or _gsutil_ (Cloud Storage command from Cloud SDK)
+
+#### Storage Transfer Service
+
+* Schedule and manage batch transfers to Cloud storage from various endpoints
+  * Another cloud provider
+  * Different cloud storage region
+  * HTTPS endpoint&#x20;
+* Good for transferring TB or PB of data&#x20;
+
+#### Transfer Appliance&#x20;
+
+* Rackable, high-capacity storage server leased from Google Cloud
+* Load with data in your data center, then ship it to an upload facility to be uploaded to Cloud Storage&#x20;
+* Service is in beta at the time of these notes&#x20;
+
+## Google Cloud Bigtable&#x20;
+
+* Cloud Bigtable is...
+  * NoSQL database&#x20;
+    * Not a relational database
+    * Not every row (entry) needs to have the same column&#x20;
+    * More like a dictionary or JSON structure&#x20;
+  * Fully managed database service&#x20;
+  * Ideal for apps that need high throughput and scalability for non-structured key/value pair data&#x20;
+  * Ideal for large quantities of semi-structured or structured data (> 1 TB)
+  * Used in many of Google's core services such as: Gmail, Search, Maps, and Google Analytics
+  * Same API as HBase (native Hadoop database), which enables portability between HBase and Bigtable&#x20;
+  * Encrypted in-transit and at-rest by default
+  * Able to restrict access via Role-based ACLs
+  * Use cases:
+    * Marketing data&#x20;
+    * Financial data such as transaction histories, stock prices, exchange rates
+    * IoT data&#x20;
+    * Time-series data&#x20;
+    * Running machine learning algorithms on the data&#x20;
 
 ## References:
 
