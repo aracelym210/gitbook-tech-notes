@@ -1,0 +1,13 @@
+---
+description: Cheatsheet of gcloud commands
+---
+
+# gcloud cheatsheet
+
+
+
+| Command                                                                                                                                                                                                                                                                                                 | Description                                            |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| `gcloud compute zones list \| grep <region>`                                                                                                                                                                                                                                                            | list all zones in the region specified                 |
+| `gcloud config set compute/zone <zone>`                                                                                                                                                                                                                                                                 | set default zone to the zone specified in the command  |
+| <p><code>gcloud compute instances create "&#x3C;vm-name-goes-here>"</code><br><code>--machine-type "&#x3C;machine-type>"</code><br><code>--image-project "&#x3C;image-project>"</code><br><code>--image-family "&#x3C;image-family>"</code><br><code>--subnet "&#x3C;default>|&#x3C;custom>"</code></p> | create a Compute Engine VM instance                    |

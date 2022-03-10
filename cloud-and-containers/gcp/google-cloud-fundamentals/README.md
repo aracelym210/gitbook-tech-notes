@@ -96,13 +96,13 @@
 
 ### Shared-responsibility&#x20;
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2).png>)
 
 ### Resource Hierarchy Levels
 
 * Levels of hierarchy provide trust boundaries and resource isolation&#x20;
-* ![](<../../.gitbook/assets/image (1) (1).png>)
-* ![](../../.gitbook/assets/image.png)
+* ![](<../../../.gitbook/assets/image (1) (1).png>)
+* ![](../../../.gitbook/assets/image.png)
 * Resources (VM, Storage Bucket, etc.) --> Project(s) --> Folder(s) --> Organization&#x20;
   * All resources are organized into projects.
   * Projects can optionally be organized into folders, which can also contain subfolders
@@ -198,7 +198,7 @@ Four types of principals (identity types)
 #### <mark style="color:blue;">Can do what?</mark>&#x20;
 
 * Defined by an _<mark style="color:blue;">IAM role,</mark> which is a collection of permissions_&#x20;
-* _<mark style="color:blue;"></mark>_![](<../../.gitbook/assets/image (3).png>)_<mark style="color:blue;"></mark>_
+* _<mark style="color:blue;"></mark>_![](<../../../.gitbook/assets/image (3).png>)_<mark style="color:blue;"></mark>_
 
 _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</mark>_&#x20;
 
@@ -386,7 +386,101 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
   * direct, private connections to Google&#x20;
   * SLA available&#x20;
 
+## Storage&#x20;
 
+### Google Cloud Storage
+
+* Fully managed, scalable service to store _objects_ (arbitrary number of bytes)
+* Comprised of buckets to store objects
+  * Access controls available for buckets&#x20;
+    * ACL: Scope (who) + permission (what actions can be performed)&#x20;
+  * Pick a region for your bucket that makes sense&#x20;
+* Storage objects are immutable&#x20;
+  * feature available to record history (object versioning).&#x20;
+  * without versioning, new always overrides new&#x20;
+* lifecycle management is available&#x20;
+  * i.e. keeps only last 3 versions; delete all before \<specified date>; keep only last 12 months, etc.&#x20;
+* Always encrypts data at rest and in transit
+* Not a file system!&#x20;
+
+#### Four Cloud Storage classes&#x20;
+
+{% tabs %}
+{% tab title="Multi-regional" %}
+**Intent:**&#x20;
+
+* High performance obj storage
+* Geo-redundant
+* Frequently accessed data&#x20;
+
+**Availability SLA:**&#x20;
+
+**Access APIs:**
+
+**Access time:**
+
+**Storage Price:**
+
+**Retrieval Price:**
+
+**Use cases:**
+{% endtab %}
+
+{% tab title="Regional" %}
+**Intent:**&#x20;
+
+* High performance obj storage
+* \`
+
+**Availability SLA:**&#x20;
+
+**Access APIs:**
+
+**Access time:**
+
+**Storage Price:**
+
+**Retrieval Price:**
+
+**Use cases:**
+{% endtab %}
+
+{% tab title="Nearline" %}
+**Intent:**&#x20;
+
+* Backup/ archival storage
+
+**Availability SLA:**&#x20;
+
+**Access APIs:**
+
+**Access time:**
+
+**Storage Price:**
+
+**Retrieval Price:**
+
+**Use cases:**
+{% endtab %}
+
+{% tab title="Coldline" %}
+**Intent:**&#x20;
+
+* Backup/ archival storage
+
+**Availability SLA:**&#x20;
+
+**Access APIs:**
+
+**Access time:**
+
+**Storage Price:**
+
+**Retrieval Price:**
+
+**Use cases:**
+{% endtab %}
+{% endtabs %}
 
 ## References:
 
