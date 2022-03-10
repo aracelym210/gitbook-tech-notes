@@ -388,6 +388,11 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 
 ## Storage&#x20;
 
+* [Storage Overview ](./#storage)
+* [Cloud Bigtable](./#google-cloud-bigtable)
+* [Cloud SQL](./#undefined)
+* [Cloud Datastore](./#cloud-datastore)
+
 ### Google Cloud Storage
 
 * Fully managed, scalable service to store _objects_ (arbitrary number of bytes)
@@ -548,7 +553,7 @@ _**When creating a bucket...**_
 * NoSQL database&#x20;
   * Not a relational database
   * Not every row (entry) needs to have the same column&#x20;
-  * More like a dictionary or JSON structure&#x20;
+  * More like a dictionary/[ hash table](https://en.wikipedia.org/wiki/Hash\_table#:\~:text=In%20computing%2C%20a%20hash%20table,desired%20value%20can%20be%20found.) or JSON structure&#x20;
 * Fully managed database service&#x20;
 * Ideal for apps that need high throughput and scalability for non-structured key/value pair data&#x20;
 * Ideal for large quantities of semi-structured or structured data (> 1 TB)
@@ -584,6 +589,54 @@ _**When creating a bucket...**_
 * Hadoop MapReduce
 * Dataflow
 * Spark
+
+## Cloud SQL
+
+### Cloud SQL is...
+
+* _**Managed**_ Relational Database Services (RDBMS)
+  * MySQL
+  * PostgreSQL
+* Advantages of using RDBMS as a service (versus BYO in Compute Engine VM)
+  * Automatic replication
+  * Managed backups (on-demand or scheduled)
+  * Vertical and horizontal scaling&#x20;
+  * Google security
+  * Accessible from other GCP services and third-party services/ tools&#x20;
+
+### Cloud Spanner is...
+
+* Horizontally scalable RDBMS
+* Supports...
+  * Automatic replication
+  * Strong transactional "global consistency"
+  * HA managed instances&#x20;
+* Use cases&#x20;
+  * Outgrown relational db&#x20;
+  * Financial apps&#x20;
+  * Inventory apps&#x20;
+
+## Cloud Datastore&#x20;
+
+_Highly scalable, NoSQL DB_
+
+### Usecases
+
+* Designed for application backends&#x20;
+* Store structured data from app engine applications&#x20;
+
+### Supported Features&#x20;
+
+* [ACID](https://en.wikipedia.org/wiki/ACID) Transactions&#x20;
+* Fully managed&#x20;
+* Redundancy&#x20;
+* Distributed architecture automatically manages scaling&#x20;
+
+### Benefits&#x20;
+
+* Schemaless&#x20;
+* Free daily quota&#x20;
+* Accessible via RESTful API
 
 ## References:
 
