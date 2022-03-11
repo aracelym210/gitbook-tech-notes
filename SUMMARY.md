@@ -11,6 +11,7 @@
 * [☁ gcp](cloud-and-containers/gcp/README.md)
   * [Google Cloud Fundamentals: Core Infrastructure](cloud-and-containers/gcp/google-cloud-fundamentals/README.md)
   * [gcloud cheatsheet](cloud-and-containers/gcp/google-cloud-fundamentals/gcloud-cheatsheet.md)
+  * [gsutil cheatsheet](cloud-and-containers/gcp/gsutil-cheatsheet.md)
 
 ## Programming Languages
 
