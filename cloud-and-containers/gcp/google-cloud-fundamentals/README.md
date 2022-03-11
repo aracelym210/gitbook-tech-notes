@@ -288,6 +288,12 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
   * Good for cost-savings&#x20;
 * Auto-scaling feature&#x20;
 
+### Notes on building a VM
+
+{% hint style="info" %}
+Startup scripts can be configured when building a VM if you know that you want certain packages to be installed or commands to be run during creation of the VM. (i.e. `apt-get install apache2 php php-mysql -y`)
+{% endhint %}
+
 ### Virtual Private Cloud (VPC)
 
 * VPC networks connect GCP resources to each other and/or to the internet
