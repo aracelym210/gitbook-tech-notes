@@ -852,14 +852,86 @@ Big data services are fully managed and scalable&#x20;
 * Save money with pre-emptible instances for batch processing
 * Billed by the second (subj. to 1 min minimum)&#x20;
 * Once data is in a cluster, use Spark ML libraries to discover patterns&#x20;
+* Good for there is a dataset of a known size
 
 ### Cloud Dataflow
 
+* Good for streaming data or handling a dataset of an unknown size
+* Managed data pipelines&#x20;
+* Reads from a source (source) --> processes in a variety of ways (transforms) --> writes/ outputs to a storage solution (sink)
+* used for&#x20;
+  * extract/ transform/ load (ETL)
+  * data analysis&#x20;
+  * real-time applications such as gaming&#x20;
+
 ### BigQuery
+
+* Fully managed data warehouse (pb scale)
+* No cluster maintenance is required&#x20;
+* Use SQL queries to query data&#x20;
+* Free monthly quotas&#x20;
+* scalable&#x20;
+* 99.9 sla
+* only pay for queries when they are run&#x20;
+* price reduction for longterm storage (first reduction at 90 days)
 
 ### Cloud Pub/Sub
 
+_Pub = Publishers ; Sub = Subscribers_&#x20;
+
+* Simple, reliable, scalable foundation for stream analytics&#x20;
+* Messaging service
+* Building block for apps where data arrives at high and unpredictable rates&#x20;
+  * i.e. IoT, Marketing analytics&#x20;
+* Subscribers can be configured on push/ pull basis
+
 ### Cloud Datalab
+
+* Built on Jupyter lab/ jupyter notebook&#x20;
+* Integrates with other GCP services
+  * BigQuery
+  * Compute Engine
+  * Cloud Storage
+* Easily deploy models to BigQuery&#x20;
+
+### Machine Learning Platform
+
+* Available as a cloud service&#x20;
+* TensorFlow is an open source machine learning software library that is useful for building ML apps
+* Fully managed machine learning service
+  * Cloud ML service
+* Pre-trained machine learning models as a service using various APIs
+  * Speech
+    * convert audio to text
+  * Vision
+    * gain insight
+    * detect inappropriate content&#x20;
+    * analyze sentiment&#x20;
+    * extract text&#x20;
+  * Natural Language API
+    * reveal structure and meaning of text
+    * extract info about items mentioned in text docs, news articles, and blog posts&#x20;
+  * Translation API
+  *   Video intelligence api (beta)
+
+      * annotate contents of videos
+      * detect scene changes
+      * flag inappropriate content&#x20;
+
+
+
+#### Cloud Machine Learning Platform Use cases
+
+**Structured data**
+
+* classification and regression
+* recommendation
+* anomaly detection&#x20;
+
+#### Unstructured data&#x20;
+
+* Image analytics&#x20;
+* Text analytics&#x20;
 
 ## References:
 
