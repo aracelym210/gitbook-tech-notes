@@ -764,7 +764,9 @@ If you want to code in a language not covered in the preconfigured runtimes, use
 ### App Engine Flexible Environment
 
 * Gives more flexibility and control over runtimes for apps&#x20;
+  * Owners can control the geographic region where they run&#x20;
 * Allows you specify which _Docker container_ to run your apps on&#x20;
+* Allows SSH access
 
 ### App Engine Std. vs Flexible vs Kubernetes
 
