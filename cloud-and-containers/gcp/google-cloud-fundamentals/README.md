@@ -671,6 +671,11 @@ _Highly scalable, NoSQL DB_
 * Tools to build and run containers&#x20;
   * [Docker](../../docker/docker.md#dockerfile)&#x20;
   * GCP Service - Google Container Builder
+* Loosely coupled to environment&#x20;
+  * Consumes less resources and less error-prone than deploying an app in a VM
+  * Easy to move around&#x20;
+  * Abstract underlying OS details away from app
+* Each container _does not_ have it's own instance of the OS
 
 #### Why are they useful?&#x20;
 
@@ -687,6 +692,42 @@ _Kubernetes_ is a tool that helps to manage the moving parts that come with the 
 * Orchestrate many containers on many hosts
 * Scale
 * Roll out new versions, or roll back to an old version
+
+### Kubernetes and GKE
+
+* Kubernetes is an open source orchestrator to better manage and scale applications&#x20;
+* Containers can be deployed on a set of _nodes_ called a _cluster_&#x20;
+  * Cluster is a set of master components that control the system as a whole and set of nodes.&#x20;
+  * A cluster can be thought of as a group of machines where Kubernetes can schedule workloads
+  * In kubernetes - node represents a computing instance&#x20;
+* Pod - smallest deployable unit inside kubernetes&#x20;
+  * running process inside of cluster&#x20;
+  * Multiple containers with a hard dependencies can be packaged into a single pod which will be able to communicate locally on&#x20;
+* Deployment&#x20;
+  * `rollingUpdate` is an attribute of a deployment that allows you to tell kubernetes how you want to roll out updates to your app to your users. This is a way to mitigate risk so that updates can be pushed safely without suffering downtime&#x20;
+* Service&#x20;
+  * groups a set of pods together and provides a stable endpoint to access (i.e. a public IP managed by a load-balancer)&#x20;
+* Configuration files
+  * Tells kubernetes what you want desired state of the app to look like&#x20;
+  * .yaml file to declaritively tell kubuernetes how to manage your service&#x20;
+
+#### Google Kubernetes Engine (GKE)
+
+* Resources used to build Kubernetes Engine clusters come from Compute Engine
+  * Because of this, GKE gets to take advantage of Compute Engine's and Google VPC capabilities
+* The Kubernetes Engine team at Google periodically performs automatic upgrades of customer clusters to newer, stable versions of Kubernetes&#x20;
+
+#### How to get a kubernetes cluster?&#x20;
+
+* GCP managed service provides Kubernetes Engine&#x20;
+  * use console&#x20;
+  * or use gcloud&#x20;
+
+### Anthos&#x20;
+
+* Google's modern solution for hybrid and multi-cloud systems and services management&#x20;
+* Built on Kubernetes and GKE foundation&#x20;
+*
 
 ## References:
 
