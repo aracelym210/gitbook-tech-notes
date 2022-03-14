@@ -838,6 +838,29 @@ _GCP monitoring and logging service_&#x20;
 
 
 
+## Big Data and ML in GCP
+
+Big data services are fully managed and scalable&#x20;
+
+* Only pay for resources you consume
+
+### Cloud Dataproc
+
+* Managed way to run Hadoop, Spark, Hive, Pig
+* Map/ Reduce&#x20;
+* Easily migrate on-prem Hadoop jobs to cloud&#x20;
+* Save money with pre-emptible instances for batch processing
+* Billed by the second (subj. to 1 min minimum)&#x20;
+* Once data is in a cluster, use Spark ML libraries to discover patterns&#x20;
+
+### Cloud Dataflow
+
+### BigQuery
+
+### Cloud Pub/Sub
+
+### Cloud Datalab
+
 ## References:
 
 * Cloudskillboost Google Course&#x20;
