@@ -727,7 +727,39 @@ _Kubernetes_ is a tool that helps to manage the moving parts that come with the 
 
 * Google's modern solution for hybrid and multi-cloud systems and services management&#x20;
 * Built on Kubernetes and GKE foundation&#x20;
-*
+
+## App Engine
+
+* GCP App Engine service is a PaaS for building scalable applications&#x20;
+* Application infrastructure is managed for you, enabling developers to focus on innovating applications&#x20;
+  * For example, App Engine manages the hardware and networking infrastructure required to run code
+* Especially suited for web applications and mobile backends or other applications where the workload is highly variable
+  * App Engine will scale applications automatically in response to the amount of traffic it receives&#x20;
+
+### App Engine Standard Environment&#x20;
+
+* Easily deploy and scale
+* Free daily quota, and additional resources are priced by usage&#x20;
+* SDK available for dev, test and deployment&#x20;
+* Based on container instances running on Google's Infrastructure&#x20;
+
+#### Preconfigured runtimes available in STD env
+
+* Java
+* Python
+* Go
+* PHP
+
+{% hint style="info" %}
+If you want to code in a language not covered in the preconfigured runtimes, use of the App Engine flexible environment would be a better option
+{% endhint %}
+
+#### Sandbox constraints
+
+* Use of the App Engine Standard environment requires your code to run in a sandbox, which imposes some constraints to be aware of&#x20;
+  * No writing to local file system (must use db service instead)
+  * Requests time out at 60 seconds
+  * 3rd party software installation is limited
 
 ## References:
 
