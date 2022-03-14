@@ -657,6 +657,37 @@ _Highly scalable, NoSQL DB_
 | **Unit size**             | 1 MB / entity                                                                     | <p>~ 10 MB / cell<br>~ 100 MB / row</p>                                                        | 5 TB/ object                                                         | Determined by DB engine                                     | 10,240 MiB/ row                                                   | 10 MB / row                                                       |
 |                           |                                                                                   |                                                                                                |                                                                      |                                                             |                                                                   |                                                                   |
 
+## Containers in GCP
+
+* Recall GCP services Compute Engine -- IaaS offering, and GCP App Engine -- PaaS offering
+
+### Containers&#x20;
+
+#### What are they?
+
+* get independent scalability of workloads, similar to PaaS, and also an abstraction of hardware, similar to IaaS
+* Containers run as processes (compare with boot time of an OS)
+* OS virtualization (vs. hardware virtualization as with a VM)
+* Tools to build and run containers&#x20;
+  * Docker&#x20;
+  * GCP Service - Google Container Builder
+
+#### Why are they useful?&#x20;
+
+* Scalable and flexible&#x20;
+* Abstraction makes code very portable&#x20;
+* Apps can be moved with minimal re-work effort (i.e. between dev-test-prod or between local host and cloud)
+
+#### How are they managed at scale?&#x20;
+
+Following a microservices architecture, containers running specific services of your app can start, stop, scale as needed.&#x20;
+
+_Kubernetes_ is a tool that helps to manage the moving parts that come with the scenario mentioned above&#x20;
+
+* Orchestrate many containers on many hosts
+* Scale
+* Roll out new versions, or roll back to an old version
+
 ## References:
 
 * Cloudskillboost Google Course&#x20;

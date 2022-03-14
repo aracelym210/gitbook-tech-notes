@@ -6,12 +6,12 @@
 
 * [☁ aws](cloud-and-containers/aws/README.md)
   * [cloud-practitioner-essentials](cloud-and-containers/aws/cloud-practitioner-essentials.md)
-* [🐋 docker](cloud-and-containers/docker/README.md)
-  * [Docker Cheat Sheet](cloud-and-containers/docker/docker.md)
 * [☁ gcp](cloud-and-containers/gcp/README.md)
   * [Google Cloud Fundamentals: Core Infrastructure](cloud-and-containers/gcp/google-cloud-fundamentals/README.md)
   * [gcloud cheatsheet](cloud-and-containers/gcp/google-cloud-fundamentals/gcloud-cheatsheet.md)
   * [gsutil cheatsheet](cloud-and-containers/gcp/gsutil-cheatsheet.md)
+* [🐋 docker](cloud-and-containers/docker/README.md)
+  * [Docker Cheat Sheet](cloud-and-containers/docker/docker.md)
 
 ## Programming Languages
 
