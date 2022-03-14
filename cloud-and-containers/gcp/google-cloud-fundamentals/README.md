@@ -774,6 +774,28 @@ If you want to code in a language not covered in the preconfigured runtimes, use
 
 ![](<../../../.gitbook/assets/image (2).png>)
 
+## Cloud Endpoints and Apigee Edge
+
+### Cloud Endpoints
+
+* helps to create an maintain APIs for your applications&#x20;
+* Control access and validate calls with JSON web tokens and Google API keys
+  * id web and mobile users with Auth0 and Firebase authentication
+* Generate client libs&#x20;
+* Supports multiple GCP services/ runtime environments
+  * App Engine Flexible Environment
+  * Kubernetes engine
+  * Compute engine&#x20;
+
+### Apigee Edge
+
+* Helps to secure and monetize APIs&#x20;
+* A platform for making APIs available to customers and partners
+  * i.e. paying for access to an API such as a Threat Intel provider, or exclusive data from ESPN.com&#x20;
+  * Good to use if you want to gradually decompose a pre-existing monolithic application, not implemented in GCP, into microservices
+
+
+
 ## References:
 
 * Cloudskillboost Google Course&#x20;
