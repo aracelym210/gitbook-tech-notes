@@ -796,6 +796,48 @@ If you want to code in a language not covered in the preconfigured runtimes, use
 
 
 
+## Development in the Cloud
+
+### Cloud Source Repositories&#x20;
+
+* GCP managed Git repository service
+
+### Cloud Functions&#x20;
+
+* Single purpose functions that responds to events without a server or runtime&#x20;
+* Cloud functions are written in JS
+* Use beyond the perpetual monthly free tier is billed in 100 ms increments&#x20;
+
+## Deployment: Infra as Code
+
+### Deployment Manager
+
+* GCP Infrastructure management service
+* To use it, create a .yaml or python template file describing what the components of the environment&#x20;
+* templates can be stored and placed under version control in Cloud Source Repos
+
+## Monitoring: Proactive Instrumentation
+
+### Stackdriver
+
+_GCP monitoring and logging service_&#x20;
+
+* Provides insights into:
+  * health
+  * availability&#x20;
+*   Core Components&#x20;
+
+    * Monitoring
+      * create dashboards and alerts&#x20;
+    * Logging
+      * view, search and filter logs from your application
+      * define metrics based on logs&#x20;
+    * Trace
+    * Error reporting
+    * Debugger
+
+
+
 ## References:
 
 * Cloudskillboost Google Course&#x20;
