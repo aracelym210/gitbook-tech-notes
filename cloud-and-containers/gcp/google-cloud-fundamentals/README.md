@@ -96,13 +96,13 @@
 
 ### Shared-responsibility&#x20;
 
-![](<../../../.gitbook/assets/image (2).png>)
+![](<../../../.gitbook/assets/image (2) (1).png>)
 
 ### Resource Hierarchy Levels
 
 * Levels of hierarchy provide trust boundaries and resource isolation&#x20;
-* ![](<../../../.gitbook/assets/image (1) (1).png>)
-* ![](../../../.gitbook/assets/image.png)
+* ![](<../../../.gitbook/assets/image (1) (1) (1).png>)
+* ![](<../../../.gitbook/assets/image (1).png>)
 * Resources (VM, Storage Bucket, etc.) --> Project(s) --> Folder(s) --> Organization&#x20;
   * All resources are organized into projects.
   * Projects can optionally be organized into folders, which can also contain subfolders
@@ -760,6 +760,17 @@ If you want to code in a language not covered in the preconfigured runtimes, use
   * No writing to local file system (must use db service instead)
   * Requests time out at 60 seconds
   * 3rd party software installation is limited
+
+### App Engine Flexible Environment
+
+* Gives more flexibility and control over runtimes for apps&#x20;
+* Allows you specify which _Docker container_ to run your apps on&#x20;
+
+### App Engine Std. vs Flexible vs Kubernetes
+
+![](../../../.gitbook/assets/image.png)
+
+![](<../../../.gitbook/assets/image (2).png>)
 
 ## References:
 
