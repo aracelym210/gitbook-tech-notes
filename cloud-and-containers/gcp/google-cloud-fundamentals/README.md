@@ -206,7 +206,7 @@ Four types of principals (identity types)
 #### <mark style="color:blue;">Can do what?</mark>&#x20;
 
 * Defined by an _<mark style="color:blue;">IAM role,</mark> which is a collection of permissions_&#x20;
-* _<mark style="color:blue;"></mark>_![](<../../../.gitbook/assets/image (3).png>)_<mark style="color:blue;"></mark>_
+* _<mark style="color:blue;"></mark>_![](<../../../.gitbook/assets/image (3) (1).png>)_<mark style="color:blue;"></mark>_
 
 _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</mark>_&#x20;
 
@@ -823,6 +823,8 @@ If you want to code in a language not covered in the preconfigured runtimes, use
 * GCP Infrastructure management service
 * To use it, create a .yaml or python template file describing what the components of the environment&#x20;
 * templates can be stored and placed under version control in Cloud Source Repos
+* quickly deploy functional software packages by using pre-defined templates with Deployment Manager service&#x20;
+* templates are combo of yaml, python and jinja2
 
 ## Monitoring: Proactive Instrumentation
 
