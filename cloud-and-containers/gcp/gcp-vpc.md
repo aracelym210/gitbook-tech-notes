@@ -169,6 +169,7 @@ Three types of network in GCP:&#x20;
 ### Security when designing networks&#x20;
 
 * Only assign internal IP address to VM whenever possible&#x20;
+  * The default setting for a VM instance is to have an ephemeral external IP address. This behavior can be changed with a policy constraint at the organization or project level.
 
 #### Cloud NAT&#x20;
 
