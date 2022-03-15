@@ -82,7 +82,7 @@ Three types of network in GCP:&#x20;
   * Sounds like an A record / CNAME record?&#x20;
 * Essentially, you can configure multiple IP addresses representing containers or applications hosted in a VM
 
-![](<../../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 ## DNS&#x20;
 
@@ -138,7 +138,7 @@ Three types of network in GCP:&#x20;
 * priority
 * rule assignment&#x20;
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 ## Network pricing
 
@@ -147,19 +147,26 @@ Three types of network in GCP:&#x20;
 
 ![I believe this presentation was created in 2019](../../.gitbook/assets/image.png)
 
-![I believe this presentation was created in 2019](<../../.gitbook/assets/image (3).png>)
+![I believe this presentation was created in 2019](<../../.gitbook/assets/image (3) (1).png>)
 
 ## "Common" Network Designs&#x20;
 
 ### Availability&#x20;
 
 * If availability is a high priority, you can place two VMs into multiple zones, but within the same subnet&#x20;
+* Allocating VMs on a single subnet to separate zones gives improved availability without additional security complexity&#x20;
+
+![](<../../.gitbook/assets/image (4).png>)
 
 ### Globalization
 
 * place resources in different regions to create a higher degree of failure independence&#x20;
+* design robust systems with resources spread across different failure domains&#x20;
+* HTTP load balancer allows you to route traffic to the region that is closest to the user&#x20;
 
-### Security considerations
+![](<../../.gitbook/assets/image (3).png>)
+
+### Security when designing networks&#x20;
 
 * Only assign internal IP address to VM whenever possible&#x20;
 
@@ -169,9 +176,22 @@ _GCP managed network address translation service is "Cloud NAT"_
 
 * Cloud NAT allows you to provision app instances without public IP addresses while also allowing them to access the internet in a controlled and efficient manner&#x20;
 * Outbound NAT vs. Inbound NAT
-* Hosts outside of VPC network cannot directly access any o the private instances behind the cloud NAT gateway&#x20;
-  * Helps keep VPC networks isolated and secure&#x20;
-  *
+*   Hosts outside of VPC network cannot directly access any o the private instances behind the cloud NAT gateway&#x20;
+
+    * Helps keep VPC networks isolated and secure&#x20;
+
+
+
+![](<../../.gitbook/assets/image (2).png>)
+
+#### Private Google Access
+
+_Allows VMs that only have internal IP addresses to reach external IP addresses of Google APIs and services \*\*without going through the internet\*\*_
+
+* Need to enable this if your private VM needs access to a cloud storage bucket&#x20;
+* Enabled on a subnet-by-subnet basis
+
+![](<../../.gitbook/assets/image (5).png>)
 
 ## References&#x20;
 
