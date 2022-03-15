@@ -107,3 +107,34 @@ Three types of network in GCP:&#x20;
 * Scalable, reliable and managed authoritative dns service&#x20;
 * 100% up-time SLA for domains configured in cloud dns
 
+## Routes and Firewall rules&#x20;
+
+### Cloud Routes&#x20;
+
+* Route is mapping of IP address to a destination&#x20;
+* Route is created when a network or when a subnet is created&#x20;
+* each route may apply to one or more instances&#x20;
+  * if network and instance tags match
+  * If network matches and there are no instance tags specified, the route applies to all instances in that network&#x20;
+* Instance routing tables&#x20;
+* Need to have a firewall rule to match your route or else no traffic will flow&#x20;
+
+### Cloud Firewall rules&#x20;
+
+* VPC network functions as a distributed firewall&#x20;
+* Rules are applied to the network as a whole
+* Protect VM instances from unapproved connections&#x20;
+* Connections allowed or denied at the instance level&#x20;
+* Stateful&#x20;
+* Implied deny all ingress and allow all egress&#x20;
+
+#### Rule attributes&#x20;
+
+* direction&#x20;
+* source or destination&#x20;
+* protocol and port&#x20;
+* action
+* priority
+* rule assignment&#x20;
+
+![](<../../.gitbook/assets/image (4).png>)
