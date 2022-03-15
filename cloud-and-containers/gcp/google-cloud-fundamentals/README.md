@@ -109,8 +109,8 @@ GCP infrastructure can be compared to the infrastructure of a city.&#x20;
 ### Resource Hierarchy Levels
 
 * Levels of hierarchy provide trust boundaries and resource isolation&#x20;
-* ![](<../../../.gitbook/assets/image (1) (1) (1).png>)
-* ![](<../../../.gitbook/assets/image (1).png>)
+* ![](<../../../.gitbook/assets/image (1) (1) (1) (1).png>)
+* ![](<../../../.gitbook/assets/image (1) (1).png>)
 * Resources (VM, Storage Bucket, etc.) --> Project(s) --> Folder(s) --> Organization&#x20;
   * All resources are organized into projects.
   * Projects can optionally be organized into folders, which can also contain subfolders
@@ -206,7 +206,7 @@ Four types of principals (identity types)
 #### <mark style="color:blue;">Can do what?</mark>&#x20;
 
 * Defined by an _<mark style="color:blue;">IAM role,</mark> which is a collection of permissions_&#x20;
-* _<mark style="color:blue;"></mark>_![](<../../../.gitbook/assets/image (3) (1).png>)_<mark style="color:blue;"></mark>_
+* _<mark style="color:blue;"></mark>_![](<../../../.gitbook/assets/image (3) (1) (1).png>)_<mark style="color:blue;"></mark>_
 
 _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</mark>_&#x20;
 
@@ -778,7 +778,7 @@ If you want to code in a language not covered in the preconfigured runtimes, use
 
 ### App Engine Std. vs Flexible vs Kubernetes
 
-![](../../../.gitbook/assets/image.png)
+![](<../../../.gitbook/assets/image (1).png>)
 
 ![](<../../../.gitbook/assets/image (2).png>)
 

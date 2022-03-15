@@ -81,7 +81,7 @@ Three types of network in GCP:&#x20;
   * Sounds like an A record / CNAME record?&#x20;
 * Essentially, you can configure multiple IP addresses representing containers or applications hosted in a VM
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 ## DNS&#x20;
 
@@ -138,3 +138,16 @@ Three types of network in GCP:&#x20;
 * rule assignment&#x20;
 
 ![](<../../.gitbook/assets/image (4).png>)
+
+## Network pricing
+
+* GCP pricing calculator&#x20;
+  * Web-based tool  that you use to specify the expected consumption of certain services and resources, and then it provides you with an estimated cost&#x20;
+
+![I believe this presentation was created in 2019](../../.gitbook/assets/image.png)
+
+![I believe this presentation was created in 2019](<../../.gitbook/assets/image (3).png>)
+
+## References&#x20;
+
+* Cloudskillsboost - Essential Google Cloud Infrastructure: Foundation
