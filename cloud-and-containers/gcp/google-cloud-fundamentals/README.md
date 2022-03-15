@@ -13,6 +13,14 @@
 * IaaS ---> Hybrid ---> PaaS (App Engine) ---> Serverless logic (Cloud functions) ---> Automated elastic resources (Managed services)&#x20;
 * Google network is made of up hundreds of thousands kilometers of fiber cable, including subsea cables, more than 90 Internet exchanges and more than 100 Internet Points of Presence.&#x20;
 
+### Thinking of GCP Infrastructure
+
+GCP infrastructure can be compared to the infrastructure of a city.&#x20;
+
+* People in the city are like users
+* Buildings, cars and bikes are like applications
+* Everything that goes into supporting those applications for the users is the infrastructure&#x20;
+
 ## Regions and Zones&#x20;
 
 * Services can be zonal, regional, or managed by Google across regions&#x20;
