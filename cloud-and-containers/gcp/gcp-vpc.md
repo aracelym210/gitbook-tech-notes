@@ -36,7 +36,7 @@ description: Notes on Google Virtual Private Cloud
 Three types of network in GCP:&#x20;
 
 1. Default
-2. Auto Mode
+2. Auto Mode (not recommended for production)
 3. Custom Mode
 {% endhint %}
 
@@ -54,6 +54,7 @@ Three types of network in GCP:&#x20;
 * One subnet per region is automatically created&#x20;
   * predefined IPs with /20 mask that can expand to /16
   * All subnets fit within 10.128.0.0/9
+* Not recommended for production (convert to custom mode instead)
 {% endtab %}
 
 {% tab title="Custom Mode" %}
@@ -147,6 +148,30 @@ Three types of network in GCP:&#x20;
 ![I believe this presentation was created in 2019](../../.gitbook/assets/image.png)
 
 ![I believe this presentation was created in 2019](<../../.gitbook/assets/image (3).png>)
+
+## "Common" Network Designs&#x20;
+
+### Availability&#x20;
+
+* If availability is a high priority, you can place two VMs into multiple zones, but within the same subnet&#x20;
+
+### Globalization
+
+* place resources in different regions to create a higher degree of failure independence&#x20;
+
+### Security considerations
+
+* Only assign internal IP address to VM whenever possible&#x20;
+
+#### Cloud NAT&#x20;
+
+_GCP managed network address translation service is "Cloud NAT"_
+
+* Cloud NAT allows you to provision app instances without public IP addresses while also allowing them to access the internet in a controlled and efficient manner&#x20;
+* Outbound NAT vs. Inbound NAT
+* Hosts outside of VPC network cannot directly access any o the private instances behind the cloud NAT gateway&#x20;
+  * Helps keep VPC networks isolated and secure&#x20;
+  *
 
 ## References&#x20;
 
