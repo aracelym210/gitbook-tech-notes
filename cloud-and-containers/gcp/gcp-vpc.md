@@ -82,7 +82,7 @@ Three types of network in GCP:&#x20;
   * Sounds like an A record / CNAME record?&#x20;
 * Essentially, you can configure multiple IP addresses representing containers or applications hosted in a VM
 
-![](<../../.gitbook/assets/image (3) (1) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 ## DNS&#x20;
 
@@ -147,7 +147,7 @@ Three types of network in GCP:&#x20;
 
 ![I believe this presentation was created in 2019](../../.gitbook/assets/image.png)
 
-![I believe this presentation was created in 2019](<../../.gitbook/assets/image (3) (1).png>)
+![I believe this presentation was created in 2019](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 ## "Common" Network Designs&#x20;
 
@@ -164,7 +164,7 @@ Three types of network in GCP:&#x20;
 * design robust systems with resources spread across different failure domains&#x20;
 * HTTP load balancer allows you to route traffic to the region that is closest to the user&#x20;
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 ### Security when designing networks&#x20;
 
