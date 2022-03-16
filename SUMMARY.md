@@ -7,6 +7,7 @@
 * [☁ aws](cloud-and-containers/aws/README.md)
   * [cloud-practitioner-essentials](cloud-and-containers/aws/cloud-practitioner-essentials.md)
 * [☁ gcp](cloud-and-containers/gcp/README.md)
+  * [GCP Virtual Machines](cloud-and-containers/gcp/gcp-virtual-machines.md)
   * [GCP Fundamentals: Core Infrastructure](cloud-and-containers/gcp/google-cloud-fundamentals/README.md)
   * [GCP VPC](cloud-and-containers/gcp/gcp-vpc.md)
   * [gcloud cheatsheet](cloud-and-containers/gcp/google-cloud-fundamentals/gcloud-cheatsheet.md)
