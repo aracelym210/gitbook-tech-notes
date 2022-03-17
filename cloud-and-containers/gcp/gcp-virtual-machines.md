@@ -1,4 +1,4 @@
-# GCP Virtual Machines
+# 💻 GCP Virtual Machines
 
 ## Compute Engine&#x20;
 
@@ -34,7 +34,7 @@
 
 ![Machine type structure](<../../.gitbook/assets/image (5).png>)
 
-### Storage Options
+### Storage Options :minidisc:
 
 * Harddisk vs SSDs -- performance vs. cost
   * SSDs designed for higher IOPs per dollar vs. std disk&#x20;
@@ -52,7 +52,7 @@
 * Flexible scheduling
 * Customize with pre/ post scripts&#x20;
 
-### Preemptible Resources
+### Preemptible Resources&#x20;
 
 * Up to 80% savings cost
 * VM may be terminated at any time
@@ -122,7 +122,7 @@ _Compute engine resource that stores all the configuration, metadata, permission
 * Snapshots
   * persistent disk snapshots (snapshots cannot be done on local ssd)
 
-### Billing/ Pricing
+### Billing/ Pricing :moneybag:
 
 * You do not pay for memory or cpu resources when a VM is terminated, but any attached disks and reserved IPs will incur a charge&#x20;
 * Sustained use discounts&#x20;

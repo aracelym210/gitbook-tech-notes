@@ -1,4 +1,4 @@
-# GCP Fundamentals
+# 🧱 GCP Fundamentals
 
 ## Cloud Computing Definition
 
@@ -21,7 +21,7 @@ GCP infrastructure can be compared to the infrastructure of a city.&#x20;
 * Buildings, cars and bikes are like applications
 * Everything that goes into supporting those applications for the users is the infrastructure&#x20;
 
-## Regions and Zones&#x20;
+## Regions and Zones :earth\_africa:
 
 * Services can be zonal, regional, or managed by Google across regions&#x20;
 * A zone is a deployment area for GCP resources within a region.&#x20;
@@ -87,7 +87,7 @@ GCP infrastructure can be compared to the infrastructure of a city.&#x20;
   * Open source&#x20;
   * Multiple languages supported&#x20;
 
-## Security&#x20;
+## Security :closed\_lock\_with\_key:
 
 ### Overview
 
@@ -151,7 +151,7 @@ GCP infrastructure can be compared to the infrastructure of a city.&#x20;
   * Delete projects&#x20;
   * Recover projects&#x20;
 
-#### Folders&#x20;
+#### Folders :file\_folder:
 
 * Optional
 * Group projects or other folders under an organization
@@ -172,7 +172,7 @@ GCP infrastructure can be compared to the infrastructure of a city.&#x20;
   * Existing G Suite customer&#x20;
   * Use Google Cloud Identity&#x20;
 
-### Identity and Access Management (IAM)
+### Identity and Access Management (IAM) :unlock:
 
 _<mark style="color:green;">\<Who></mark> <mark style="color:blue;">\<can do what></mark>  <mark style="color:red;">\<on which resource></mark>_&#x20;
 

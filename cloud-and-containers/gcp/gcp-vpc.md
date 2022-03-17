@@ -2,7 +2,7 @@
 description: Notes on Google Virtual Private Cloud
 ---
 
-# GCP VPC
+# 🌐 GCP VPC
 
 * Comprehensive set of Google managed networking objects&#x20;
   * Projects
@@ -140,7 +140,7 @@ Three types of network in GCP:&#x20;
 
 ![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
 
-## Network pricing
+## Network pricing :moneybag:
 
 * GCP pricing calculator&#x20;
   * Web-based tool  that you use to specify the expected consumption of certain services and resources, and then it provides you with an estimated cost&#x20;
@@ -158,7 +158,7 @@ Three types of network in GCP:&#x20;
 
 ![](<../../.gitbook/assets/image (4) (1) (1).png>)
 
-### Globalization
+### Globalization :earth\_americas:
 
 * place resources in different regions to create a higher degree of failure independence&#x20;
 * design robust systems with resources spread across different failure domains&#x20;
