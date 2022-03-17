@@ -45,3 +45,12 @@ description: Open source, container orchestration and management software
 
 * Workload portability is supported because of Kubernetes open-source nature&#x20;
 
+## Kubernetes Concepts&#x20;
+
+### Kubernetes Object Model
+
+_Everything in Kubernetes is an object, which is similar to the computer science concept of object-oriented programming_
+
+* Attributes of objects can be viewed and changed&#x20;
+
+[#what-is-kubernetes](kubernetes.md#what-is-kubernetes "mention")
