@@ -669,7 +669,7 @@ _Highly scalable, NoSQL DB_
 
 * Recall GCP services Compute Engine -- IaaS offering, and GCP App Engine -- PaaS offering
 
-### Containers&#x20;
+### [Containers](../google-kubernetes-engine.md#containers-are...)&#x20;
 
 #### What are they?
 
@@ -701,7 +701,7 @@ _Kubernetes_ is a tool that helps to manage the moving parts that come with the 
 * Scale
 * Roll out new versions, or roll back to an old version
 
-### Kubernetes and GKE
+### [Kubernetes](../../kubernetes.md) and [GKE](../google-kubernetes-engine.md)
 
 * Kubernetes is an open source orchestrator to better manage and scale applications&#x20;
 * Containers can be deployed on a set of _nodes_ called a _cluster_&#x20;

@@ -93,6 +93,33 @@ _GCP managed service to build containers_&#x20;
 * Each build step runs in a Docker container&#x20;
 * Delivers containers to various execution environments such as GitHub Enterprise (GHE) and Cloud Functions&#x20;
 
+## GKE
+
+_GCP managed service that helps to deploy, manage and scale_ [_Kubernetes_](../kubernetes.md) _environments for containerized applications on GCP_
+
+### Features
+
+* Fully managed&#x20;
+* Container-optimized OS managed by Google
+* Auto upgrade
+  * Ensures that clusters are automatically upgraded to latest version of Kubernetes&#x20;
+* Auto repair
+  * Unhealthy nodes are automatically repaired if a node is determined to be unhealthy during periodic health checks&#x20;
+* Cluster scaling
+* Seamless integration
+  * Integrates with GCP Cloud Build
+  * Integrates with GCP Container Registry&#x20;
+  * Integrates with IAM
+  * Integrates with Stackdriver for logging and monitoring&#x20;
+  * GCP VPC
+* Cloud console can be used to manage and view dashboards&#x20;
+
+{% hint style="info" %}
+The virtual machines that host containers inside of a GKE custer is referred to as a _**node**_&#x20;
+{% endhint %}
+
+
+
 ## References:
 
 * Google Cloud Training - Getting Started with Google Kubernetes Engine

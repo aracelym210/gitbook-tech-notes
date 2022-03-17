@@ -13,8 +13,9 @@
   * [Google Kubernetes Engine](cloud-and-containers/gcp/google-kubernetes-engine.md)
   * [📔 gcloud cheatsheet](cloud-and-containers/gcp/google-cloud-fundamentals/gcloud-cheatsheet.md)
   * [📔 gsutil cheatsheet](cloud-and-containers/gcp/gsutil-cheatsheet.md)
-* [🐋 docker](cloud-and-containers/docker/README.md)
+* [🐋 Docker](cloud-and-containers/docker/README.md)
   * [Docker Cheat Sheet](cloud-and-containers/docker/docker.md)
+* [☸ Kubernetes](cloud-and-containers/kubernetes.md)
 
 ## Programming Languages
 
