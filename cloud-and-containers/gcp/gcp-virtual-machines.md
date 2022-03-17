@@ -20,7 +20,7 @@
 
 * Compute-optimized
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 * Memory-optimized
 
@@ -28,7 +28,7 @@
 
 * Accelerator-optimized
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (6) (1).png>)
 
 #### Machine Type
 

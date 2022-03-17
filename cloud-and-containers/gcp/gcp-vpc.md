@@ -138,7 +138,7 @@ Three types of network in GCP:&#x20;
 * priority
 * rule assignment&#x20;
 
-![](<../../.gitbook/assets/image (4) (1) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
 
 ## Network pricing
 
@@ -156,7 +156,7 @@ Three types of network in GCP:&#x20;
 * If availability is a high priority, you can place two VMs into multiple zones, but within the same subnet&#x20;
 * Allocating VMs on a single subnet to separate zones gives improved availability without additional security complexity&#x20;
 
-![](<../../.gitbook/assets/image (4) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1).png>)
 
 ### Globalization
 
