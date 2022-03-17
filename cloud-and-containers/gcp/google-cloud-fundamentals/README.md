@@ -1,4 +1,4 @@
-# GCP Fundamentals: Core Infrastructure
+# GCP Fundamentals
 
 ## Cloud Computing Definition
 
@@ -945,4 +945,4 @@ _Pub = Publishers ; Sub = Subscribers_&#x20;
 
 ## References:
 
-* Cloudskillboost Google Course&#x20;
+* Cloudskillboost Google Course: Google Cloud Fundamentals: Core Infrastructure
