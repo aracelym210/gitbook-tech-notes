@@ -16,7 +16,7 @@
 * curated set of processor and hardware configs optimized for specific workloads&#x20;
 * _**General-purpose**_
 
-![](<../../.gitbook/assets/image (2).png>)
+![](<../../.gitbook/assets/image (2) (1).png>)
 
 * Compute-optimized
 
@@ -24,15 +24,15 @@
 
 * Memory-optimized
 
-![](<../../.gitbook/assets/image (8).png>)
+![](<../../.gitbook/assets/image (8) (1).png>)
 
 * Accelerator-optimized
 
-![](<../../.gitbook/assets/image (6) (1).png>)
+![](<../../.gitbook/assets/image (6) (1) (1).png>)
 
 #### Machine Type
 
-![Machine type structure](<../../.gitbook/assets/image (5).png>)
+![Machine type structure](<../../.gitbook/assets/image (5) (1).png>)
 
 ### Storage Options :minidisc:
 

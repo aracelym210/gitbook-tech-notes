@@ -104,7 +104,7 @@ GCP infrastructure can be compared to the infrastructure of a city.&#x20;
 
 ### Shared-responsibility&#x20;
 
-![](<../../../.gitbook/assets/image (2) (1) (1) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1) (1) (1).png>)
 
 ### Resource Hierarchy Levels
 
@@ -780,7 +780,7 @@ If you want to code in a language not covered in the preconfigured runtimes, use
 
 ![](<../../../.gitbook/assets/image (1).png>)
 
-![](<../../../.gitbook/assets/image (2) (1) (1).png>)
+![](<../../../.gitbook/assets/image (2) (1) (1) (1).png>)
 
 ## Cloud Endpoints and Apigee Edge
 

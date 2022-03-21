@@ -183,7 +183,7 @@ _GCP managed network address translation service is "Cloud NAT"_
 
 
 
-![](<../../.gitbook/assets/image (2) (1).png>)
+![](<../../.gitbook/assets/image (2) (1) (1).png>)
 
 #### Private Google Access
 
@@ -192,7 +192,7 @@ _Allows VMs that only have internal IP addresses to reach external IP addresses 
 * Need to enable this if your private VM needs access to a cloud storage bucket&#x20;
 * Enabled on a subnet-by-subnet basis
 
-![](<../../.gitbook/assets/image (5) (1).png>)
+![](<../../.gitbook/assets/image (5) (1) (1).png>)
 
 ## References&#x20;
 

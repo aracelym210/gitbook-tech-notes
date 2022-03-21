@@ -35,7 +35,7 @@ _Containers take advantage of various technologies inherent to the Linux operati
 * Each Linux process has it's own virtual memory address space&#x20;
 * Rapidly created and destroyed&#x20;
 
-#### Linux namespace&#x20;
+#### _Linux namespace_&#x20;
 
 * Access control of what an application can see
   * Process ID (pid)
@@ -44,12 +44,12 @@ _Containers take advantage of various technologies inherent to the Linux operati
   * etc.
 * Diff. from Kubernetes namespace&#x20;
 
-#### Linux cgroups
+#### _Linux cgroups_
 
 * Resource management for an application
   * Max consumption limits for CPU, memory, I/O
 
-#### Linux Union file systems&#x20;
+#### _Linux Union file systems_&#x20;
 
 * Encapsulate applications and dependencies into "clean" layers
 
@@ -74,12 +74,16 @@ _Layers, layers, layers_&#x20;
   * GCP customers can store their private images here and use IAM to implement access control&#x20;
 * Docker Hub registry&#x20;
 
-### Container Best Practice Notes
+
+
+{% hint style="success" %}
+### Container Best Practices
 
 * Do not build your application in the very same container you ship and run in production&#x20;
 * Whenever you want to store data permanently, you must do so somewhere other than the container image&#x20;
+{% endhint %}
 
-## GCP Cloud Build
+### GCP Cloud Build
 
 _GCP managed service to build containers_&#x20;
 
@@ -93,11 +97,9 @@ _GCP managed service to build containers_&#x20;
 * Each build step runs in a Docker container&#x20;
 * Delivers containers to various execution environments such as GitHub Enterprise (GHE) and Cloud Functions&#x20;
 
-## GKE
+## GKE Overview
 
 _GCP managed service that helps to deploy, manage and scale_ [_Kubernetes_](../kubernetes.md) _environments for containerized applications on GCP_
-
-### Features
 
 * Fully managed&#x20;
 * Container-optimized OS managed by Google
@@ -118,8 +120,68 @@ _GCP managed service that helps to deploy, manage and scale_ [_Kubernetes_](../k
 The virtual machines that host containers inside of a GKE custer is referred to as a _**node**_&#x20;
 {% endhint %}
 
+## Kubernetes in GKE
 
+This section documents specifics related to Kubernetes that are [documented here.](../kubernetes.md#architecture)
 
-## References:
+* GKE manages all control plane components&#x20;
+  * Takes responsibility for provisioning and managing all control plane infrastructure&#x20;
+* Instead of Kubernetes Admins manually creating nodes, GKE automatically deploys and registers [Compute Engine](google-cloud-fundamentals/#compute-engine) instances as nodes
+* Node pool:Subset of nodes within a cluster that share a configuration. This is specific to GKE, although you can manually build out an analogous feature in Kubernetes&#x20;
+  * note that there is some overhead&#x20;
+
+![](<../../.gitbook/assets/image (7).png>)
+
+### Zonal Clusters vs. Regional Clusters
+
+* Cannot change zonal to regional or visa-versa&#x20;
+
+![](<../../.gitbook/assets/image (6).png>)
+
+### Private Clusters
+
+![](<../../.gitbook/assets/image (10).png>)
+
+### Object Management
+
+#### Manifest files&#x20;
+
+* YAML or JSON
+* Defines a desired state for a pod -- name and specific container image to run&#x20;
+  * ![](<../../.gitbook/assets/image (5).png>)****
+
+{% hint style="success" %}
+### **Object Management Best Practices**
+
+* Define related objects in the same YAML file
+* Version control manifest files
+* Apply namespaces at the command line level to make YAML file for more flexibility&#x20;
+{% endhint %}
+
+#### Namespaces&#x20;
+
+* A single cluster can be abstracted into multiple clusters called namespaces&#x20;
+* Provide scope for naming resources such as pod deployments and controllers
+* For example -- test, stage, and prod
+* not required&#x20;
+* 3 initial namespaces in a cluster
+  * Default
+  * Kube-System: namespace for objects created by kubernetes system itself
+  * Kube-public: essentially this is a broadcast namespace&#x20;
+* Object names need only be unique across a namespace, not across all namespaces&#x20;
+* ![](<../../.gitbook/assets/image (2).png>)
+
+#### Controller Objects and Pods
+
+* Instead of defining separate individual pods, we can use a controller object whose job is to manage the state of the pods
+  * Remember that pods are not self-healing&#x20;
+* A deployment ensures that a defined set of pods is running at any given time
+  * ![](<../../.gitbook/assets/image (8).png>)
+
+#### Resource quotas&#x20;
+
+*
+
+## References
 
 * Google Cloud Training - Getting Started with Google Kubernetes Engine

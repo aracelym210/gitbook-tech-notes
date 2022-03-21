@@ -62,6 +62,14 @@ _Everything that is managed by Kubernetes is an object, which is similar to the 
 
 ### Architecture
 
+#### **Basic components**
+
+* Cluster
+* Node(s)
+* Pods
+  * ephemeral and disposable objects, w/ lifecycle -- born, running, broken, dead&#x20;
+* Container
+
 Kubernetes cluster is made up of multiple computers -- mostly VMs
 
 * Control plane: computer that runs several of Kubernetes critical components&#x20;
@@ -79,6 +87,10 @@ Kubernetes cluster is made up of multiple computers -- mostly VMs
 
 
 
-![Diagram of how the components described above interconnect ](<../.gitbook/assets/image (7).png>)
+![Diagram of how the components described above interconnect ](<../.gitbook/assets/image (9).png>)
 
 ####
+
+## References
+
+* Google Cloud Training - Getting Started with Google Kubernetes Engine
