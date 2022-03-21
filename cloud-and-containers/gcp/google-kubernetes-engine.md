@@ -175,12 +175,61 @@ This section documents specifics related to Kubernetes that are [documented here
 
 * Instead of defining separate individual pods, we can use a controller object whose job is to manage the state of the pods
   * Remember that pods are not self-healing&#x20;
-* A deployment ensures that a defined set of pods is running at any given time
+* A **deployment** ensures that a defined set of pods is running at any given time
   * ![](<../../.gitbook/assets/image (8).png>)
 
-#### Resource quotas&#x20;
+_**Other controller objects**_ :arrow\_down:_****_
 
-*
+{% tabs %}
+{% tab title="ReplicaSets" %}
+* Ensures identical pods (population) are running at the same time&#x20;
+* Can receive declarative updates from a Deployment object
+{% endtab %}
+
+{% tab title="Deployments" %}
+* Create, update, roll back and scale Pods, using ReplicaSets as needed
+* For example, when you perform a rolling upgrade of a Deployment, the Deployment object creates a second ReplicaSet, and then increases the number of Pods in the new ReplicaSet as it decreases the number of Pods in its original ReplicaSet.
+{% endtab %}
+
+{% tab title="Replication Controllers" %}
+{% hint style="danger" %}
+No longer recommended, although can perform similar role of ReplicaSets and Deployments combination
+{% endhint %}
+{% endtab %}
+
+{% tab title="StatefulSet" %}
+* Useful for applications that need to maintain a local state
+* Pods created through Deployment have unique identities with stable network identity and persistent disk storage&#x20;
+{% endtab %}
+
+{% tab title="DaemonSets" %}
+* Ensures that a specific Pod is always running on all or some subnet of the nodes&#x20;
+* If new nodes are added, DaemonSet will automatically set up Pods in those nodes with the required specification
+
+{% hint style="info" %}
+_****_[_**Daemon**_](https://en.wikipedia.org/wiki/Daemon\_\(computing\)) **** is a computer science term which is a non-interactive process that provides useful services to other processes
+{% endhint %}
+{% endtab %}
+
+{% tab title="Job" %}
+* Creates one or more Pods required to run a task
+* Once the task completes, the Job controller will terminate the pods&#x20;
+
+{% hint style="warning" %}
+<mark style="color:orange;">**Related:**</mark> CronJob controller
+{% endhint %}
+{% endtab %}
+{% endtabs %}
+
+#### Load-balanced Services&#x20;
+
+* ClusterIP: Exposes the service on an IP address that is only accessible from within this cluster. This is the default type.&#x20;
+* NodePort: Exposes the service on the IP address of each node in the cluster, at a specific port number.&#x20;
+* LoadBalancer: Exposes the service externally, using a load balancing service provided by a cloud provider.
+
+{% hint style="info" %}
+In GKE, LoadBalancers give access to a regional [Network Load Balancing](https://txmx.gitbook.io/tech-notes/cloud-and-containers/gcp/google-cloud-fundamentals#cloud-load-balancing) configuration by default, but this can be modified.&#x20;
+{% endhint %}
 
 ## References
 
