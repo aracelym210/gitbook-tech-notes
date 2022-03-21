@@ -2,7 +2,7 @@
 description: Cheatsheet of gsutil commands
 ---
 
-# gsutil cheatsheet
+# 📔 gsutil cheatsheet
 
 
 

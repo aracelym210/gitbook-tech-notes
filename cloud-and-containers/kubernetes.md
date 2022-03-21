@@ -49,8 +49,36 @@ description: Open source, container orchestration and management software
 
 ### Kubernetes Object Model
 
-_Everything in Kubernetes is an object, which is similar to the computer science concept of object-oriented programming_
+_Everything that is managed by Kubernetes is an object, which is similar to the computer science concept of object-oriented programming_
 
 * Attributes of objects can be viewed and changed&#x20;
+* A Kubernetes object is a persistent entity that represents the state of something running in a cluster. More specifically, the _desired state_ and the _current state_ are part of the object definition.&#x20;
 
-[#what-is-kubernetes](kubernetes.md#what-is-kubernetes "mention")
+### Principle of declarative management&#x20;
+
+* Kubernetes expects to be told what the desired state of the objects under it's management is
+* Given a defined state, Kubernetes will work to bring that state to fruition, and will keep it there&#x20;
+  * This is achieved by the Kubernetes "watchloop"
+
+### Architecture
+
+Kubernetes cluster is made up of multiple computers -- mostly VMs
+
+* Control plane: computer that runs several of Kubernetes critical components&#x20;
+  * kube-APIserver: accept commands to view/ change the state of the cluster&#x20;
+    * `kubectl` command communicates with the kube-APIserver, but in fact any command that changes the cluster goes through the kube-APIserver
+  * etcd: cluster DB that stores the state of the cluster, configuration data, and other dynamic metadata.&#x20;
+  * kube-scheduler: scheduling pods onto nodes by evaluating requirements of each indv. pod, and then selects which node is most suitable. **it does not assign, but simply writes information on the pod object which will later get referenced and assigned by another component**&#x20;
+  * kube-controller-manager: continuously monitors the state of the cluster through kube-APIserver. when there is a deviation between desired state and current state, this component attempts to make changes to achieve the desired state&#x20;
+    * a _controller_ is a code loop that handles the process of remediation on individual kubernetes objects. the kube-controller-manager manages these code loops.&#x20;
+  * kube-cloud-mananger: manages controllers that interact with the underlying cloud service providers (CSP)
+*   Node
+
+    * kubelet: kubernetes agent on each node that communicates with kube-APIserver
+    * kube-proxy: maintains the network connectivity among the pods in a cluster by leveraging firewall capabilities of iptables
+
+
+
+![Diagram of how the components described above interconnect ](<../.gitbook/assets/image (7).png>)
+
+####

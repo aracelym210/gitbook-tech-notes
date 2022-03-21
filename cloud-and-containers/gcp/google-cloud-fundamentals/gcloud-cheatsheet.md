@@ -2,7 +2,7 @@
 description: Cheatsheet of gcloud commands
 ---
 
-# gcloud cheatsheet
+# 📔 gcloud cheatsheet
 
 
 
