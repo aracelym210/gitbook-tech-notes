@@ -66,9 +66,12 @@ _Everything that is managed by Kubernetes is an object, which is similar to the 
 
 * Cluster
 * Node(s)
-* Pods
+* [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
   * ephemeral and disposable objects, w/ lifecycle -- born, running, broken, dead&#x20;
+  * A set of running containers in your cluster&#x20;
 * Container
+* [Workload](https://kubernetes.io/docs/concepts/workloads/)
+  * An application running on K8s that is run inside a set of pods
 
 Kubernetes cluster is made up of multiple computers -- mostly VMs
 
@@ -94,3 +97,4 @@ Kubernetes cluster is made up of multiple computers -- mostly VMs
 ## References
 
 * Google Cloud Training - Getting Started with Google Kubernetes Engine
+* [Kubernetes Docs](https://kubernetes.io/docs/concepts/)
