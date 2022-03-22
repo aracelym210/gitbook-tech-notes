@@ -69,6 +69,7 @@ _Everything that is managed by Kubernetes is an object, which is similar to the 
 * [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
   * ephemeral and disposable objects, w/ lifecycle -- born, running, broken, dead&#x20;
   * A set of running containers in your cluster&#x20;
+  * Placing containers on the same pod will ensure they run on the same node, thus reducing network latenct
 * Container
 * [Workload](https://kubernetes.io/docs/concepts/workloads/)
   * An application running on K8s that is run inside a set of pods
