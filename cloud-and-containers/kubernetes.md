@@ -195,7 +195,13 @@ _**How to create a deployment**_&#x20;
    * Example: `kubectl apply -f [DEPLOYMENT FILE]`
 2. Create imperatively using `kubectl run` command that specifies the parameters of the deployment inline
    * Example: `kubectl run [DEPLOYMENT NAME] --image [IMAGE]:[TAG] --replicas 3` etc. etc&#x20;
-3. :warning: [**GKE Specific**](gcp/google-kubernetes-engine.md#kubernetes-in-gke) **** GKE Workloads menu via GCP console. &#x20;
+3. :warning: [**GKE Specific**](gcp/google-kubernetes-engine.md#kubernetes-in-gke)**:** GKE Workloads menu via GCP console.&#x20;
+
+**Scaling a deployment**&#x20;
+
+* Manually - by modifying the manifest replicas via the console or `kubectl`
+* Autoscale - declare a minimum and maximum number of desired pods&#x20;
+  * This creates yet another Kubernetes object called horizontal pod auto scaler&#x20;
 
 ### [Workload](https://kubernetes.io/docs/concepts/workloads/)
 
@@ -232,9 +238,6 @@ _**How to create a deployment**_&#x20;
 * the `[NAME]` field is optional, and can be used to specify the object you wish to act upon.&#x20;
   * For example, `kubectl get pod my-test-app` will return the state of the pod _named_ "my-test-app"
 * like many CLI tools, `[flags]` can be used to display more or specific information or to specify an output format&#x20;
-*
-
-##
 
 ## References
 
