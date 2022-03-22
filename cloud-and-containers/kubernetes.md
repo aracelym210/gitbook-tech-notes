@@ -197,11 +197,27 @@ _**How to create a deployment**_&#x20;
    * Example: `kubectl run [DEPLOYMENT NAME] --image [IMAGE]:[TAG] --replicas 3` etc. etc&#x20;
 3. :warning: [**GKE Specific**](gcp/google-kubernetes-engine.md#kubernetes-in-gke)**:** GKE Workloads menu via GCP console.&#x20;
 
-**Scaling a deployment**&#x20;
+_**Scaling a deployment**_&#x20;
 
 * Manually - by modifying the manifest replicas via the console or `kubectl`
 * Autoscale - declare a minimum and maximum number of desired pods&#x20;
   * This creates yet another Kubernetes object called horizontal pod auto scaler&#x20;
+
+_**Strategies for updating deployments**_
+
+* Recreate
+* Rolling update
+* Blue/green&#x20;
+* Canary
+* A/B
+* Shadow&#x20;
+
+**Managing deployments**&#x20;
+
+* Pausing -- `kubectl rollout pause deployment [DEPLOYMENT NAME]`
+* Resuming -- `kubectl rollout resume deployment [DEPLOYMENT NAME]`&#x20;
+* Check status -- `kubectl rollout status deployment [DEPLOYMENT NAME]`&#x20;
+* Deleting -- `kubectl delete deployment [DEPLOYMENT NAME]`
 
 ### [Workload](https://kubernetes.io/docs/concepts/workloads/)
 
