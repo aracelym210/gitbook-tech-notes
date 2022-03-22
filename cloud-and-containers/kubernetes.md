@@ -189,6 +189,14 @@ _**Deployment lifecycle states**_
 Keep your deployment YAML files in a source code repository of some sort!
 {% endhint %}
 
+_**How to create a deployment**_&#x20;
+
+1. Create declaratively, using a manifest file (i.e. a .yaml file), and use the `kubectl apply` command.
+   * Example: `kubectl apply -f [DEPLOYMENT FILE]`
+2. Create imperatively using `kubectl run` command that specifies the parameters of the deployment inline
+   * Example: `kubectl run [DEPLOYMENT NAME] --image [IMAGE]:[TAG] --replicas 3` etc. etc&#x20;
+3. :warning: [**GKE Specific**](gcp/google-kubernetes-engine.md#kubernetes-in-gke) **** GKE Workloads menu via GCP console. &#x20;
+
 ### [Workload](https://kubernetes.io/docs/concepts/workloads/)
 
 * An application running on K8s that is run inside a set of pods
