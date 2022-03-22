@@ -140,7 +140,7 @@ This section documents specifics related to Kubernetes that are [documented here
 
 ### Private Clusters
 
-![](<../../.gitbook/assets/image (10).png>)
+![](<../../.gitbook/assets/image (10) (1).png>)
 
 ### Object Management
 
