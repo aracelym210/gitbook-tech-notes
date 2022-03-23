@@ -154,7 +154,7 @@ _****_[_**Daemon**_](https://en.wikipedia.org/wiki/Daemon\_\(computing\)) **** i
 
 * Declares the state of Pods&#x20;
 * Ensures that a defined set of pods is running at any given time
-* ![](<../.gitbook/assets/image (8).png>)
+* ![](<../.gitbook/assets/image (8) (1).png>)
 * Well-suited for [stateless applications ](kubernetes.md#stateful-and-stateless-applications)
   * i.e. a web frontend&#x20;
 
@@ -225,11 +225,60 @@ _**Pod Networking**_&#x20;
 * IP-per-pod model
   * every pod has it's own IP address&#x20;
   * Containers within a pod, thus share the same network namespace using that IP address&#x20;
-*
+
+![](<../.gitbook/assets/image (8).png>)
+
+{% hint style="warning" %}
+_**In GKE**_, Nodes get Pod IP addresses from address ranges assigned in VPC
+{% endhint %}
+
+
 
 ### [Workload](https://kubernetes.io/docs/concepts/workloads/)
 
 * An application running on K8s that is run inside a set of pods
+
+### Volumes
+
+* Directory which is accessible to all of the containers in a pod
+* Volumes are attached to _**pods**_ ~~not containers~~
+* Can be ephemeral or persistent&#x20;
+
+#### Ephemeral volumes&#x20;
+
+* config map: provides a way to inject application configuration data into pods from K8s
+  * Data can be stored in volume as if it were a tree of files and directories
+* emptyDir: an empty directory that allows a pod to to read and write to it
+  * created when a pod is assigned to a node and exists _as long as the pod exists_
+  * _do not use this for data of lasting value. ONLY USE FOR SHORT-TERM purposes_
+* Secrets: Similar to configMaps. Created to pass sensitive information (tokens, passwords, .ssh files) to pods.&#x20;
+  * Backed by in-memory file systems -- never written to non-volatile storage&#x20;
+  * base64 encoded&#x20;
+* downwardAPI: used to make downwardAPI data available to apps (containers can learn about their pod environment)&#x20;
+
+#### Persistent volumes
+
+* Used to manage durable storage in a cluster
+* Cluster resources that exist independently of pods
+* Can be provisioned dynamically or explicitly&#x20;
+
+{% hint style="warning" %}
+_**In GKE**_
+
+* Persistent volumes are usually backed by a persistent disk.&#x20;
+{% endhint %}
+
+| PersistentVolume (PV)                                            | PersistentVolumeClaim (PVC)                   |
+| ---------------------------------------------------------------- | --------------------------------------------- |
+| Managed at cluster level                                         | Requests and claims made by _pods_ to use PVs |
+| Independent of pod's lifecycle                                   |                                               |
+| Managed by K8s                                                   |                                               |
+| Manual or dynamic provision                                      |                                               |
+| :warning: In gke, persistent disks are used as PersistentVolumes |                                               |
+|                                                                  |                                               |
+|                                                                  |                                               |
+
+![](<../.gitbook/assets/image (10).png>)
 
 ### Load-balanced Services&#x20;
 
@@ -255,7 +304,7 @@ _**Pod Networking**_&#x20;
 
 ### kubectl syntax&#x20;
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (10) (1).png>)
 
 #### `kubectl [command] [TYPE] [NAME] [flags]`&#x20;
 

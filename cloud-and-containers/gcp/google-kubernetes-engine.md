@@ -140,7 +140,7 @@ This section documents specifics related to Kubernetes that are [documented here
 
 ### Private Clusters
 
-![](<../../.gitbook/assets/image (10) (1).png>)
+![](<../../.gitbook/assets/image (10) (1) (1).png>)
 
 ### Object Management
 
@@ -176,7 +176,7 @@ This section documents specifics related to Kubernetes that are [documented here
 * Instead of defining separate individual pods, we can use a controller object whose job is to manage the state of the pods
   * Remember that pods are not self-healing&#x20;
 * A **deployment** ensures that a defined set of pods is running at any given time
-  * ![](<../../.gitbook/assets/image (8).png>)
+  * ![](<../../.gitbook/assets/image (8) (1).png>)
 
 _**Other controller objects**_ :arrow\_down:_****_
 
