@@ -104,7 +104,7 @@ Kubernetes cluster is made up of multiple computers -- mostly VMs
 ### [Pods](https://kubernetes.io/docs/concepts/workloads/pods/)
 
 * ephemeral and disposable objects, w/ lifecycle -- born, running, broken, dead&#x20;
-* A set of running containers in your cluster&#x20;
+* A set of running containers in your cluster with shared storage and networking&#x20;
 * Placing containers on the same pod will ensure they run on the same node, thus reducing network latency
 
 #### Controller Objects and Pods
@@ -218,6 +218,14 @@ _**Strategies for updating deployments**_
 * Resuming -- `kubectl rollout resume deployment [DEPLOYMENT NAME]`&#x20;
 * Check status -- `kubectl rollout status deployment [DEPLOYMENT NAME]`&#x20;
 * Deleting -- `kubectl delete deployment [DEPLOYMENT NAME]`
+
+_**Pod Networking**_&#x20;
+
+* Different types of load-balancing is used to to direct traffic to the correct pod&#x20;
+* IP-per-pod model
+  * every pod has it's own IP address&#x20;
+  * Containers within a pod, thus share the same network namespace using that IP address&#x20;
+*
 
 ### [Workload](https://kubernetes.io/docs/concepts/workloads/)
 
