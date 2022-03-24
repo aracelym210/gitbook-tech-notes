@@ -17,12 +17,7 @@ description: Notes on Google Virtual Private Cloud
 
 ## Fundamentals
 
-| Term              | Definition                                                                                                                                                                                      |   |
-| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
-| Region            | Specific geographical location where resources can be run                                                                                                                                       |   |
-| Point of Presence | Where Google's network is connected to the Internet. Greater PoPs bring traffic                                                                                                                 |   |
-| Zone              | <ul><li>Deployment area for GCP resources</li><li>Does not necessarily correlate to one physical data center</li><li>Grouped in regions</li><li>Single failure domain within a region</li></ul> |   |
-| Multi-region      | Encompasses multiple regions. Resources that are allocated as multi-region means that data/ services are redundant in at least two geographic locations separated at least by 160 km            |   |
+
 
 ## Projects, Networks and Subnets&#x20;
 
@@ -95,6 +90,8 @@ Three types of network in GCP:&#x20;
 
 ## DNS&#x20;
 
+* Each VM instance has a metadata server that also acts as a DNS resolver for that instance. This metadata server handles all DNS queries for local network resources and routes all other queries to Google's public DNS servers&#x20;
+
 ### Resolution for internal addresses&#x20;
 
 * Each instance has a hostname that can be resolved to an internal IP address
@@ -103,6 +100,8 @@ Three types of network in GCP:&#x20;
   * Provided as part of Compute Engine (169.254.169.254)
   * routes other queries to Google's public DNS servers for public name resolution
 * Instance is not aware of external IP address assigned to it&#x20;
+  * External IP address is unknown to the OS of the VM. Running `ifconfig`, for example, will only return the internal IP address.&#x20;
+    * External IPs are _mapped_ to the VM's internal address transparently by VPC
 * The network stores a lookup table that matches external IP addresses with the internal IP addresses of relevant instances&#x20;
 
 ### Resolution for external addresses&#x20;
@@ -148,6 +147,23 @@ Three types of network in GCP:&#x20;
 * rule assignment&#x20;
 
 ![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
+
+## Multiple network interfaces
+
+* VPC networks are isolated by default&#x20;
+* Internal IP address communication is not allowed between networks unless you set up a mechanism such as VPC peering or VPN.
+* Additional network interfaces can be setup on an instance which will enable you to create configurations that allow the instance to connect directly to several VPC networks
+* Each interface can have external IP addresses
+
+### Usecase for multiple interfaces
+
+* Network appliances such as IDS, firewall, load balancing, etc.&#x20;
+
+### Limitations&#x20;
+
+![](<../../.gitbook/assets/image (11).png>)
+
+
 
 ## Network pricing :moneybag:
 
@@ -206,3 +222,4 @@ _Allows VMs that only have internal IP addresses to reach external IP addresses 
 ## References&#x20;
 
 * Cloudskillsboost - Essential Google Cloud Infrastructure: Foundation
+* Cloudskillsboost - **Networking in Google Cloud**
