@@ -222,4 +222,4 @@ _Allows VMs that only have internal IP addresses to reach external IP addresses 
 ## References&#x20;
 
 * Cloudskillsboost - Essential Google Cloud Infrastructure: Foundation
-* Cloudskillsboost - **Networking in Google Cloud**
+* Cloudskillsboost - **** Networking in Google Cloud

@@ -1,0 +1,94 @@
+---
+description: >-
+  Notes on Cloud Identity and Access Management -- WHO can do WHAT on which
+  RESOURCE
+---
+
+# Cloud IAM
+
+## Fundamentals&#x20;
+
+### IAM Objects
+
+* Organization
+* Folders
+* Projects
+* Resources
+* Roles
+* Members
+
+### IAM Resource Hierarchy&#x20;
+
+* Policies can be set at each level - resource, projects, folders, organization
+  * Policy contains a set of _roles_ and _members_
+
+| Hierarchy Level | Definition                                                                                                    | Inheritance Notes                                                                                                                                                                                                              |
+| --------------- | ------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Organization    | <p>Represents your company. </p><p></p>                                                                       | IAM roles granted at this level are inherited by all resources under the org                                                                                                                                                   |
+| Folders         | <p>Optional method of further organizing resources and projects.</p><p></p>                                   | IAM roles granted at this level are inherited by all resources contained within that folder                                                                                                                                    |
+| Projects        | Represent a trust boundary within the company. Services within the same project have a default level of trust | If the resource hierarchy is changes, the policies applies to the project will also change. (i.e. if you move a project under a different organization, the IAM policies applied will change to that of the new organization.  |
+| Resources       |                                                                                                               |                                                                                                                                                                                                                                |
+
+![](<../../.gitbook/assets/Screen Shot 2022-03-24 at 10.53.28 AM.png>)
+
+{% hint style="warning" %}
+<mark style="color:orange;">**Child policies cannot restrict access granted by a parent.**</mark>** ** For example, if editor role was granted to folder Dept. X, and viewer role is granted for the Bookshelf project, the policy applied by the parent of Dept. X will trump the policy set for the Bookshelf project. In other words -- you will still be able to edit the Bookshelf project.&#x20;
+{% endhint %}
+
+{% hint style="success" %}
+<mark style="color:green;">**Best practice:**</mark> Follow the principle of least privilege which applies to identities, roles and resources.
+{% endhint %}
+
+### IAM Members (WHO)
+
+#### Five types of members&#x20;
+
+| Member Type            | Definition                                                                                 | Notes                                                                                                                   |
+| ---------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------- |
+| Google accounts        | Any person who interacts with GCP                                                          | Any email address that is associated with a google account can be an identity. This includes gmail.com or other domains |
+| Service accounts       | Account that belongs to an application, not individual user                                |                                                                                                                         |
+| Google groups          | Named collection of Google accounts and service accounts                                   | Convenient way to apply access controls to whole groups of users or service accounts                                    |
+| Gsuite domains         | Virtual group of all Google accounts have been created  in an organization's gsuite domain |                                                                                                                         |
+| Cloud identity domains | Represents a virtual group of all google accounts in an organization                       | Cloud identity domain users do not have access to g suite applications and features                                     |
+
+### IAM Roles (WHAT)
+
+#### Three kinds of roles&#x20;
+
+| Role              | Definition                                            | Notes                                                                                                                                                                                                                                                 |
+| ----------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Basic roles       | Original roles available in cloud console             | <ul><li>Owner - full admin access </li><li>Editor - modify and delete access </li><li>Viewer - Read-only access</li><li>Billing admin - manage billing &#x26; +/- admins</li><li>A project can have more than one of the roles defined here</li></ul> |
+| Pre-defined roles | Roles that are made up of collections of permissions  | <ul><li>Permissions are classes and methods in APIs</li><li>Users can have multiple roles </li></ul><p><code>service.resource.verb</code></p>                                                                                                         |
+| Custom roles      | Self-explanatory                                      | Best way to enforce least-privilege                                                                                                                                                                                                                   |
+
+#### Network-related IAM roles
+
+![There are other network-related roles than those listed here](<../../.gitbook/assets/image (6).png>)
+
+### Organization Policy (WHAT)
+
+_An organization policy let's admins set restrictions on specific resources to determine how they can be configured_ &#x20;
+
+| Term                                | Definition                                                                                                  | Notes |
+| ----------------------------------- | ----------------------------------------------------------------------------------------------------------- | ----- |
+| Organization Policy                 | A configuration of restrictions                                                                             |       |
+| Organization Policy _Administrator_ | Configures constraints across entire resource hierarchy. An org policy admin defines the org policy         |       |
+| Organization Policy _Service_       | Gives centralized and programmatic control over your org's cloud resources                                  |       |
+| Constraint                          | Particular type of restriction against one or more of GCP service. It defines what behaviors are controlled |       |
+
+![](<../../.gitbook/assets/Screen Shot 2022-03-24 at 1.48.08 PM.png>)
+
+### Firewall Rules&#x20;
+
+* Protect VM instances from unapproved connections&#x20;
+
+{% hint style="success" %}
+Filtering by service accounts is considered more secure than filtering by tags
+{% endhint %}
+
+![](<../../.gitbook/assets/Screen Shot 2022-03-24 at 2.03.53 PM.png>)
+
+## References&#x20;
+
+* Cloudskillsboost - **** Networking in Google Cloud
+* [GCP IAM Docs](https://cloud.google.com/iam/docs/overview)

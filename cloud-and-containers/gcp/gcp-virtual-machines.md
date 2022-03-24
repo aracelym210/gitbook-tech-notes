@@ -28,7 +28,7 @@
 
 * Accelerator-optimized
 
-![](<../../.gitbook/assets/image (6) (1) (1).png>)
+![](<../../.gitbook/assets/image (6) (1) (1) (1).png>)
 
 #### Machine Type
 

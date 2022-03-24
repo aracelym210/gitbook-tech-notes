@@ -136,7 +136,7 @@ This section documents specifics related to Kubernetes that are [documented here
 
 * Cannot change zonal to regional or visa-versa&#x20;
 
-![](<../../.gitbook/assets/image (6).png>)
+![](<../../.gitbook/assets/image (6) (1).png>)
 
 ### Private Clusters
 

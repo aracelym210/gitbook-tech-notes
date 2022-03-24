@@ -10,6 +10,7 @@
   * [🧱 GCP Fundamentals](cloud-and-containers/gcp/google-cloud-fundamentals/README.md)
   * [💻 GCP Virtual Machines](cloud-and-containers/gcp/gcp-virtual-machines.md)
   * [🌐 GCP VPC](cloud-and-containers/gcp/gcp-vpc.md)
+  * [Cloud IAM](cloud-and-containers/gcp/cloud-iam.md)
   * [Google Kubernetes Engine](cloud-and-containers/gcp/google-kubernetes-engine.md)
   * [📔 gcloud cheatsheet](cloud-and-containers/gcp/google-cloud-fundamentals/gcloud-cheatsheet.md)
   * [📔 gsutil cheatsheet](cloud-and-containers/gcp/gsutil-cheatsheet.md)
