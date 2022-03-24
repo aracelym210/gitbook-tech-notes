@@ -15,6 +15,15 @@ description: Notes on Google Virtual Private Cloud
   * Internal and external IP addressing&#x20;
   * Routes & firewall rules&#x20;
 
+## Fundamentals
+
+| Term              | Definition                                                                                                                                                                                      |   |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | - |
+| Region            | Specific geographical location where resources can be run                                                                                                                                       |   |
+| Point of Presence | Where Google's network is connected to the Internet. Greater PoPs bring traffic                                                                                                                 |   |
+| Zone              | <ul><li>Deployment area for GCP resources</li><li>Does not necessarily correlate to one physical data center</li><li>Grouped in regions</li><li>Single failure domain within a region</li></ul> |   |
+| Multi-region      | Encompasses multiple regions. Resources that are allocated as multi-region means that data/ services are redundant in at least two geographic locations separated at least by 160 km            |   |
+
 ## Projects, Networks and Subnets&#x20;
 
 ### Projects

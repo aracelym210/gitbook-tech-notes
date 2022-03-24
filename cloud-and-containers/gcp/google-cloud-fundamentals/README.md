@@ -37,6 +37,13 @@ GCP infrastructure can be compared to the infrastructure of a city.&#x20;
   * Google Cloud Storage&#x20;
   * Google BigQuery&#x20;
 
+| Term              | Definition                                                                                                                                                                                      |
+| ----------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Region            | Specific geographical location where resources can be run                                                                                                                                       |
+| Point of Presence | Where Google's network is connected to the Internet. Greater PoPs bring traffic                                                                                                                 |
+| Zone              | <ul><li>Deployment area for GCP resources</li><li>Does not necessarily correlate to one physical data center</li><li>Grouped in regions</li><li>Single failure domain within a region</li></ul> |
+| Multi-region      | Encompasses multiple regions. Resources that are allocated as multi-region means that data/ services are redundant in at least two geographic locations separated at least by 160 km            |
+
 ## Pricing&#x20;
 
 * Per-second billing for IaaS compute engine, K8, and more&#x20;
