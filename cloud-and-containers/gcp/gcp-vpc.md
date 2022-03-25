@@ -179,11 +179,15 @@ Three types of network in GCP:&#x20;
 
 #### Architecture of HTTPS load balancer&#x20;
 
-| Term | Definition | Notes |
-| ---- | ---------- | ----- |
-|      |            |       |
-|      |            |       |
-|      |            |       |
+| Term                   | Definition                                                                                                             | Notes                                                                                                                                   |
+| ---------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| Global Forwarding Rule | Directs request from internet to target HTTP proxy                                                                     |                                                                                                                                         |
+| Target Proxy           | Checks each request against url map to determine appropriate backend service for the request                           |                                                                                                                                         |
+| URL Map                |                                                                                                                        |                                                                                                                                         |
+| Backend Service        | Directs each request to appropriate backend depending on capacity, zone, and instance health of attached backends      | <ul><li>(Optional) session affinity</li><li>Timeout setting determines how long the backend server will wait before a timeout</li></ul> |
+| Health Check           | Pulls instances configured to the backend services to determine which instances are healthy enough to service requests |                                                                                                                                         |
+| Session affinity       | Attempts to send all requests from the same client to the same service.                                                | Overrides the default round-robin algorithm                                                                                             |
+|                        |                                                                                                                        |                                                                                                                                         |
 
 ## Network pricing :moneybag:
 
