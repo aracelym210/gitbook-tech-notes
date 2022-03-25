@@ -98,7 +98,7 @@ _Compute engine resource that stores all the configuration, metadata, permission
 
 ### Disk options&#x20;
 
-![](<../../.gitbook/assets/image (7) (1).png>)
+![](<../../.gitbook/assets/image (7) (1) (1).png>)
 
 * Boot disk&#x20;
 * Persistent disk&#x20;

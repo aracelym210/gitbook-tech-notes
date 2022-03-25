@@ -130,7 +130,7 @@ This section documents specifics related to Kubernetes that are [documented here
 * Node pool:Subset of nodes within a cluster that share a configuration. This is specific to GKE, although you can manually build out an analogous feature in Kubernetes&#x20;
   * note that there is some overhead&#x20;
 
-![](<../../.gitbook/assets/image (7).png>)
+![](<../../.gitbook/assets/image (7) (1).png>)
 
 ### Zonal Clusters vs. Regional Clusters
 

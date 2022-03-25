@@ -157,7 +157,7 @@ Three types of network in GCP:&#x20;
 
 ### Limitations&#x20;
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)
 
 ## Load balancing&#x20;
 
@@ -170,14 +170,14 @@ Three types of network in GCP:&#x20;
 * Dynamically add/remove instances based on changes in load
   * Define autoscaling policy
 
-### HTTPS load balancing&#x20;
+### HTTP load balancing&#x20;
 
 * Global&#x20;
 * Apps are available to customers at a single anycast IP address, simplifying DNS
 * No pre-warming required&#x20;
 * URL maps can be configured to route URLs to specific instances, though requests are generally routed to closest instance with capacity to serve
 
-#### Architecture of HTTPS load balancer&#x20;
+#### Architecture of HTTP load balancer&#x20;
 
 | Term                   | Definition                                                                                                             | Notes                                                                                                                                   |
 | ---------------------- | ---------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
@@ -188,6 +188,43 @@ Three types of network in GCP:&#x20;
 | Health Check           | Pulls instances configured to the backend services to determine which instances are healthy enough to service requests |                                                                                                                                         |
 | Session affinity       | Attempts to send all requests from the same client to the same service.                                                | Overrides the default round-robin algorithm                                                                                             |
 |                        |                                                                                                                        |                                                                                                                                         |
+
+### HTTPS load balancing
+
+Very similar to HTTP load balancer with a few differences&#x20;
+
+* Target HTTPS proxy
+* At least one signed SSL cert installed
+* SSL session terminates _at_ load balancer&#x20;
+* QUIC transport layer protocol&#x20;
+
+#### SSL certificates&#x20;
+
+* target proxy can be configured with up to 10 SSL certificates&#x20;
+
+## Cloud Armor
+
+* Works with global HTTPS load balancing to provide built-in defenses against DDoS attacks&#x20;
+* Restrict or allow access to load balancer at the edge of your network (as close to the user)&#x20;
+* Security policies with deny and allow rules&#x20;
+  * block by IP&#x20;
+  * custom configure which HTTP error code is returned&#x20;
+
+### Cloud Armor web-app firewall&#x20;
+
+![](<../../.gitbook/assets/image (7).png>)
+
+* Findings are automatically sent to Security Command Center (if enabled/ in use)&#x20;
+
+### Network endpoint groups
+
+* Specifies a group of backend endpoints or services&#x20;
+* Used as backend for certain load balancers&#x20;
+* Zonal, internet and serverless endpoint types&#x20;
+
+![](<../../.gitbook/assets/image (11).png>)
+
+
 
 ## Network pricing :moneybag:
 
