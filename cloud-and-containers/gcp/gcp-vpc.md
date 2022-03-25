@@ -15,10 +15,6 @@ description: Notes on Google Virtual Private Cloud
   * Internal and external IP addressing&#x20;
   * Routes & firewall rules&#x20;
 
-## Fundamentals
-
-
-
 ## Projects, Networks and Subnets&#x20;
 
 ### Projects
@@ -163,7 +159,31 @@ Three types of network in GCP:&#x20;
 
 ![](<../../.gitbook/assets/image (11).png>)
 
+## Load balancing&#x20;
 
+### Managed Instance Groups
+
+* Identical instances can be deployed based on an instance template&#x20;
+* Manager ensures all instances are in a running state&#x20;
+* Typically used with autoscaler load-balancer
+* Regional managed instance groups are generally recommended over zonal instance groups&#x20;
+* Dynamically add/remove instances based on changes in load
+  * Define autoscaling policy
+
+### HTTPS load balancing&#x20;
+
+* Global&#x20;
+* Apps are available to customers at a single anycast IP address, simplifying DNS
+* No pre-warming required&#x20;
+* URL maps can be configured to route URLs to specific instances, though requests are generally routed to closest instance with capacity to serve
+
+#### Architecture of HTTPS load balancer&#x20;
+
+| Term | Definition | Notes |
+| ---- | ---------- | ----- |
+|      |            |       |
+|      |            |       |
+|      |            |       |
 
 ## Network pricing :moneybag:
 
