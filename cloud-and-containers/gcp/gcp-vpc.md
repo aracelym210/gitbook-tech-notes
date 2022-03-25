@@ -224,7 +224,54 @@ Very similar to HTTP load balancer with a few differences&#x20;
 
 ![](<../../.gitbook/assets/image (11).png>)
 
+### Cloud CDN
 
+* Content delivery network as a service using Google's globally distributed edge points of presence (PoP)
+* Cache miss vs Cache hit&#x20;
+* Certain information can be cached, but some cannot&#x20;
+* Cloud CDN cache modes (3) control factors to determine if your content is cached or not.&#x20;
+
+### SSL/TCP proxy load balancing&#x20;
+
+#### SSL
+
+* Global load balancing for encrypted, non-HTTP traffic&#x20;
+* Terminates SSL sessions at load balancing layer
+* Automatically routes traffic to closes region that has capacity&#x20;
+* Only need to update customer facing certificate in one place&#x20;
+* GCP automatically patches load balancers, reducing overhead of managing the security of the load balancers&#x20;
+
+#### TCP
+
+* Global load balancing for unencrypted, non-HTTP traffic&#x20;
+* Terminates TCP sessions at load balancing layer
+* Automatically routes traffic to closes region that has capacity&#x20;
+* GCP automatically patches load balancers&#x20;
+
+### Network load balancing&#x20;
+
+* Regional, non-proxied load balancer&#x20;
+* Forwarding rules balance loads on systems&#x20;
+* UDP and certain TCP/SSL ports&#x20;
+* Able to service instance group backends or target pool resource backends&#x20;
+
+#### Target pool resource&#x20;
+
+* Defines a group of instances that receives incoming traffic from forwarding rules&#x20;
+* Must be in the same region&#x20;
+
+### Internal load balancing&#x20;
+
+* TCP/ UDP, regional load balancing service&#x20;
+* Internal / private&#x20;
+* Software-defined, fully distributed load balancing&#x20;
+* Built on top of Andromeda, which is Google's network virtualization stack&#x20;
+
+### Choosing a load balancer&#x20;
+
+* HTTPS, SSL Proxy, TCP proxy services support IPv6
+
+![](<../../.gitbook/assets/image (6).png>)
 
 ## Network pricing :moneybag:
 

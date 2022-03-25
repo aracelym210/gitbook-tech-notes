@@ -63,7 +63,7 @@ description: >-
 
 #### Network-related IAM roles
 
-![There are other network-related roles than those listed here](<../../.gitbook/assets/image (6).png>)
+![There are other network-related roles than those listed here](<../../.gitbook/assets/image (6) (1).png>)
 
 ### Organization Policy (WHAT)
 
