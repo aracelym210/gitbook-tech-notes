@@ -43,3 +43,5 @@
   * [🧵 Threads](operating-systems/process-management/threads.md)
   * [🧠 Mind Map](operating-systems/process-management/mind-map.md)
 * [🧰 Process Sync Tools](operating-systems/process-sync-tools.md)
+* [Distributed Systems for Blockchain](operating-systems/distributed-systems-for-blockchain/README.md)
+  * [Intro to blockchain and distributed systems](operating-systems/distributed-systems-for-blockchain/intro-to-blockchain-and-distributed-systems.md)
