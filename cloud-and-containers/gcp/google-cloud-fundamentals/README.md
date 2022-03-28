@@ -221,7 +221,7 @@ _Three kinds of IAM roles to define who <mark style="color:blue;">can do what</m
 {% tab title="Primitive" %}
 * Broad roles
 * Apply across all GCP services in a project
-* Fixed & "course-grained" level of access roles
+* Fixed & "course-grained" level of access roles, known as _basic roles_
   * Owner
   * Editor
   * Viewer&#x20;
