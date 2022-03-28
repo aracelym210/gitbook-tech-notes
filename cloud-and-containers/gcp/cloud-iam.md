@@ -91,4 +91,5 @@ Filtering by service accounts is considered more secure than filtering by tags
 ## References&#x20;
 
 * Cloudskillsboost - **** Networking in Google Cloud
+* Cloudskillsboost - **** Security in Google Cloud
 * [GCP IAM Docs](https://cloud.google.com/iam/docs/overview)

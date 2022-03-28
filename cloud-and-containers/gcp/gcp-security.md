@@ -72,7 +72,39 @@ Data deleted from all Google systems as soon as reasonably possible, with a max 
 
 * Cloud platform customers own their data, not Google
 * Google does not scan customer data for advertisements, nor is it sold to 3rd parties&#x20;
-*
+
+## Cloud Identity
+
+* Google Cloud Identity is an Identity as a Service Solution&#x20;
+* Manage users, groups, domain-wide security settings&#x20;
+* Tied to a unique DNS domain&#x20;
+* Do not need to use GSuite services, but can be combined with existing GSuite subscriptions
+* Free and premium edition&#x20;
+* Each cloud identity account is associated with _one_ organization&#x20;
+
+### GCP Directory Sync (GCDS)&#x20;
+
+#### Syncing with MS Active Directory&#x20;
+
+* GCP Directory Sync (GCDS) can syncronize GSuite accounts to match data in existing Active Directory or LDAP
+* One way synchronization. AD/ LDAP is updated and GCDS periodically syncs with AD.
+
+#### Managed Microsoft AD&#x20;
+
+* Runs actual Microsoft AD controllers&#x20;
+
+## GCP Authentication&#x20;
+
+* two primary ways to handle google user authentication: Google authentication and SSO
+* Google Auth -- Google password stored within Google's infrastructure&#x20;
+* SAML is supported for SSO
+  * Google operates as a service provider and SSO system operates as an identity provider&#x20;
+
+## Managing GCP permissions
+
+* Use groups to help manage permissions!&#x20;
+* High risk areas may want to assign individual permissions directly instead of groups&#x20;
+* General principle is to add no more than 3 admins to the Organization&#x20;
 
 ## References&#x20;
 
