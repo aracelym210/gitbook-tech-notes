@@ -82,7 +82,7 @@
 
 * Keep your instances physically separated from other customers if needed for compliance or other reason&#x20;
 
-![](<../../.gitbook/assets/image (3).png>)
+![](<../../.gitbook/assets/image (3) (1).png>)
 
 ### Images&#x20;
 

@@ -82,7 +82,7 @@ Three types of network in GCP:&#x20;
   * Sounds like an A record / CNAME record?&#x20;
 * Essentially, you can configure multiple IP addresses representing containers or applications hosted in a VM
 
-![](<../../.gitbook/assets/image (3) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1) (1) (1).png>)
 
 ## DNS&#x20;
 
@@ -360,7 +360,7 @@ Very similar to HTTP load balancer with a few differences&#x20;
 
 ![I believe this presentation was created in 2019](../../.gitbook/assets/image.png)
 
-![I believe this presentation was created in 2019](<../../.gitbook/assets/image (3) (1) (1).png>)
+![I believe this presentation was created in 2019](<../../.gitbook/assets/image (3) (1) (1) (1).png>)
 
 ## "Common" Network Designs&#x20;
 
@@ -377,7 +377,7 @@ Very similar to HTTP load balancer with a few differences&#x20;
 * design robust systems with resources spread across different failure domains&#x20;
 * HTTP load balancer allows you to route traffic to the region that is closest to the user&#x20;
 
-![](<../../.gitbook/assets/image (3) (1).png>)
+![](<../../.gitbook/assets/image (3) (1) (1).png>)
 
 ### Security when designing networks&#x20;
 
@@ -407,10 +407,46 @@ _Allows VMs that only have internal IP addresses to reach external IP addresses 
 
 ![](<../../.gitbook/assets/image (5) (1) (1).png>)
 
-## Best Practices
+## Best Practices :white\_check\_mark:
+
+* Do not use default network for production project&#x20;
+* Place compute engine resources that require network communication on the same VPC network
+* Create separate subnets with a network for each tier of an app (i.e. front-end, service layer, db)
+* Use load balancer with SSL policies in front of a web service
+* Private Google API access (access Google API with internal vs. external)&#x20;
+
+## VPC Service Controls
+
+[_Click here to go to GCP documentation regarding VPC service controls_](https://cloud.google.com/vpc-service-controls)__
+
+* Mitigates risk of data exfil by controlling movement of data within a defined perimeter&#x20;
+* Prevents data from being copied to unauthorized resources&#x20;
+* on-prem extensions&#x20;
+* Access to resources within a service perimeter from the internet is denied by default.
+
+### How to setup a VPC service perimeter&#x20;
+
+![](<../../.gitbook/assets/image (3).png>)
+
+### Access Context Manager
+
+
+
+## VPC Flow Logs
+
+* Records network flows sent from, or received by VM instances&#x20;
+* Only inclues traffic _seen_ by the VM
+  * For example, if outbound traffic was blocked by an egress rule, it will be seen and logged, but inbound traffic blocks by an ingress rule not reaching a VM, will not be seen and not to be logged.
+* Can be viewed in Stackdriver logging
+* Aggregated by connection at 5 second intervals&#x20;
+* Enable/ disable per VPC subnet&#x20;
+
+
 
 ## References&#x20;
 
 * Cloudskillsboost - Essential Google Cloud Infrastructure: Foundation
 * Cloudskillsboost - **** Networking in Google Cloud
 * Cloudskillsboost - **** Security in Google Cloud
+* [https://cloud.google.com/vpc-service-controls](https://cloud.google.com/vpc-service-controls)
+*
