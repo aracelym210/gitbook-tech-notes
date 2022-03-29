@@ -126,6 +126,22 @@ Three types of network in GCP:&#x20;
 
 ### Cloud Firewall rules&#x20;
 
+{% hint style="info" %}
+**All VPCs** have 2 implied firewall rules&#x20;
+
+1. All all outbound traffic&#x20;
+2. Block all incoming traffic&#x20;
+{% endhint %}
+
+{% hint style="info" %}
+Default VPCs have additional allow rules&#x20;
+
+1. `default-allow-internal`
+2. `default-allow-ssh`
+3. `default-allow-rdp`
+4. `default-allow-icmp`
+{% endhint %}
+
 * VPC network functions as a distributed firewall&#x20;
 * Rules are applied to the network as a whole
 * Protect VM instances from unapproved connections&#x20;
@@ -144,6 +160,29 @@ Three types of network in GCP:&#x20;
 
 ![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
 
+#### Firewall best practices&#x20;
+
+{% hint style="success" %}
+1. Principle of least privilege&#x20;
+2. Minimize direct exposure to/from Internet&#x20;
+3. Explicit deny as last rule (lowest priority)
+4. Develop standard naming convention&#x20;
+5. Consider service account firewall rules instead of tag-based rules
+   1. tag-based rules requires less privileges&#x20;
+{% endhint %}
+
+#### Default-deny traffic&#x20;
+
+![](<../../.gitbook/assets/image (11).png>)
+
+#### Firewall insights&#x20;
+
+* Help better understand and optimize firewall rules&#x20;
+* Helps to analyze the way that firewall rules are being used&#x20;
+  * identify firewall misconfigs&#x20;
+  * id security attacks
+  * optimize firewall rules and tighten security boundaries&#x20;
+
 ## Multiple network interfaces
 
 * VPC networks are isolated by default&#x20;
@@ -157,7 +196,7 @@ Three types of network in GCP:&#x20;
 
 ### Limitations&#x20;
 
-![](<../../.gitbook/assets/image (11) (1).png>)
+![](<../../.gitbook/assets/image (11) (1) (1).png>)
 
 ## Load balancing&#x20;
 
@@ -222,7 +261,7 @@ Very similar to HTTP load balancer with a few differences&#x20;
 * Used as backend for certain load balancers&#x20;
 * Zonal, internet and serverless endpoint types&#x20;
 
-![](<../../.gitbook/assets/image (11).png>)
+![](<../../.gitbook/assets/image (11) (1).png>)
 
 ### Cloud CDN
 
@@ -331,3 +370,4 @@ _Allows VMs that only have internal IP addresses to reach external IP addresses 
 
 * Cloudskillsboost - Essential Google Cloud Infrastructure: Foundation
 * Cloudskillsboost - **** Networking in Google Cloud
+* Cloudskillsboost - **** Security in Google Cloud
