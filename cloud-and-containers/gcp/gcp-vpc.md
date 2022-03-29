@@ -169,6 +169,7 @@ Default VPCs have additional allow rules&#x20;
 4. Develop standard naming convention&#x20;
 5. Consider service account firewall rules instead of tag-based rules
    1. tag-based rules requires less privileges&#x20;
+   2. One issue with tags is that they must be added to instances and could possibly be added or removed inadvertently. Firewall rules can also be applied to instances by the service account used. These rules will be applied automatically to all instances that use the specified service account.
 {% endhint %}
 
 #### Default-deny traffic&#x20;
