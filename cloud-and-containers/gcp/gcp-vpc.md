@@ -199,6 +199,33 @@ Default VPCs have additional allow rules&#x20;
 
 ![](<../../.gitbook/assets/image (11) (1) (1).png>)
 
+## VPC Interconnect Peering
+
+### VPC Network Peering&#x20;
+
+* Allows connection of two non-overlapping VPC networks, which enables resources in the separate networks to communicate over private IP space&#x20;
+* Do not need to be in same project or the same organization&#x20;
+* Rules need to be configured in each network&#x20;
+* Up to 25 peers allowed&#x20;
+
+#### Pros:
+
+* Decreased network latency&#x20;
+* Increased security due to minimizing exposure to internet&#x20;
+* Reduced egress cost&#x20;
+
+### Shared VPCs
+
+* Makes a VPC network shareable across several projects in the organization&#x20;
+* Requires host project within the same organization&#x20;
+
+![](<../../.gitbook/assets/image (10).png>)
+
+### Cloud Interconnect&#x20;
+
+* Dedicated interconnect: direct physical connection between on-prem and GCP VPC networks
+* Partner Interconnect
+
 ## Load balancing&#x20;
 
 ### Managed Instance Groups
@@ -241,6 +268,19 @@ Very similar to HTTP load balancer with a few differences&#x20;
 #### SSL certificates&#x20;
 
 * target proxy can be configured with up to 10 SSL certificates&#x20;
+
+### SSL load balancing&#x20;
+
+* Cloud-SSL proxy is intended for non-HTTPS traffic&#x20;
+
+#### Defining SSL policy
+
+* Specifies the min TLS version clients can connect with&#x20;
+* Profile of SSL policy features (3 GCP managed/ pre-configured profiles)
+  * Compatible -- allows broadest set of clients
+  * Modern -- Wide set
+  * Restricted -- Support reduced set of SSL/ TLS features intended to meet more strict compliance requirements&#x20;
+* 4th, custom profile available&#x20;
 
 ## Cloud Armor
 
@@ -366,6 +406,8 @@ _Allows VMs that only have internal IP addresses to reach external IP addresses 
 * Enabled on a subnet-by-subnet basis
 
 ![](<../../.gitbook/assets/image (5) (1) (1).png>)
+
+## Best Practices
 
 ## References&#x20;
 

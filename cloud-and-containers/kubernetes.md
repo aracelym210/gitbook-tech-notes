@@ -278,7 +278,7 @@ _**In GKE**_
 |                                                                  |                                               |
 |                                                                  |                                               |
 
-![](<../.gitbook/assets/image (10).png>)
+![](<../.gitbook/assets/image (10) (1).png>)
 
 ### Load-balanced Services&#x20;
 
@@ -304,7 +304,7 @@ _**In GKE**_
 
 ### kubectl syntax&#x20;
 
-![](<../.gitbook/assets/image (10) (1).png>)
+![](<../.gitbook/assets/image (10) (1) (1).png>)
 
 #### `kubectl [command] [TYPE] [NAME] [flags]`&#x20;
 
