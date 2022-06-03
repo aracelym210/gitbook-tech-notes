@@ -27,9 +27,22 @@ description: The history and overview of artificial intelligence
 
 ![](<../.gitbook/assets/image (12).png>)
 
-### Turing Test
+#### Cognitive modeling
+
+* Program "thinks" like the human.&#x20;
+* Interdisciplinary field of cognitive science plus computer modeling&#x20;
+
+#### Turing Test
 
 A machine's ability to exhibit behavior, equivalent to, or indistinguishable from a human&#x20;
+
+#### Laws of Thought
+
+* Program that "thinks rationally (logically)"
+
+#### Rational Agents
+
+A rational agent is one that acts so as to achieve the best outcome or, when there is uncertainty, the best expected outcome.
 
 ### Narrow AI
 
