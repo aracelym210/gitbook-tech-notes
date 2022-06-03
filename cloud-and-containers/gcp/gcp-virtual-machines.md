@@ -20,7 +20,7 @@
 
 * Compute-optimized
 
-![](<../../.gitbook/assets/image (4) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1).png>)
 
 * Memory-optimized
 

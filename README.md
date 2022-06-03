@@ -1,6 +1,6 @@
 # About
 
-This Gitbook hosts cheat-sheets and personal notes on various topics I learn about. It was inspired by @spotheplanet's personal notes at  [iRedTeam](https://www.ired.team).&#x20;
+This Gitbook hosts cheat-sheets and personal notes on various topics I learn about. It was inspired by @spotheplanet's personal notes at  [iRedTeam](https://www.ired.team/).&#x20;
 
 {% hint style="info" %}
 Note that there are some screenshots directly taken from various training providers, which I do not take credit for.

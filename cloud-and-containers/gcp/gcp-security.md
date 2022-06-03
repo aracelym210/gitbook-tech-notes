@@ -1,4 +1,4 @@
-# GCP Security
+# 🔒 GCP Security
 
 ## Google's Approach to Security
 

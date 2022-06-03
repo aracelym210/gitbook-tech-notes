@@ -58,7 +58,7 @@ description: >-
 
 #### Service accounts&#x20;
 
-![](<../../.gitbook/assets/image (12).png>)
+![](<../../.gitbook/assets/image (12) (1).png>)
 
 ### IAM Roles (WHAT)
 

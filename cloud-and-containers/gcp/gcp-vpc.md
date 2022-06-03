@@ -158,7 +158,7 @@ Default VPCs have additional allow rules&#x20;
 * priority
 * rule assignment&#x20;
 
-![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1) (1) (1).png>)
 
 #### Firewall best practices&#x20;
 
@@ -369,7 +369,7 @@ Very similar to HTTP load balancer with a few differences&#x20;
 * If availability is a high priority, you can place two VMs into multiple zones, but within the same subnet&#x20;
 * Allocating VMs on a single subnet to separate zones gives improved availability without additional security complexity&#x20;
 
-![](<../../.gitbook/assets/image (4) (1) (1).png>)
+![](<../../.gitbook/assets/image (4) (1) (1) (1).png>)
 
 ### Globalization :earth\_americas:
 

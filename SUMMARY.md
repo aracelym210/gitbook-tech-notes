@@ -47,3 +47,8 @@
 * [🧰 Process Sync Tools](operating-systems/process-sync-tools.md)
 * [Distributed Systems for Blockchain](operating-systems/distributed-systems-for-blockchain/README.md)
   * [Intro to blockchain and distributed systems](operating-systems/distributed-systems-for-blockchain/intro-to-blockchain-and-distributed-systems.md)
+
+## Data Science
+
+* [About](data-science/about.md)
+* [AI - History and Overview](data-science/ai-history-and-overview.md)

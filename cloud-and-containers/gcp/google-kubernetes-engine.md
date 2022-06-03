@@ -6,7 +6,7 @@ description: Notes on Google Kubernetes Engine -- aka GK
 
 ## Containers&#x20;
 
-Containerization is the latest virtualization technology which virtualizes the [user space ](https://en.wikipedia.org/wiki/User\_space\_and\_kernel\_space#:\~:text=Kernel%20space%20is%20strictly%20reserved,software%20and%20some%20drivers%20execute.)where applications reside. Compare this to hypervisors like VMWare, Virtual Box or KVM, which virtualize [kernel space](https://en.wikipedia.org/wiki/User\_space\_and\_kernel\_space#:\~:text=Kernel%20space%20is%20strictly%20reserved,software%20and%20some%20drivers%20execute.)/ hardware.
+Containerization is the latest virtualization technology which virtualizes the [user space ](https://en.wikipedia.org/wiki/User\_space\_and\_kernel\_space)where applications reside. Compare this to hypervisors like VMWare, Virtual Box or KVM, which virtualize [kernel space](https://en.wikipedia.org/wiki/User\_space\_and\_kernel\_space)/ hardware.
 
 ### Containers are...
 
@@ -66,7 +66,7 @@ _Layers, layers, layers_&#x20;
 * Changes to the running container are written to the container layer, which is ephemeral. Meaning, changes will be lost when the container is deleted&#x20;
 * Multiple containers can share access to the same underlying image with their own data-state&#x20;
 
-![](<../../.gitbook/assets/image (4).png>)
+![](<../../.gitbook/assets/image (4) (1).png>)
 
 ### How to get containers?&#x20;
 
