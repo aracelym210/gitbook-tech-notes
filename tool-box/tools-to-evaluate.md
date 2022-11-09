@@ -15,12 +15,12 @@ description: >-
 * [ ] IamVulnerable - IAMVulnerable uses the Terraform binary and your AWS credentials to deploy over 250 IAM resources into your selected AWS account. Within minutes, you can start learning how to identify and exploit vulnerable IAM configurations that allow for privilege escalation.
 * [ ] [Pmapper](https://github.com/nccgroup/PMapper) - Principal Mapper, also known as PMapper, is a script and library for identifying risks in the configuration of AWS Identity and Access Management (IAM) for an AWS account or an AWS organization. It models the different IAM Users and Roles in an account as a directed graph, which enables checks for privilege escalation and for alternate paths an attacker could take to gain access to a resource or action in AWS.
 
-#### Pentesting tools
+### Pentesting tools
 
 * [ ] [awspx](https://github.com/WithSecureLabs/awspx) - awspx is a A graph-based tool for visualizing effective access and resource relationships in AWS environments.
 * [ ] Pacu
 
-#### Vulnerable by design
+### Vulnerable by design
 
 * [ ] [CloudGoat](https://github.com/RhinoSecurityLabs/cloudgoat/) - CloudGoat is Rhino Security Labs' "Vulnerable by Design" AWS deployment tool. It allows you to hone your cloud cybersecurity skills by creating and completing several "capture-the-flag" style scenarios.
 * [ ] [Sadcloud](https://github.com/nccgroup/sadcloud) - Sadcloud is a tool for standing up (and tearing down!) purposefully insecure cloud infrastructure.
@@ -31,11 +31,11 @@ description: >-
 
 ## GCP
 
-#### IAM Evaluation
+### IAM Evaluation
 
 * [ ] [GCP Scanner](https://github.com/google/gcp\_scanner)- GCP Scanner is a GCP resource scanner that can help determine what level of access certain credentials posses on GCP. The scanner is designed to help security engineers with evaluating impact of a certain VM/container compromise, GCP service account or OAuth2 token key leak.
 
-#### Vulnerable by design
+### Vulnerable by design
 
 * [ ] GCP Goat -&#x20;
 
