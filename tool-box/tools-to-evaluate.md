@@ -25,11 +25,11 @@ description: >-
 * [ ] [CloudGoat](https://github.com/RhinoSecurityLabs/cloudgoat/) - CloudGoat is Rhino Security Labs' "Vulnerable by Design" AWS deployment tool. It allows you to hone your cloud cybersecurity skills by creating and completing several "capture-the-flag" style scenarios.
 * [ ] [Sadcloud](https://github.com/nccgroup/sadcloud) - Sadcloud is a tool for standing up (and tearing down!) purposefully insecure cloud infrastructure.
 
-### Blue Team Tools
+## Blue Team Tools
 
 * [GitHub - chainguard-dev/osquery-defense-kit](https://github.com/chainguard-dev/osquery-defense-kit) - Production-ready detection & response queries for osquery
 
-### GCP
+## GCP
 
 #### IAM Evaluation
 
@@ -39,12 +39,12 @@ description: >-
 
 * [ ] GCP Goat -&#x20;
 
-### Multi-cloud
+## Multi-cloud
 
 * [ ] CloudSploit - CloudSploit is a cloud scanner to detect security risks in cloud infrastructure accounts. AWS, GCP, Azure, GitHub
 * [ ] [ScoutSuite](https://github.com/nccgroup/ScoutSuite) - ScoutSuite is an open source multi-cloud security-auditing tool, which enables security posture assessment of cloud environments. Using the APIs exposed by cloud providers, Scout Suite gathers configuration data for manual inspection and highlights risk areas.
 
-### Terraform
+## Terraform
 
 * [x] [infracost.io](https://www.infracost.io/docs/) - Tool to run inside repository/ directory to estimate cloud infrastructure cost of Terraform template
 * [x] [TerraGoat](https://github.com/bridgecrewio/terragoat) - TerraGoat is a learning and training project that demonstrates how common configuration errors can find their way into production cloud environments. AWS, GCP, Azu
