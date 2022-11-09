@@ -55,3 +55,8 @@
 * [About](data-science/about.md)
 * [AI - History and Overview](data-science/ai-history-and-overview.md)
 * [Searching methods in AI](data-science/searching-methods-in-ai.md)
+
+## 🧰 Tool Box
+
+* [Tools to evaluate](tool-box/tools-to-evaluate.md)
+* [Infracost](tool-box/infracost.md)
