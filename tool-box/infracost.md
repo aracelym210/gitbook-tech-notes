@@ -8,14 +8,14 @@ description: >-
 
 ## Evaluation
 
-| Criteria                  | Score | Notes                                                                                                                                                                         |
-| ------------------------- | ----- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Account required for use? | Y     |                                                                                                                                                                               |
-| Date of last update       | 5     | actively maintained product                                                                                                                                                   |
-| Ease of install           | 5     |                                                                                                                                                                               |
-| Ease of configuration     | 5     |                                                                                                                                                                               |
-| Ease of use               | 5     | Tested against \[\[TerraGoat]], which has templates for AWS, GCP, Oracle, and Alibaba cloud and the tool gave individual, monthly project totals and a overall monthly total. |
-| Documentation             | 5     | Getting started documentation was all I needed to follow.                                                                                                                     |
+| Criteria                  | Score | Notes                                                                                                                                                                                                                |
+| ------------------------- | ----- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Account required for use? | Y     |                                                                                                                                                                                                                      |
+| Date of last update       | 5     | actively maintained product                                                                                                                                                                                          |
+| Ease of install           | 5     |                                                                                                                                                                                                                      |
+| Ease of configuration     | 5     |                                                                                                                                                                                                                      |
+| Ease of use               | 5     | Tested against [TerraGoat](https://github.com/bridgecrewio/terragoat)  which has templates for AWS, GCP, Oracle, and Alibaba cloud and the tool gave individual, monthly project totals and a overall monthly total. |
+| Documentation             | 5     | Getting started documentation was all I needed to follow.                                                                                                                                                            |
 
 #### Other evaluation notes:
 
